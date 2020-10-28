@@ -1,0 +1,1077 @@
+/*
+ * 公共的js
+ * */
+
+$(function () {
+    if (document.getElementById("l_mainBox")) {
+        $("img.lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 600, //预加载，在图片距离屏幕180px时提前载入
+            container: $("#l_mainBox")
+        });
+    } else {
+        $("img.lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 600,
+        });
+    }
+
+    $("#l_prompt .bottom > div").on("click", function () {
+        $("#l_prompt").fadeOut(500);
+    });
+
+    $("#l_GOTop").on("click", function () {
+        // console.log(1231245)
+        $("body,html").animate({
+            scrollTop: 0
+        }, 600);
+
+    });
+
+    $("#l_prompt").delegate(".no", "click", function () {
+        $("#l_prompt").fadeOut(500);
+    });
+
+});
+
+/*获取url中传过来的参数*/
+function GetRequest() {
+    var url = location.search; //获取url中"?"符后的字串
+    console.log(url, '............')
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1),
+            strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+            theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+        }
+    }
+    return theRequest;
+}
+
+/*提示盒子*/
+
+/*已经到底部 加载数据 */
+var scrollMaxIsTrue = true; // 避免重复加载给一个值进行判断
+function scrollMax(fn, minFn) {
+    //滚动条到页面底部加载更多
+    var htmlFontSize = parseFloat($("html").css("fontSize")) * 5;
+    var $docBxo = $("window");
+    var $docCont = $("body");
+    if (document.getElementById("l_mainBox")) {
+        $docBxo = $("#l_mainBox");
+        $docCont = $("#l_mainBox > .content");
+    }
+    $docBxo.scroll(function () {
+        var scrollTop = $docBxo.scrollTop(); //滚动条距离顶部的高度
+        var scrollHeight = $docCont.outerHeight(); //当前页面的总高度
+        var clientHeight = $docBxo.height() + htmlFontSize; //当前可视的页面高度
+        // console.log("top:"+scrollTop+",doc:"+scrollHeight+",client:"+clientHeight);
+        if (scrollTop + clientHeight >= scrollHeight && scrollMaxIsTrue) {
+            //距离顶部+当前高度 >=文档总高度 即代表滑动到底部 count++;         //每次滑动count加1
+            if (fn) {
+                // console.log(isTrue);
+                fn();
+                scrollMaxIsTrue = false;
+            }
+            // isTrue = false;
+        } else if (scrollTop <= 0 && scrollMaxIsTrue) {
+            //滚动条距离顶部的高度小于等于0
+            if (minFn) {
+                minFn();
+            }
+            // isTrue = false;
+        }
+    });
+}
+
+/*cookie 设置  */
+function setCookie(name, value, iDay) {
+    var oDate = new Date();
+    if(iDay == '') {
+        iDay = 30*24*60*60*1000
+    }
+    oDate.setDate(oDate.getDate() + iDay);
+    document.cookie = name + '=' + value + ';path=/;expires=' + oDate;
+}
+
+function getCookie(name) {
+    var arr = document.cookie.split(";");
+    for (var i = 0; i < arr.length; i++) {
+        var arr2 = arr[i].split("=");
+        // console.log(arr2);
+        if (arr2[0].trim() === name) {
+            return arr2[1];
+        }
+    }
+    return null;
+}
+
+function removeCookie(name) {
+    setCookie(name, "1", -1);
+}
+
+/*超过三行隐藏*/
+function showDied() {
+    /*由于rem显示的需要获取到html的字体大小 行高是2就乘2 3是3行 */
+    var textHeight = (parseInt($('html').css('fontSize')) * 2 * 3);
+    var textCont = $('#l_talkTitle .textCont');
+    /*如果文本内容超过3行就给#l_talkTitle .textCont 添加 height类名*/
+
+    textCont.each(function (i, v) {
+        if ($(v).height() > textHeight) {
+            $(v).addClass('height');
+            $("#l_talkTitle .showH").eq(i).show();
+        }
+    });
+    setTimeout(function () {
+        $("img.lazy").lazyload({
+            effect: "fadeIn",
+            container: $("#l_mainBox")
+        });
+    }, 100)
+}
+
+/*未登录跳转登录页面*/
+function NotLoggedIn(fn) {
+    if (!cookie_uid || cookie_uid === "") {
+        window.location.href = '/mobile/ucenter/member-index.html';
+    }
+}
+/*返回上一个页面--如果不是当前域名下就跳转到首页*/
+function historyGo() {
+    if (document.referrer.indexOf(window.location.host) !== -1) {
+        self.location = document.referrer;
+    } else {
+        window.location.href = "/";
+    }
+}
+
+/*点击分享按钮封装，传入当前的url就行*/
+function shareFn(href, fn) {
+    $("body").delegate(".shareBt", "click", function (event) {
+        var event = event || window.event;
+        var detail_id = $(this).parents(".detailsLi").attr("data-id"),
+            pic = $(this).parents(".detailsLi").find(".imgBox .lazy").eq(0).attr("src"),
+            _this = $(this),
+            digest = null,
+            title = null;
+        var url = detail_id === "" ? "http://m.mijwed.com" : window.location.host + href + '?limit=10&detail_id=' + detail_id;
+        pic = pic ? pic : "https://files.mijwed.com/default/moren.jpg";
+        if (fn) {
+            var obj = fn(_this);
+            // console.log(obj);
+            digest = obj.digest;
+            title = obj.title;
+        }
+        // console.log(url);
+        soshm.popIn({
+            url: url,
+            title: title.trim(),
+            digest: digest.trim(),
+            pic: pic,
+            sites: ['weixin', 'weixintimeline', 'qq', 'qzone']
+            // sites: ['weixin', 'weixintimeline', 'weibo', 'qzone', 'qq', 'tqq']
+        });
+    });
+}
+
+/*静止body上下滑动*/
+var bodyStaticMove = false;
+document.addEventListener("touchmove", function (event) {
+    var event = event || window.event;
+    if (bodyStaticMove) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+}, false);
+
+// 控制城市字数
+$(function () {
+    var len = $(".sy_cs").text();
+    if (len.length > 3) {
+        var cs = len.trim().substring(0, 3);
+        $(".sy_cs").text(cs);
+    }
+});
+// 判断是不是微信端
+function isWeiXin() {
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+// 提示框
+$('body').append('<div id="l_msg"></div>');
+$('body').append('<div class="showloding" style="display: none;"><div class="showloding-box">上传数据中...</div></div>');
+function msg(_cont, _hun, _ct) {
+    if (!_hun) _hun = "";
+    if (!_ct) _ct = "";
+    $('#l_msg').stop();
+    $('#l_msg').fadeIn().html('<p>' + _cont + '</p><p>' + _hun + '</p><p>' + _ct + '</p>');
+    setTimeout(function () {
+        $('#l_msg').fadeOut();
+    }, 3000)
+}
+
+//出现 隐藏
+function S_H(fa, son, bg) {
+    bounce(fa, bg);
+    $(fa).off('click');
+    $(fa).on("click", function () {
+        bounce(fa, bg);
+    }).find(son).click(function () {
+        return false;
+    })
+}
+var isMoveTrue = false;
+document.addEventListener("touchmove", function (event) {
+    var event = event || window.event;
+    if (isMoveTrue) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+}, false);
+
+function bounce(cl, bg) {
+    $(bg).stop();
+    if ($(cl).hasClass("bounceInUp")) {
+        isMoveTrue = false;
+        $(cl).removeClass("bounceInUp").addClass("bounceOutUp");
+        $(bg).fadeOut(1000);
+    } else {
+        isMoveTrue = true;
+        $(cl).removeClass("bounceOutUp").addClass("bounceInUp").show();
+        $(bg).delay(200).fadeIn();
+    }
+}
+
+
+/*向下滚动封装*/
+$.fn.textSlider = function (settings) {
+    settings = jQuery.extend({
+        speed: settings.speed || "normal",
+        line: 1,
+        timer: settings.duration || 1500
+    }, settings);
+    return this.each(function () {
+        $.fn.textSlider.scllor($(this), settings);
+    });
+};
+$.fn.textSlider.scllor = function ($this, settings) {
+    var ul = $("ul:eq(0)", $this);
+    // var timerID;
+    var li = ul.children();
+    var liHight = $(li[0]).innerHeight();
+    var upHeight = 0 - settings.line * liHight; //滚动的高度；
+    var scrollUp = function () {
+        ul.animate({
+            marginTop: upHeight
+        }, settings.speed, function () {
+            for (i = 0; i < settings.line; i++) {
+                ul.find("li:first", $this).appendTo(ul);
+            }
+            ul.css({
+                marginTop: 0
+            });
+        });
+
+    };
+    // var autoPlay = function () {
+    // timerID = 
+    window.$setInterval = setInterval(scrollUp, settings.timer);
+    // };
+    // var autoStop = function () {
+    //     window.clearInterval(timerID);
+    // };
+    //事件绑定
+    // ul.hover(autoStop, autoPlay).mouseout();
+};
+
+// 访问次数统计
+function trace(json) {
+    var data = { 'url': window.location.href, 'from_type': '3g', 'channel_type': 2, 'area': '默认值-未填写', 'note': '默认值-未填写' }
+    $.post('https://www.mijwed.com/trace.html', $.extend(data, json));
+}
+// 引导下载app按钮 S
+$(function () {
+    //新增唤起app
+    var ua = navigator.userAgent.toLowerCase();
+    var t;
+    //config 配置文件 JS 传递 scheme  客户端进行匹配
+    //scheme_Adr 安卓端必要参数
+    //download_url_Adr 下载地址  timeout 过期时间
+    var config = {
+        //scheme:必须
+        scheme_Adr: 'mijwed://welcome/open',
+        download_url_Adr: 'https://m.mijwed.com/v5/index-downloadUrl',
+        timeout: 50
+    };
+    $appPageAnchor()
+    $("#down_img").on('click', function () {
+        var startTime = Date.now();
+        // 用户点击时，在动态创建一个iframe，并且让这个iframe去加载config中的Schema
+        var ifr = document.createElement('iframe');
+        ifr.src = config.scheme_Adr;
+        ifr.style.display = 'none';
+        document.body.appendChild(ifr);
+        var t = setTimeout(function () {
+            var endTime = Date.now();
+            //指定的时间内没有跳转成功 当前页跳转到apk的下载地址
+            if ((endTime - startTime) < (config.timeout + 200)) {
+                window.location.href = config.download_url_Adr;
+            } else {
+                window.close();
+            }
+        }, config.timeout);
+        window.onblur = function () {
+            clearTimeout(t);
+        }
+        trace({
+            'area': 'app 下载按钮',
+            'note': '页面底部公共下载app按钮'
+        });
+    });
+
+})
+var appDownText = [{
+    "down_textCont": "唯美实景案例随时看",
+    "down_btn": "打开查看",
+    "href": "app_channel_id=3g-ydxzapp",
+}]
+function navHtml(i) {
+    $("#down_new").html(i.down_new);
+    $("#down_textCont").html(i.down_textCont);
+    $("#down_btn").html(i.down_btn);
+    $("#down_img").attr("href", i.href ? ("https://m.mijwed.com/v5/index-downloadUrl?" + i.href) : "https://m.mijwed.com/v5/index-downloadUrl");
+}
+// 引导下载app按钮 E
+
+/**
+ *  app原生登录
+ *  未登录或者不是app内进入 返回对象 is_login： false
+ * 
+ */
+function app_login() {
+    var request = GetRequest();
+    if ($common.isApp) {
+        if (request.uid == "" || request.uid == "0") {
+            if (is_android()) {
+                window.webtonative.goLogin();
+            } else if (is_ios()) {
+                window.webkit.messageHandlers.userlogin.postMessage({
+                    body: ''
+                });
+            }
+        }
+        request.is_login = (request.uid == "" || request.uid == "0") ? false : true;
+    } else {
+        request.is_login = false;
+    }
+    return request;
+}
+
+// swiper形式的下拉选择框
+function selectSwiper(obj) {
+    var _self = this;
+    _self.el = $(obj.el);
+    _self.selectSwiper = null;
+    _self.swiperData = {};
+    _self.swiperData.mustSelect = obj.mustSelect || false;
+    _self.swiperData.activeIndex = (typeof obj.activeIndex === 'number' && obj.activeIndex >= -1) ? obj.activeIndex : -1;
+    _self.swiperData.oldIndex = _self.swiperData.activeIndex;
+    _self.swiperData.data = obj.data || [];
+    _self.swiperData.okFun = obj.okFun;
+    _self.swiperData.okFunUndefind = obj.okFunUndefind || function () { };
+    _self.swiperData.closeFun = obj.closeFun || function () { };
+    _self.swiperData.init = obj.init;
+    var hgSelect =
+        '<div class="swiper-select-box">' +
+        '    <span class="swiper-select-close">取消</span>' +
+        '    <span class="swiper-select-ok">确定</span>' +
+        '    <div class="swiper-select-list">' +
+        '        <div class="swiper-container">' +
+        '            <div class="swiper-select-cloth"></div>' +
+        '            <div class="swiper-wrapper">' +
+        '                <div class="swiper-slide">请选择</div>' +
+        '            </div>' +
+        '        </div>' +
+        '    </div>' +
+        '</div>'
+        ;
+    _self.init = function () {
+        _self.el.html(hgSelect);
+        _self.el.addClass('swiper-select-click-no');
+        _self.selectSwiper = new Swiper(obj.el + ' .swiper-container', {
+            direction: 'vertical',
+            slidesPerView: 4,
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            onInit: function (swiper) {
+                swiper.removeSlide(0);
+                var data = _self.swiperData.data;
+                var s = [];
+                s[0] = '<div class="swiper-slide">请选择</div>';
+                for (i = 0; i < data.length; i++) {
+                    s[i + 1] = '<div class="swiper-slide">' + data[i] + '</div>';
+                }
+                swiper.appendSlide(s);
+                _self.swiperData.init(_self.swiperData.activeIndex);
+            },
+            onSlideChangeEnd: function (swiper) {
+                _self.swiperData.activeIndex = swiper.activeIndex - 1;
+            },
+        });
+        _self.el.find('.swiper-select-ok').on('click', _self.okSelectSwiper);
+        _self.el.find('.swiper-select-close').on('click', function () {
+            _self.swiperData.activeIndex = _self.swiperData.oldIndex;
+            _self.swiperData.closeFun();
+            _self.closeSelectSwiper();
+        });
+        _self.el.on('click', function () {
+            _self.el.find('.swiper-select-close').trigger('click');
+        });
+        $('.swiper-select-box').on('click', function (e) {
+            e.stopPropagation();
+        });
+    };
+    _self.openSelectSwiper = function () {
+        var _self = this;
+        _self.el.addClass('swiper-select-yes');
+        _self.selectSwiper.update();
+        _self.selectSwiper.slideTo(_self.swiperData.activeIndex + 1, 0);
+    };
+    _self.okSelectSwiper = function () {
+        if (_self.swiperData.mustSelect && _self.swiperData.activeIndex === -1) {
+            _self.swiperData.okFunUndefind();
+        } else {
+            _self.swiperData.okFun(_self.swiperData.activeIndex);
+            _self.swiperData.oldIndex = _self.swiperData.activeIndex;
+            _self.closeSelectSwiper();
+        }
+    };
+    _self.closeSelectSwiper = function () {
+        _self.el.removeClass('swiper-select-yes');
+    };
+    _self.init();
+}
+
+var $request = GetRequest();
+
+// 跳到原生酒店详情
+function go_hotel(Hotel_id) {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toHotelPage(Hotel_id);
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toHotelPage.postMessage({
+                body: {
+                    data: Hotel_id
+                }
+            });
+        }
+    }
+}
+
+// 跳到原生案例详情
+function go_case_detail(case_id) {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toCaseDetail(case_id);
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toOwnCase.postMessage({
+                body: {
+                    data: case_id
+                }
+            });
+        }
+    }
+}
+
+// 跳到原生爆款详情
+function go_product(shop_id) {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toDirectProductDetail(shop_id);
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toOwnHot.postMessage({
+                body: {
+                    data: shop_id
+                }
+            });
+        }
+    }
+}
+
+// 跳到原生商家详情
+function go_own_home() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toOwnHome();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toOwnHome.postMessage({
+                body: ''
+            });
+        }
+    }
+}
+
+// 跳到原生商家详情
+function go_shop(shop_id) {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toShopPage(shop_id);
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toShopPage.postMessage({ body: { data: shop_id } });
+        }
+    }
+}
+
+// 跳到原生去发帖详情
+function go_live_show_new() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toLiveShowNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toLiveShowNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 跳到原生去回答
+function go_live_show_question() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toLiveShowQuestion();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toLiveShowQuestion.postMessage({ body: "" });
+        }
+    }
+}
+
+// 跳到原生去发帖
+function go_pulish_note() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toPulishNote();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toPulishNote.postMessage({ body: "" });
+        }
+    }
+}
+
+
+// 去分享
+function goShareLive() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goLiveShowMain();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.shareLive.postMessage({ body: '' });
+        }
+    }
+}
+
+// 去直播
+function goPostLive() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goLiveShowMain();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.postLive.postMessage({ body: '' });
+        }
+    }
+}
+
+// 去邀请
+function goInviteCouple() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goInviteCouple();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.inviteFriend.postMessage({ body: '' });
+        }
+    }
+}
+
+/*
+    2019.08.09 新定义跳转原生APP方法名 Start
+*/
+// 设置婚期：进入原生APP - 我的设置 -  个人资料页
+function goMyFliesNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goMyFliesNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.goMyFliesNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 首次查看婚庆产品：进入原生APP - 直营婚庆产品列表
+function goProductHomeNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goProductHomeNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.goProductHomeNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 首次发表新人说帖子：进入原生APP - 新人说首页
+function goZhiboNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toLiveShowNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toLiveShowNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 首次问答版块提问：进入原生APP - 问答首页
+function goQuestionNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toLiveShowQuestion();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toLiveShowQuestion.postMessage({ body: "" });
+        }
+    }
+}
+
+// 首次参与活动帖子：进入原生APP - 新人说 - 话题列表
+function goZhiboGambitNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goZhiboGambitNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.goZhiboGambitNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 首次分享蜜匠婚礼APP：进入原生APP - 我的 - 设置页面
+function goFliesSetNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goFliesSetNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.goFliesSetNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 查看产品和案例大于2分钟：进入原生APP - 婚庆产品列表
+function goProductCaseNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.toDirectPage();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.toDirectPage.postMessage({ body: "" });
+        }
+    }
+}
+
+// 收藏产品和案例：进入原生APP - 案例列表
+function goCaseHomeNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goCaseHomeNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.goCaseHomeNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 首次立即预约：进入原生APP - 蜜匠产品列表
+function goProductHomeNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goProductHomeNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.goProductHomeNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 完成所有结婚任务：进入原生APP - 工具 - 结婚任务
+function goToolTaskNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goToolTaskNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.goToolTaskNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 首次写酒店评价：进入原生APP - 酒店首页
+function goHotelNew() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goHotelNew();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.goHotelNew.postMessage({ body: "" });
+        }
+    }
+}
+
+// 查看新人故事大于2分钟：进入原生APP - 新人故事
+function goStoryList() {
+    if ($common.isApp) {
+        if (is_android()) {
+            window.webtonative.goStoryList();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.goStoryList.postMessage({ body: "" });
+        }
+    }
+}
+
+// 填写收货地址
+function goUpdateAddress(setAddr) {
+    if ($common.isApp) {
+        if (!setAddr) {
+            setAddr = false
+        }
+        if (is_android()) {
+            window.webtonative.updateAddress(setAddr, "");
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.updateAddress.postMessage({
+                body: setAddr
+            });
+        }
+    }
+}
+
+// 2019.08.09 新定义跳转原生APP方法名 End
+
+// app交互方法 - 2019.12.16之后新增交互方法全部加到 appAlt对象中
+var appAlt = {
+    // 新增app内部下载方法 - 目前只有安卓
+    appGoDownload: function (url) {
+        console.log(url)
+        if (is_android() && window.webtonative && window.webtonative.goDownload) {
+            window.webtonative.goDownload();
+        } else if (is_ios()) {
+            // window.webkit.messageHandlers.updateAddress.postMessage({
+            //     body: ''
+            // });
+            // window.location.href = 'https://apps.apple.com/cn/app/id1472550802'; //此链接不可用--不支持非国行苹果手机
+            window.location.href = 'https://itunes.apple.com/app/id1472550802';
+        } else {
+            window.location.href = url;
+        }
+    }
+}
+
+
+/**
+//  *  原生分享功能
+//  *  1.不传参数为使用所以分享功能
+//  *  2.传参数 - type：分享类型 - share：分享文案-传入字符串json
+//  * 
+//  * model.share_title = dic[@"share_title"];
+//  * model.share_photo = dic[@"share_photo"];
+//  * model.share_content = dic[@"share_content"];
+//  * model.share_link = dic[@"share_link"];
+//  * model.wx_id = dic[@"wx_id"];
+//  * model.wx_path = dic[@"wx_path"];
+//  * 
+**/
+function share_forjs(type, share) {
+    if ($common.isApp) {
+        if (is_android()) {
+            share && type ? window.webtonative.shareForJS(share, type) : window.webtonative.shareForJS();
+        } else if (is_ios()) {
+            var ios_p = share && type ? { data: JSON.parse(share), type: "weixin" } : '';
+            window.webkit.messageHandlers.shareForJS.postMessage({ body: ios_p });
+        }
+    }
+}
+
+/**
+ * app内H5获取锚点参数
+ * 通过URL携带参数
+ * 参数名 => idAnchor || classAnchor
+ * 可带同过参数 idAnchor=元素id
+ * class同理 如果有多个同名class取第一个
+ * 两个参数有同的同时取id
+ *  */
+function $appPageAnchor() {
+    if ($request.idAnchor) {
+        $bodyScrollTop($("#" + $request.idAnchor))
+    } else if ($request.classAnchor) {
+        $bodyScrollTop($("." + $request.classAnchor))
+    }
+}
+
+//跳转咨询
+function goNimConsult(type, url) {
+    var typeDate = JSON.stringify(type);
+    if ($common.isApp) {
+        if (is_android()) {
+            typeof window.webtonative.goNimConsult ? window.webtonative.goNimConsult(typeDate) : window.location.href = url;
+        } else if (is_ios()) {
+            var $goNimConsult = window.webkit.messageHandlers.goNimConsult;
+            typeof $goNimConsult ? $goNimConsult.postMessage({ body: typeDate }) : window.location.href = url;
+        }
+    } else {
+        window.location.href = url
+    }
+}
+
+// 滚动到指定位置
+function $bodyScrollTop(doc) {
+    $('html,body').animate({ scrollTop: doc.offset().top }, 0);
+}
+
+// 判断是否安卓
+function is_android() {
+    return /(Android)/i.test(navigator.userAgent);
+}
+
+// 判断是否ios
+function is_ios() {
+    return /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent);
+}
+
+// 判断是否ios
+function is_weixin() {
+    return navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger";
+}
+
+/**
+ * 微信jsdk 上传图片
+ * success 上传完的回调
+ * dir 指定路径
+ * count 数量
+ *  */
+function wxUpLoadImage(success, dir, count) {
+    var imgList = [];
+    dir = dir ? dir : 'default'
+    count = count ? count : 1;
+    wx.chooseImage({
+        count: count, // 默认9
+        sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有
+        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+        success: function (res) {
+            var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+            for (var index = 0; index < localIds.length; index++) {
+                wx.uploadImage({
+                    localId: localIds[index], // 需要上传的图片的本地ID，由chooseImage接口获得
+                    isShowProgressTips: 1, // 默认为1，显示进度提示
+                    success: function (res) {
+                        var serverId = res.serverId; // 返回图片的服务器端ID
+                        // 通知接口用微信生成的id取到图片传到图片服务器
+                        $.get('https://api.mijwed.com:8080/mijwed/pub/wxapi/media?dirName=' + dir + '&mediaIdList=' + serverId, function (e) {
+                            imgList.push('https://files.mijwed.com/wx/' + dir + '/' + serverId);
+                            count === imgList.length && (success(imgList));
+                        })
+                    }
+                });
+            }
+        },
+        cancel: function (res) { //用户取消
+            // var imgcount = $("#imgcount").val();
+            // cancel(imgcount);
+            console.log(localIds)
+        }
+    });
+}
+
+// 显示加载状态
+function $showloding(text, timer) {
+    text && $('.showloding-box').text(text)
+    $('.showloding').show()
+    timer && setTimeout(function () {
+        $('.showloding').hide()
+    }, timer)
+}
+
+// 隐藏加载状态
+function $hideloding() {
+    $('.showloding').hide()
+}
+
+
+
+// 关闭浏览器就清空
+var $session = {
+    set(key, value) {
+        window.sessionStorage.setItem(key, JSON.stringify(value)) // 设置指定key的数据（JSON格式）
+    },
+    get(key) {
+        return JSON.parse(window.sessionStorage.getItem(key)) // 获取指定key的数据
+    },
+    remove(key) {
+        window.sessionStorage.removeItem(key) // 删除指定key的数据
+    },
+    clear() {
+        window.sessionStorage.clear() // 清空所有的存储数据
+    }
+}
+// 长期
+var $local = {
+    set(key, value) {
+        window.localStorage.setItem(key, JSON.stringify(value)) // 设置指定key的数据（JSON格式）
+    },
+    get(key) {
+        return JSON.parse(window.localStorage.getItem(key)) // 获取指定key的数据
+    },
+    remove(key) {
+        window.localStorage.removeItem(key) // 删除指定key的数据
+    },
+    clear() {
+        window.localStorage.clear() // 清空所有的存储数据
+    }
+}
+
+// app内 兼容存储本地方法
+function appLocalSet(name, value) {
+    if (is_android()) {
+        setCookie(name, value, 7)
+    } else {
+        $local.set(name, value)
+    }
+}
+function appLocalGet(name) {
+    if (is_android()) {
+        return getCookie(name)
+    } else {
+        return $local.get(name)
+    }
+}
+function appLocalRemove(name) {
+    if (is_android()) {
+        removeCookie(name)
+    } else {
+        $local.remove(name)
+    }
+}
+
+/**
+ * 页面加载完毕之后执行
+ * 如果有其他需要页面加载完执行的
+ * 定义 $Wonload 方法
+ * 例如：function $Wonload () {console.log('$Wonload')}
+ */
+window.onload = function () {
+    $appPageAnchor();
+    if (typeof $Wonload === "function") {
+        $Wonload()
+    }
+}
+
+//判断是在APP内并且未登录 2019.09.04
+function inAppNotLogin() {
+    if ($common.isApp && ($request.uid == "" || $request.uid == "0")) {
+        if (is_android()) {
+            window.webtonative.goLogin();
+        } else if (is_ios()) {
+            window.webkit.messageHandlers.userlogin.postMessage({
+                body: ''
+            });
+        }
+        return true;
+    }
+    return false
+}
+
+/**
+ * [通过参数名获取url中的参数值]
+ * 示例URL:m.mijwed.com/activity/wedding-w20191016.html?id=460&channel_type=80&plate_code=0&no53=1&distinct_id=1583718180985-2612657-05c530b284e189-22365832&platform=mp-baidu&MJAPP=baiduMiniprgBPbZ&childtype=mp-baidu
+ * @param  {[string]} queryName [参数名]
+ * @return {[string]}           [参数值]
+ */
+function GetQueryValue1(queryName) {
+    var h5Url = decodeURI(window.location.search);
+    var reg = new RegExp("(^|&)" + queryName + "=([^&]*)(&|$)", "i");
+    var r = h5Url.substr(1).match(reg);
+    if ( r != null ){
+       return decodeURI(r[2]);
+    }else{
+       return null;
+    }
+}
+
+/**
+ * @description: 将url的参数 platform、childtype存储在session中
+ */
+function setAfCtLocal () {
+    var platform  = GetQueryValue1('platform');
+    var childtype = GetQueryValue1('childtype');
+    var channel_type = GetQueryValue1('channel_type');
+    var city_id = GetQueryValue1('city_id');
+    console.log(city_id,'**********')
+    if(platform || childtype || channel_type || city_id) {
+        var platChild = {
+            platform: platform,
+            childtype: childtype,
+            channel_type: channel_type,
+            city_id: city_id
+        }
+        $session.set('AfCtLocal',platChild);
+    }
+}
+
+
+setAfCtLocal();
+/**
+ * @description: shop预约,data里无需传入url,from_type,platform,childtype,传入其它需要的参数
+ * shop预约kind传''，招商预约kind传is_business
+ * @param1: {
+ *      mobile:"电话号码", //招商预约 为 contact: "电话号码"
+ *      note: "备注",
+ *      ...
+ *  }
+ * @return: 请求成功返回res,请求失败返回res.message
+ */
+function shopAppointment (data,kind='',fn) {
+    var path = '/mobile/activity/shop-yuyue.html';
+
+    var ourl = window.location.href;
+    if (kind === 'is_business') {
+        if(ourl.indexOf('zyz') !=-1){
+            path = 'https://zyz.mijwed.com/mobile/business-add.html';
+        }else{
+            path = 'https://www.mijwed.com/mobile/business-add.html';
+        }
+    }
+
+    var shopData = {
+        url: window.location.href,
+        platform: $session.get('AfCtLocal') ? $session.get('AfCtLocal').platform : '',
+        childtype: $session.get('AfCtLocal') ? $session.get('AfCtLocal').childtype : '',
+        channel_type: $session.get('AfCtLocal') ? $session.get('AfCtLocal').channel_type : '' 
+    }
+    if(kind == 'is_business') {
+        data.data.cust_source = '114';
+    }
+    // shopData[custom_type] = $session.get('AfCtLocal') ? $session.get('AfCtLocal').channel_type : ''
+    Object.assign(shopData,data);
+    
+    $.post(path, shopData, function (res) {
+        //四周年活动或者类似处理如下
+        if(window.location.href.indexOf('w20200407') != '-1') {
+            if(typeof fn == "function"){
+                fn(res);
+            }
+            return false;
+        }
+        if(!res.error) {
+            //确保callback是一个函数   
+            if(typeof fn == "function"){
+                fn(res);
+            }
+        }else {
+            msg(res.message);
+        }
+    },'json');
+    
+}

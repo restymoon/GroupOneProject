@@ -1,0 +1,26 @@
+#new_topHeader {
+    height: 120px
+}
+
+#new_topHeader .top-header-bar {
+    height: 120px;
+    width: -webkit-fill-available;
+    line-height: 120px;
+    background-color: #d51111
+}
+
+#new_topHeader .top-header-bar .slogan img {
+    width: 131px
+}
+
+#new_topHeader .menu-into li {
+    margin: 0 10px;
+    height: 120px;
+    font-size: 23px;
+    font-weight: 300
+}
+
+#new_topHeader .menu-into li a {
+    color: #fff;
+    font-size: 23px
+}

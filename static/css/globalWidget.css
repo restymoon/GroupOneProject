@@ -1,0 +1,528 @@
+.new-global-widget {
+    width: 64px;
+    border-radius: 32px;
+    background: #fff;
+    border: 1px solid #eee;
+    position: fixed;
+    right: 10px;
+    bottom: 335px;
+    z-index: 9998
+}
+
+.new-global-widget a {
+    color: #999
+}
+
+.new-global-widget a:hover {
+    color: #666
+}
+
+.new-global-widget .list {
+    width: 64px;
+    height: auto;
+    padding: 5px 0 10px
+}
+
+.new-global-widget .list li {
+    line-height: 20px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    margin-top: 12px
+}
+
+.new-global-widget .list li a {
+    padding-top: 45px;
+    position: relative;
+    display: block
+}
+
+.new-global-widget .list li .hover-show {
+    width: 190px;
+    padding: 0 15px 0 0;
+    position: absolute;
+    top: -90%;
+    left: -205px;
+    display: none;
+    z-index: 9999
+}
+
+.new-global-widget .list li .hover-show .icon {
+    width: 17px;
+    height: 17px;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin: -8px 0;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAA50lEQVRYR83YSw7CMAwE0PjG3ACWbLkpS3ZBRWmrko/tcT7uvs7TVImmoWB8YoyPEMKHiJ6WUWR5OSHuacaNiF7oPBjyh9jXhzEQpIIwYdQQBgFjVBAhAsKIIUqEGiOCgAgVhoUYEWJME9IJIcJUIZ0RLKYIGYRoYjLIYEQVc4FMQhQxB2QyIsP8IIsQFwwtRpwYNxA3n2bPZlEyR5Hyt30nJ5NVSr9H/OBkquXafw3onAz7m8E2tA7nDIvY1hBBDBgRQgUBMGKEGqLAqBAQRIBRI2BIAwMhTJACBkaYIQmzXdC8rRc1X7ZXqPv1cwefAAAAAElFTkSuQmCC") no-repeat center right
+}
+
+.new-global-widget .list li .hover-show .main {
+    width: 120px;
+    height: 100%;
+    min-height: auto;
+    background: #fff;
+    overflow: hidden;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(153, 153, 153, 0.16)
+}
+
+.new-global-widget .list li .hover-show .main .figure-list {
+    float: left;
+    margin: 0 35px;
+    position: relative
+}
+
+.new-global-widget .list li .hover-show .main .figure-list::after {
+    content: "";
+    width: 2px;
+    height: 80px;
+    background: #ccc;
+    position: absolute;
+    top: 15px;
+    left: -35px;
+    opacity: .5
+}
+
+.new-global-widget .list li .hover-show .main .figure-list.no-line::after {
+    width: 0
+}
+
+.new-global-widget .list li .hover-show .main .pic {
+    width: 107px;
+    display: block;
+    margin: 0 auto
+}
+
+.new-global-widget .list li .hover-show .main .text {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px
+}
+
+.new-global-widget .list li .hover-show .main .text .hot {
+    width: 16px;
+    display: inline-block;
+    margin-left: 5px
+}
+
+.new-global-widget .list li .hover-show .main .text .pirce {
+    color: #cd1414
+}
+
+.new-global-widget .list li:hover .hover-show {
+    display: block
+}
+
+.new-global-widget .list li.first {
+    padding-top: 45px;
+    position: relative;
+    display: block;
+    background: url("https://files.mijwed.com/wed/template/brand/kefu.png") no-repeat center top;
+    background-size: 40px 40px
+}
+
+.new-global-widget .list li.first .cover {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 0;
+    margin-left: -20px;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0
+}
+
+.new-global-widget .list li.taobao {
+    background: url("https://files.mijwed.com/wed/template/brand/tmall-1.png") no-repeat center top;
+    background-size: 40px 40px
+}
+
+.new-global-widget .list li.taobao:hover {
+    background: url('https://files.mijwed.com/wed/template/brand/tmall-1-1.png') no-repeat center top;
+    background-size: 40px 40px;
+    color: #666666
+}
+
+.new-global-widget .list li.wechat {
+    padding-top: 45px;
+    position: relative;
+    display: block;
+    background: url("https://files.mijwed.com/wed/template/brand/wechat-1.png") no-repeat center top;
+    background-size: 40px 40px
+}
+
+.new-global-widget .list li.wechat a {
+    padding-top: 0
+}
+
+.new-global-widget .list li.wechat:hover {
+    background: url('https://files.mijwed.com/wed/template/brand/wechat-1-1.png') no-repeat center top;
+    background-size: 40px 40px;
+    color: #666666
+}
+
+.new-global-widget .list li.wechat .hover-show {
+    width: 360px;
+    left: -376px
+}
+
+.new-global-widget .list li.wechat .hover-show .main {
+    width: 360px;
+    min-height: auto;
+    padding: 25px 0
+}
+
+.new-global-widget .list li.app-down {
+    background: url("https://files.mijwed.com/wed/template/home/app-1-1.png") no-repeat center top;
+    background-size: 40px 40px
+}
+
+.new-global-widget .list li.app-down:hover {
+    background: url("https://files.mijwed.com/wed/template/home/app-1-2.png") no-repeat center top;
+    background-size: 40px 40px
+}
+
+.new-global-widget .list li.jisuan {
+    background: url("https://files.mijwed.com/wed/template/brand/calculate-1.png") no-repeat center top;
+    background-size: 40px 40px
+}
+
+.new-global-widget .list li.jisuan:hover {
+    background: url("https://files.mijwed.com/wed/template/brand/calculate-1-1.png") no-repeat center top;
+    background-size: 40px 40px
+}
+
+.new-global-widget .list li.jisuan .hover-show {
+    width: auto;
+    top: 10%;
+    left: -80px
+}
+
+.new-global-widget .list li.jisuan .hover-show .pic {
+    width: 70px
+}
+
+.new-global-widget .list li.to-top {
+    height: 58px;
+    display: none;
+    font-size: 0;
+    border-top: 1px solid #eee;
+    background: url('https://files.mijwed.com/wed/template/brand/top-1.png') no-repeat center 15px;
+    background-size: 40px 40px
+}
+
+.new-global-widget .list li.to-top .hover-show {
+    width: auto;
+    top: 88%;
+    left: -80px
+}
+
+.new-global-widget .list li.to-top .hover-show .pic {
+    width: 70px
+}
+
+.enter-date {
+    z-index: 99999;
+    display: block;
+    width: 66px;
+    height: 271px;
+    position: fixed;
+    left: 10px;
+    top: 250px;
+    background: url("https://files.mijwed.com/wed/template/home/enter.png") no-repeat no-repeat center center;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    padding-top: 22px
+}
+
+.enter-date .tel-icon {
+    width: 41px;
+    height: 41px;
+    margin: 0 auto;
+    animation: bigsmall 1s infinite
+}
+
+.enter-date .tel-icon img {
+    width: 100%;
+    height: 100%
+}
+
+.calculator-init {
+    position: relative;
+    background: #f1f1f1;
+    padding: 95px 0 75px;
+    background: url("https://files.mijwed.com/wed/template/calculator/calculator-bg.png") no-repeat top center;
+    background-size: cover
+}
+
+.calculator-init .calculator-bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.calculator-init .caption-pic {
+    width: 566px;
+    margin: 0 auto 0
+}
+
+.calculator-init .main {
+    width: 974px;
+    min-height: auto;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 304px
+}
+
+.calculator-init .main .calculator-header {
+    width: 928px;
+    min-height: 355px;
+    margin: 0 auto;
+    background: url("https://files.mijwed.com/wed/template/calculator/calculator-header.png") no-repeat top center;
+    background-size: 100%
+}
+
+.calculator-init .main .calculator-header .header, .calculator-init .main .calculator-header .calculator-result {
+    line-height: 38px;
+    padding: 15px 64px 10px 97px;
+    position: relative;
+    text-align: left;
+    display: block;
+    overflow: hidden
+}
+
+.calculator-init .main .calculator-header .header .caption, .calculator-init .main .calculator-header .calculator-result .caption {
+    width: auto;
+    line-height: 38px;
+    font-size: 24px;
+    color: #fff;
+    position: relative;
+    padding: 0 0 10px 36px;
+    vertical-align: middle;
+    font-weight: 600
+}
+
+.calculator-init .main .calculator-header .header .icon, .calculator-init .main .calculator-header .calculator-result .icon {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: -18px 0
+}
+
+.calculator-init .main .calculator-header .header .calculator-number, .calculator-init .main .calculator-header .calculator-result .calculator-number {
+    position: absolute;
+    top: 18px;
+    right: 65px
+}
+
+.calculator-init .main .calculator-header .header .calculator-number .text, .calculator-init .main .calculator-header .calculator-result .calculator-number .text {
+    float: right;
+    font-size: 12px;
+    font-weight: 100;
+    color: #fff
+}
+
+.calculator-init .main .calculator-header .header .calculator-number .proportion-num, .calculator-init .main .calculator-header .calculator-result .calculator-number .proportion-num {
+    float: right;
+    text-align: center;
+    overflow: hidden;
+    position: relative
+}
+
+.calculator-init .main .calculator-header .header .calculator-number .proportion-num .proportion-show, .calculator-init .main .calculator-header .calculator-result .calculator-number .proportion-num .proportion-show {
+    top: -5px
+}
+
+.calculator-init .main .calculator-header .header .calculator-number .proportion-num .num, .calculator-init .main .calculator-header .calculator-result .calculator-number .proportion-num .num {
+    font-size: 24px;
+    color: #FFD84F;
+    font-weight: 600
+}
+
+.calculator-init .main .calculator-header .select-list {
+    display: block;
+    padding: 0 0 0 70px
+}
+
+.calculator-init .main .calculator-header .select-list .list {
+    display: block;
+    float: left;
+    margin: 0 29px;
+    text-align: left;
+    padding-bottom: 24px;
+    position: relative
+}
+
+.calculator-init .main .calculator-header .select-list .list .title {
+    line-height: 35px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+    display: block
+}
+
+.calculator-init .main .calculator-header .select-list .list .text {
+    width: 128px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 3px;
+    font-size: 12px
+}
+
+.calculator-init .main .calculator-header .select-list .list .error {
+    line-height: 18px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.calculator-init .main .calculator-header .calculator-btn {
+    width: 238px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 27px;
+    color: #DC1414;
+    background: #FFD84F;
+    box-shadow: 0 26px 35px 0 rgba(96, 11, 11, 0.2);
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+    display: block;
+    cursor: pointer
+}
+
+.calculator-init .main .calculator-result {
+    width: 734px;
+    margin: 0 auto;
+    padding: 110px 120px 20px;
+    background: url("https://files.mijwed.com/wed/template/calculator/calculator-result.png") no-repeat top center;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.calculator-init .main .calculator-result .calculator-pic {
+    width: 194px;
+    position: absolute;
+    top: 118px;
+    right: 140px
+}
+
+.calculator-init .main .calculator-result .caption {
+    width: auto;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    line-height: 38px;
+    font-size: 24px;
+    position: relative;
+    padding: 0 0 10px 36px;
+    vertical-align: middle;
+    font-weight: 600
+}
+
+.calculator-init .main .calculator-result .icon {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: -18px 0
+}
+
+.calculator-init .main .calculator-result .pirce-all {
+    display: block;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    padding: 10px 0 20px
+}
+
+.calculator-init .main .calculator-result .pirce-all .title {
+    width: 100%;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    display: block
+}
+
+.calculator-init .main .calculator-result .pirce-all .pirce {
+    line-height: 56px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #DC1414
+}
+
+.calculator-init .main .calculator-result .pirce-all .pirce .num {
+    font-size: 42px;
+    font-weight: 600
+}
+
+.calculator-init .main .calculator-result .list {
+    overflow: hidden;
+    margin: 5px -10px;
+    display: block
+}
+
+.calculator-init .main .calculator-result .list li {
+    width: 20%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box
+}
+
+.calculator-init .main .calculator-result .list li .title {
+    width: 100%;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    display: block
+}
+
+.calculator-init .main .calculator-result .list li .pirce {
+    line-height: 32px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #DC1414
+}
+
+.calculator-init .main .calculator-result .list li .pirce .num {
+    font-size: 24px;
+    font-weight: 400;
+    padding-right: 5px
+}
+
+.calculator-init .main .notes {
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ccc;
+    padding: 20px 0 0;
+    display: block
+}
+
+@media screen and (max-height: 760px) {
+    .new-global-widget, .news-global-widget {
+        bottom: 80px
+    }
+}

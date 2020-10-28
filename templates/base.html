@@ -1,0 +1,170 @@
+{% extends 'header.html' %}
+{% load staticfiles %}
+{% block body %}
+<body>
+<!--顶部登陆区域 S-->
+<div class="nav_blank"></div>
+<div id="new_topHeader">
+    <div class="top-header-bar">
+        <div class="inner-wrap clearfix">
+            <!--  slogan -->
+            <h1>
+                <a href="{% url 'wedding:index' %}" class="slogan" style="margin-top: 10px">
+<!--                    https://www.mijwed.com/semsearch-index.html-->
+                    <img src="{% static 'image/logo.png' %}" alt="">
+                </a>
+            </h1>
+            <!-- menu -->
+            <ul class="menu-into rt li-margin">
+                <li>
+                    <a href="{% url 'wedding:index' %}" title="首页">首页</a>
+                </li>
+                <li>
+                    <a href="{% url 'wedding:theme' %}" title="主题婚礼">主题婚礼</a>
+                </li>
+                <li class="hover  ">
+                    <a href="{% url 'wedding:dress' %}" title="婚纱礼服">婚纱礼服</a>
+                </li>
+                <li>
+                    <a href="#" title="婚宴酒店">婚宴酒店</a>
+                </li>
+                <li>
+                    <a href="#" title="婚车租赁">婚车租赁</a>
+                </li>
+                <li>
+                    <a href="#" title="真实案例">真实案例</a>
+                </li>
+                <li>
+                    <a href="#" title="服务团队">服务团队</a>
+                </li>
+                <li>
+                    <a href="#" title="门店环境">门店环境</a>
+                </li>
+                <li>
+                    <a href="#" title="关于蜜匠">关于蜜匠</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--顶部登陆区域 E-->
+
+
+
+{% block function %}
+<!--中部功能区-->
+{% endblock function %}
+
+
+<!-- footer -->
+<div class="fotter-contact">
+    <div class="inner-wrap">
+        <ul>
+            <li><a href="{% url 'wedding:theme' %}">主题婚礼</a></li>
+            <li><a href="#">婚宴酒店</a></li>
+            <li><a href="#">真实客片</a></li>
+            <li><a href="#">门店环境</a></li>
+            <li><a href="{% url 'wedding:dress' %}">婚纱礼服</a></li>
+            <li><a href="#">婚车租赁</a></li>
+            <li><a href="#">服务团队</a></li>
+            <li><a href="#">关于蜜匠</a></li>
+        </ul>
+        <div class="online-kefu" onclick="kefu()">
+            在线客服
+         </div>
+        <div class="contact-phone">
+           <p>24小时服务热线</p>
+           <div>400-099-2169</div>
+        </div>
+    </div>
+</div>
+<div class="global-footer platform-footer" data-hotel="" data-car="">
+    <div class="footer-get">
+        <img src="{% static 'image/footer-get.png' %}" alt="" class="">
+    </div>
+    <div class="redbg">
+        <div class="inner-wrap">
+            <div class="foot1">
+                <p>备婚预算清单</p>
+                <p class="fbg">十秒填写  极速获取</p>
+            </div>
+            </div>
+    </div>
+</div>
+
+<!-- 右侧悬浮 -->
+
+<style>
+    .new-global-widget{
+        width:80px;
+        height: 362px;
+        background: url('https://files.mijwed.com/activity/pcSemSearch/nav.png') no-repeat;
+        background-size: 100% 100%;
+        border: none;
+    }
+    .new-global-widget ul{
+        margin-top: 90px;
+        width: 100%!important;;
+    }
+    .new-global-widget ul li{
+        color: #fff!important;
+    }
+    .new-global-widget ul li img{
+        width:50px;
+        height: 50px;
+    }
+    .to-top{
+        display: block!important;
+        border-top: none!important;
+    }
+    .nav-pop-btn{
+        cursor: pointer;
+    }
+</style>
+{% block righttip %}
+<div class="new-global-widget" band-sensors="sensors-div-297" style="display: none">
+    <ul class="list">
+        <li band-sensors="sensors-li-298">
+            <div class="hot-btn" band-sensors="sensors-div-299">
+                <img src="{% static 'image/hotactivity.png' %}" class="pic" band-sensors="sensors-img-300">
+            </div>
+            热门活动
+        </li>
+        <li band-sensors="sensors-li-298">
+            <div class="hot-btn" band-sensors="sensors-div-299">
+                <img src="{% static 'image/hotactivity.png' %}" class="pic" band-sensors="sensors-img-300">
+            </div>
+            热门活动
+        </li>
+        <li class="to-top" band-sensors="sensors-li-304">
+            <div band-sensors="sensors-div-305">
+                <img src="{% static 'image/totop.png' %}" class="pic" band-sensors="sensors-img-306">
+            </div>
+            返回顶部
+        </li>
+    </ul>
+</div>
+{% endblock righttip %}
+</body>
+{% endblock body %}
+
+{% block bottomfile %}
+<script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+<script type="text/javascript">
+    $(function () {
+        <!-- 返回顶部开始 -->
+        $(window).scroll(function(){
+        if($(window).scrollTop() >= 500){
+            $('.new-global-widget').fadeIn(500); //1000指时间，淡入效果来显示
+        }else{
+            $('.new-global-widget').fadeOut(500);//1000指时间，淡入效果来隐藏
+        }
+    });
+    $('.to-top').click(function(){
+    $('html,body').animate({scrollTop: '0px'},800);//800滑动的速度
+    });
+    <!-- 返回顶部结束 -->
+    })
+</script>
+
+{% endblock %}

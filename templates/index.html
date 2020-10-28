@@ -1,0 +1,928 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block function %}
+    <div class="pc-container" band-sensors="sensors-div-14">
+        <!-- banner -->
+        <div class="banner banner-btn" onclick="kefu()" band-sensors="sensors-div-15" >
+            <img src="{% static 'image/20200306_A37B315844AFBE787F4742D664853FCB.jpg' %}" band-sensors="sensors-img-16">
+        </div>
+        <div band-sensors="sensors-div-17" class="inner-wrap">
+            <!-- 报价 -->
+            <div class="offer" band-sensors="sensors-div-18">
+                <ul>
+                    <li class="li-btn" band-sensors="sensors-li-19">
+                        <p>您的婚期是什么时候？</p>
+                        <div class="question" band-sensors="sensors-div-20">
+                            <span class="spanActive" band-sensors="sensors-span-21">今年</span>
+                            <span band-sensors="sensors-span-22">明年</span>
+                            <span band-sensors="sensors-span-23">待定</span>
+                        </div>
+                    </li>
+                    <li class="li-btn" band-sensors="sensors-li-24">
+                        <p>您筹办的婚礼预算是？</p>
+                        <div class="question" band-sensors="sensors-div-25">
+                            <span class="spanActive" band-sensors="sensors-span-26">5万以下</span>
+                            <span band-sensors="sensors-span-27">5-10万</span>
+                            <span band-sensors="sensors-span-28">10万以上</span>
+                        </div>
+                    </li>
+                    <li class="li-btn" band-sensors="sensors-li-29">
+                        <p>您预计婚宴桌数是？</p>
+                        <div class="question" band-sensors="sensors-div-30">
+                            <span band-sensors="sensors-span-31">10桌（含）以下</span>
+                            <span band-sensors="sensors-span-32">10-20桌</span>
+                            <span class="spanActive" band-sensors="sensors-span-33">20桌以上</span>
+                        </div>
+                    </li>
+                    <li class="li-btn" band-sensors="sensors-li-34">
+                        <img src="{% static 'image/get-price.png' %}" alt="" class="price-btn"
+                             band-sensors="sensors-img-35">
+                        <img src="{% static 'image/adress.png' %}" alt="" class="adress-btn"
+                             band-sensors="sensors-img-36">
+                    </li>
+                </ul>
+            </div>
+            <div class="four-link" band-sensors="sensors-div-37">
+                <a href="#" >
+                    <img src="{% static 'image/form-img1.png' %}" alt="" class="link1-btn lazy" data-animation="fadeIn"
+                         band-sensors="sensors-img-38">
+                </a>
+                <a href="#" >
+                    <img src="{% static 'image/form-img2.png' %}" alt="" class="link2-btn lazy" data-animation="fadeIn"
+                         band-sensors="sensors-img-39">
+                </a>
+                <div band-sensors="sensors-div-40">
+                    <img src="{% static 'image/form-img3.png' %}" alt="" class="link3-btn lazy" data-animation="fadeIn"
+                         band-sensors="sensors-img-41">
+                </div>
+                <a href="#" >
+                    <img src="{% static 'image/form-img4.png' %}" alt="" class="link4-btn lazy" data-animation="fadeIn"
+                         band-sensors="sensors-img-42">
+                </a>
+            </div>
+            <!-- 广告位 -->
+            <div class="six-adsense" band-sensors="sensors-div-43">
+                <img src="{% static 'image/index-title1.png' %}" alt="" class="title" band-sensors="sensors-img-44">
+                <ul>
+                    <li class="li-btn" band-sensors="sensors-li-45">
+                        <a href="#"
+                           > <img src="{% static 'image/20200318_8401DF34ABDA81D333ECD4AE42D427A8.jpg' %}" alt=""
+                                                 class="adv lazy" data-animation="fadeIn" band-sensors="sensors-img-46">
+                        </a>
+                    </li>
+                    <li class="li-btn" band-sensors="sensors-li-47">
+                        <a href="#"
+                           > <img src="{% static 'image/20200318_5CD7E25300CA79468CFBFFE616212A8F.jpg' %}" alt=""
+                                                 class="adv lazy" data-animation="fadeIn" band-sensors="sensors-img-48">
+                        </a>
+                    </li>
+                    <li class="li-btn" band-sensors="sensors-li-49">
+                        <a href="#"
+                           > <img src="{% static 'image/20200319_F6231F9F05D92F75CEE755CBD6847C2D.jpg' %}" alt=""
+                                                 class="adv lazy" data-animation="fadeIn" band-sensors="sensors-img-50">
+                        </a>
+                    </li>
+                    <li class="li-btn" band-sensors="sensors-li-51">
+                        <a href="#"
+                           > <img src="{% static 'image/20200319_B50A6635E48CE16A1AA8DE6F1EA9945D.jpg' %}" alt=""
+                                                 class="adv lazy" data-animation="fadeIn" band-sensors="sensors-img-52">
+                        </a>
+                    </li>
+                    <li class="li-btn" band-sensors="sensors-li-53">
+                        <a href="#"
+                           > <img src="{% static 'image/20200319_95493B505DE26ACDBFC5EB45C9299B9D.jpg' %}" alt=""
+                                                 class="adv lazy" data-animation="fadeIn" band-sensors="sensors-img-54">
+                        </a>
+                    </li>
+                    <li class="li-btn" band-sensors="sensors-li-55">
+                        <a href="#"
+                           > <img src="{% static 'image/20200319_4C5012FFDC2DD9A4227A846797202F7A.jpg' %}" alt=""
+                                                 class="adv lazy" data-animation="fadeIn" band-sensors="sensors-img-56">
+                        </a>
+                    </li>
+                </ul>
+                <div class="adv-link" band-sensors="sensors-div-57">
+                    <span class="more-title-btn" band-sensors="sensors-span-58">
+                        <a href="#" >更多主题&gt;</a></span>
+                    <span class="dingzhi-btn" band-sensors="sensors-span-59">
+                        <a href="#" >我要定制&gt;</a></span>
+                </div>
+            </div>
+
+            <!-- 服务流程 -->
+            <div class="process" band-sensors="sensors-div-60">
+                <img src="{% static 'image/index-title2.png' %}" alt="" class="process-title"
+                     band-sensors="sensors-img-61">
+                <ul class="number-list-inner clearfix">
+                    <li band-sensors="sensors-li-62">
+                    <span class="icon" band-sensors="sensors-span-63">
+                        <img src="{% static 'image/service-list-01.png' %}" alt="咨询预约" band-sensors="sensors-img-64">
+                    </span>
+                        <p class="title">咨询预约</p>
+                        <p class="subtitle">预约附近体验店沟通</p>
+                        <p class="line-bar first-line">
+                            <em class="num">1</em>
+                        </p>
+                    </li>
+                    <li band-sensors="sensors-li-65">
+                    <span class="icon" band-sensors="sensors-span-66">
+                        <img src="{% static 'image/service-list-02.png' %}" alt="选择产品" band-sensors="sensors-img-67">
+                    </span>
+                        <p class="title">选择产品</p>
+                        <p class="subtitle">根据需求预算确定产品服务</p>
+                        <p class="line-bar">
+                            <em class="num">2</em>
+                        </p>
+                    </li>
+                    <li band-sensors="sensors-li-68">
+                    <span class="icon" band-sensors="sensors-span-69">
+                        <img src="{% static 'image/service-list-03.png' %}" alt="签订合同" band-sensors="sensors-img-70">
+                    </span>
+                        <p class="title">签订合同</p>
+                        <p class="subtitle">签订合同及支付合同金</p>
+                        <p class="line-bar">
+                            <em class="num">3</em>
+                        </p>
+                    </li>
+                    <li band-sensors="sensors-li-71">
+                    <span class="icon icon4" band-sensors="sensors-span-72">
+                        <img src="{% static 'image/service-list-04.png' %}" alt="服务团队对接" band-sensors="sensors-img-73">
+                    </span>
+                        <p class="title">服务团队对接</p>
+                        <p class="subtitle">组建团队沟通仪式流程</p>
+                        <p class="line-bar">
+                            <em class="num">4</em>
+                        </p>
+                    </li>
+                    <li band-sensors="sensors-li-74">
+                    <span class="icon" band-sensors="sensors-span-75">
+                        <img src="{% static 'image/service-list-05.png' %}" alt="婚礼彩排" band-sensors="sensors-img-76">
+                    </span>
+                        <p class="title">婚礼彩排</p>
+                        <p class="subtitle">婚礼预演落实流程</p>
+                        <p class="line-bar">
+                            <em class="num">5</em>
+                        </p>
+                    </li>
+                    <li band-sensors="sensors-li-77">
+                    <span class="icon" band-sensors="sensors-span-78">
+                        <img src="{% static 'image/service-list-06.png' %}" alt="婚礼执行" band-sensors="sensors-img-79">
+                    </span>
+                        <p class="title">婚礼执行</p>
+                        <p class="subtitle">确保现场工作完美</p>
+                        <p class="line-bar">
+                            <em class="num">6</em>
+                        </p>
+                    </li>
+                    <li band-sensors="sensors-li-80">
+                    <span class="icon" band-sensors="sensors-span-81">
+                        <img src="{% static 'image/service-list-07.png' %}" alt="后期服务" band-sensors="sensors-img-82">
+                    </span>
+                        <p class="title">后期服务</p>
+                        <p class="subtitle">满意度回访及交付影像作品</p>
+                        <p class="line-bar finally-line">
+                            <em class="num">7</em>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="price-Quotation" band-sensors="sensors-div-83">
+                <a href="#" >
+                    <img src="{% static 'image/huoqu.png' %}" alt="" class="lingqu-btn"
+                         band-sensors="sensors-img-84"></a>
+            </div>
+            <div class="price-Quotation2" band-sensors="sensors-div-85">
+                <div class="p-left" band-sensors="sensors-div-86">
+                    <img src="{% static 'image/20200403_160EABBE48C869B67AAF24DFA2419CFF.png' %}" alt=""
+                         class="lazy mask-img" data-animation="fadeIn" band-sensors="sensors-img-87">
+                    <div class="mask" band-sensors="sensors-div-88">
+                        <p>我们做过的婚礼</p>
+                        <p>还原度不低于95%</p>
+                    </div>
+                </div>
+                <div class="video-tab clearfix" id="homeVideoBox" band-sensors="sensors-div-89">
+                    <!-- <div class="video-play-box fl">
+                        <video id="HomeVideo" src="https://video-mijwed.oss-cn-hangzhou.aliyuncs.com/video/wed3/2020011302.mp4" muted="true" controls controlslist="nodownload" loop></video>
+                    </div> -->
+                    <div class="video-play-box fl" band-sensors="sensors-div-90">
+                        <video id="HomeVideo" width="100%" controls="">
+                            <source src="https://qnvideo.mijwed.com/album/p652838/49VV3ajCvCmeexB1571815908144.mp4"
+                                    type="video/mp4">
+                        </video>
+                        <img src="{% static 'image/20200403_451035F15D19C9D2BC67B5110DBBE730.png' %}" alt=""
+                             class="vedio-cover lazy" data-animation="fadeIn" band-sensors="sensors-img-91">
+                        <img src="{% static 'image/vedio-btn.png' %}" alt="" class="vedio-btn"
+                             band-sensors="sensors-img-92">
+                    </div>
+                </div>
+            </div>
+            <!-- 案例陈列室 -->
+            <div class="inner-wrap case-list-warp clearfix" band-sensors="sensors-div-93">
+                <div class="case-slide-warp fr" band-sensors="sensors-div-94">
+                    <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal"
+                         band-sensors="sensors-div-95">
+                        <div class="swiper-wrapper" band-sensors="sensors-div-96" style="transition-duration: 0ms;">
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                                 band-sensors="sensors-div-137" data-swiper-slide-index="4"
+                                 style="width: 751px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="figure" band-sensors="sensors-div-138">
+                                    <img data-src=""
+                                         src="{% static 'image/20200807_AF109411DB9F85393D06223DDCE7DAF9.jpg' %}"
+                                         class="swiper-lazy lazy" data-animation="fadeIn"
+                                         band-sensors="sensors-img-139">
+                                    <!-- <div class="swiper-lazy-preloader"></div> -->
+                                </div>
+                                <div class="content" band-sensors="sensors-div-140">
+                                    <p class="title">漫长岁月</p>
+                                    <div class="user-list" band-sensors="sensors-div-141">
+                                        <img src="{% static 'image/face_w.png' %}" class="icon"
+                                             band-sensors="sensors-img-142">
+                                        <span class="name" band-sensors="sensors-span-143">手机会员4014</span>
+                                    </div>
+                                    <p class="text">感谢策划团队的所有工作人员为大家呈现一场完美的婚礼，从细节能感受到你们的用心服务！
+                                        摄影师小姐姐超棒！婚礼当天熬到半夜修片，只为了能让我们在这个美好的一天发上朋友圈哈哈哈哈 感恩，感谢！感动！</p>
+                                    <div class="btn-bar" band-sensors="sensors-div-144">
+                                        <a href="#" >
+                                            <span class="news-btn fr" band-sensors="sensors-span-145">查看详情</span>
+                                        </a>
+                                        <span class="news-btn red news-btn-tk" data-name="漫长岁月"
+                                              band-sensors="sensors-span-146">预约到店</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate-next" band-sensors="sensors-div-97"
+                                 data-swiper-slide-index="0"
+                                 style="width: 751px; opacity: 1; transform: translate3d(-751px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="figure" band-sensors="sensors-div-98">
+                                    <img data-src=""
+                                         src="{% static 'image/20200805_7B67773CAFC7A9A2679B395687449DFF.jpg' %}"
+                                         class="swiper-lazy lazy" data-animation="fadeIn" band-sensors="sensors-img-99">
+                                    <!-- <div class="swiper-lazy-preloader"></div> -->
+                                </div>
+                                <div class="content" band-sensors="sensors-div-100">
+                                    <p class="title">如梦令</p>
+                                    <div class="user-list" band-sensors="sensors-div-101">
+                                        <img src="{% static 'image/face_w.png' %}" class="icon"
+                                             band-sensors="sensors-img-102">
+                                        <span class="name" band-sensors="sensors-span-103"></span>
+                                    </div>
+                                    <p class="text">
+                                        婚礼所有的事情终于忙完了，才腾出空来评论，这款产品是定制的，在策划师和我们的交流下仔细得将婚礼现场改变成这样，这是一场独一无二的婚礼，谢谢蜜匠的伙伴。</p>
+                                    <div class="btn-bar" band-sensors="sensors-div-104">
+                                        <a href="#" >
+                                            <span class="news-btn fr" band-sensors="sensors-span-105">查看详情</span>
+                                        </a>
+                                        <span class="news-btn red news-btn-tk" data-name="如梦令"
+                                              band-sensors="sensors-span-106">预约到店</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" band-sensors="sensors-div-107" data-swiper-slide-index="1"
+                                 style="width: 751px; opacity: 1; transform: translate3d(-1502px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="figure" band-sensors="sensors-div-108">
+                                    <img data-src=""
+                                         src="{% static 'image/20200805_AE16849BF72DEDF50F3517BE7185B3C5.jpg' %}"
+                                         class="swiper-lazy lazy" data-animation="fadeIn"
+                                         band-sensors="sensors-img-109">
+                                    <!-- <div class="swiper-lazy-preloader"></div> -->
+                                </div>
+                                <div class="content" band-sensors="sensors-div-110">
+                                    <p class="title">繁花入梦</p>
+                                    <div class="user-list" band-sensors="sensors-div-111">
+                                        <img src="{% static 'image/face_w.png' %}" class="icon"
+                                             band-sensors="sensors-img-112">
+                                        <span class="name" band-sensors="sensors-span-113">手机会员141</span>
+                                    </div>
+                                    <p class="text">环境好，布置得很特别，策划帅哥很热心，工作细致，服务好，以后会介绍朋友的</p>
+                                    <div class="btn-bar" band-sensors="sensors-div-114">
+                                        <a href="#" >
+                                            <span class="news-btn fr" band-sensors="sensors-span-115">查看详情</span>
+                                        </a>
+                                        <span class="news-btn red news-btn-tk" data-name="繁花入梦"
+                                              band-sensors="sensors-span-116">预约到店</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" band-sensors="sensors-div-117" data-swiper-slide-index="2"
+                                 style="width: 751px; opacity: 1; transform: translate3d(-2253px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="figure" band-sensors="sensors-div-118">
+                                    <img data-src=""
+                                         src="{% static 'image/20200916_8FA59EA92938FD5367C2E6C080D209E7.jpg' %}"
+                                         class="swiper-lazy lazy" data-animation="fadeIn"
+                                         band-sensors="sensors-img-119">
+                                    <!-- <div class="swiper-lazy-preloader"></div> -->
+                                </div>
+                                <div class="content" band-sensors="sensors-div-120">
+                                    <p class="title">为爱筑城</p>
+                                    <div class="user-list" band-sensors="sensors-div-121">
+                                        <img src="{% static 'image/face_w.png' %}" class="icon"
+                                             band-sensors="sensors-img-122">
+                                        <span class="name" band-sensors="sensors-span-123">手机会员7170</span>
+                                    </div>
+                                    <p class="text">非常感谢蜜匠婚礼策划，让我有个这么浪漫的婚礼，整个婚礼策划详细，主持人口才非常了的，炒热现场气氛非常好！</p>
+                                    <div class="btn-bar" band-sensors="sensors-div-124">
+                                        <a href="#" >
+                                            <span class="news-btn fr" band-sensors="sensors-span-125">查看详情</span>
+                                        </a>
+                                        <span class="news-btn red news-btn-tk" data-name="为爱筑城"
+                                              band-sensors="sensors-span-126">预约到店</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-prev" band-sensors="sensors-div-127"
+                                 data-swiper-slide-index="3"
+                                 style="width: 751px; opacity: 1; transform: translate3d(-3004px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="figure" band-sensors="sensors-div-128">
+                                    <img data-src=""
+                                         src="{% static 'image/20200916_B26D559600E590DE5DA502CF5D27DC50.jpg' %}"
+                                         class="swiper-lazy lazy" data-animation="fadeIn"
+                                         band-sensors="sensors-img-129">
+                                    <!-- <div class="swiper-lazy-preloader"></div> -->
+                                </div>
+                                <div class="content" band-sensors="sensors-div-130">
+                                    <p class="title">余生</p>
+                                    <div class="user-list" band-sensors="sensors-div-131">
+                                        <img src="{% static 'image/EA6B2EFBDD4255A9F1B3BBC6399B58F4.jpg' %}"
+                                             class="icon" band-sensors="sensors-img-132">
+                                        <span class="name" band-sensors="sensors-span-133">宠爱过了头</span>
+                                    </div>
+                                    <p class="text">
+                                        选择蜜匠婚礼是正确的选择，各方面都蛮不错的，从定下来到结束都很舒服，布置的还原度很高，对接也很细心，这里也要特别感谢统筹，服务很耐心，细心。整个过程下来都觉得很好，很舒服，也感谢主持人，现场流程把控的很好，现场气氛很好，我很满意</p>
+                                    <div class="btn-bar" band-sensors="sensors-div-134">
+                                        <a href="#" >
+                                            <span class="news-btn fr" band-sensors="sensors-span-135">查看详情</span>
+                                        </a>
+                                        <span class="news-btn red news-btn-tk" data-name="余生"
+                                              band-sensors="sensors-span-136">预约到店</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-active" band-sensors="sensors-div-137"
+                                 data-swiper-slide-index="4"
+                                 style="width: 751px; opacity: 1; transform: translate3d(-3755px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="figure" band-sensors="sensors-div-138">
+                                    <img data-src=""
+                                         src="{% static 'image/20200807_AF109411DB9F85393D06223DDCE7DAF9.jpg' %}"
+                                         class="swiper-lazy lazy" data-animation="fadeIn"
+                                         band-sensors="sensors-img-139">
+                                    <!-- <div class="swiper-lazy-preloader"></div> -->
+                                </div>
+                                <div class="content" band-sensors="sensors-div-140">
+                                    <p class="title">漫长岁月</p>
+                                    <div class="user-list" band-sensors="sensors-div-141">
+                                        <img src="{% static 'image/face_w.png' %}" class="icon"
+                                             band-sensors="sensors-img-142">
+                                        <span class="name" band-sensors="sensors-span-143">手机会员4014</span>
+                                    </div>
+                                    <p class="text">感谢策划团队的所有工作人员为大家呈现一场完美的婚礼，从细节能感受到你们的用心服务！
+                                        摄影师小姐姐超棒！婚礼当天熬到半夜修片，只为了能让我们在这个美好的一天发上朋友圈哈哈哈哈 感恩，感谢！感动！</p>
+                                    <div class="btn-bar" band-sensors="sensors-div-144">
+                                        <a href="#" >
+                                            <span class="news-btn fr" band-sensors="sensors-span-145">查看详情</span>
+                                        </a>
+                                        <span class="news-btn red news-btn-tk" data-name="漫长岁月"
+                                              band-sensors="sensors-span-146">预约到店</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-next"
+                                 band-sensors="sensors-div-97" data-swiper-slide-index="0"
+                                 style="width: 751px; opacity: 0; transform: translate3d(-4506px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="figure" band-sensors="sensors-div-98">
+                                    <img data-src=""
+                                         src="{% static 'image/20200805_7B67773CAFC7A9A2679B395687449DFF.jpg' %}"
+                                         class="swiper-lazy lazy" data-animation="fadeIn" band-sensors="sensors-img-99">
+                                    <!-- <div class="swiper-lazy-preloader"></div> -->
+                                </div>
+                                <div class="content" band-sensors="sensors-div-100">
+                                    <p class="title">如梦令</p>
+                                    <div class="user-list" band-sensors="sensors-div-101">
+                                        <img src="{% static 'image/face_w.png' %}" class="icon"
+                                             band-sensors="sensors-img-102">
+                                        <span class="name" band-sensors="sensors-span-103"></span>
+                                    </div>
+                                    <p class="text">
+                                        婚礼所有的事情终于忙完了，才腾出空来评论，这款产品是定制的，在策划师和我们的交流下仔细得将婚礼现场改变成这样，这是一场独一无二的婚礼，谢谢蜜匠的伙伴。</p>
+                                    <div class="btn-bar" band-sensors="sensors-div-104">
+                                        <a href="#" >
+                                            <span class="news-btn fr" band-sensors="sensors-span-105">查看详情</span>
+                                        </a>
+                                        <span class="news-btn red news-btn-tk" data-name="如梦令"
+                                              band-sensors="sensors-span-106">预约到店</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
+                             band-sensors="sensors-div-147"><span class="swiper-pagination-bullet" tabindex="0"
+                                                                  role="button" aria-label="Go to slide 1"
+                                                                  band-sensors="sensors-span-168"></span><span
+                                class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"
+                                band-sensors="sensors-span-169"></span><span class="swiper-pagination-bullet"
+                                                                             tabindex="0" role="button"
+                                                                             aria-label="Go to slide 3"
+                                                                             band-sensors="sensors-span-170"></span><span
+                                class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"
+                                band-sensors="sensors-span-171"></span><span
+                                class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                role="button" aria-label="Go to slide 5" band-sensors="sensors-span-172"></span></div>
+                        <div class="swiper-button-prev" band-sensors="sensors-div-148" tabindex="0" role="button"
+                             aria-label="Previous slide"></div>
+                        <div class="swiper-button-next" band-sensors="sensors-div-149" tabindex="0" role="button"
+                             aria-label="Next slide"></div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"
+                              band-sensors="sensors-span-175"></span></div>
+                    <div class="slide-caption clearfix" band-sensors="sensors-div-150">
+                        <div class="sub-theme fr" band-sensors="sensors-div-151">
+                            <a href="#"
+                               title="石家庄市案例-中式">中式</a>
+                            <em class="line">|</em>
+                            <a href="#"
+                               title="石家庄市案例-唯美">唯美</a>
+                            <em class="line">|</em>
+                            <a href="#" title="石家庄市案例-小清新">小清新</a>
+                            <em class="line">|</em>
+                            <a href="#"
+                               title="石家庄市案例-西式">西式</a>
+                            <em class="line">|</em>
+                            <a href="#" title="石家庄市案例-创意">创意</a>
+                            <em class="line">|</em>
+                            <a href="#" title="石家庄市案例-现代">现代</a>
+                        </div>
+                        <span class="title" band-sensors="sensors-span-152">案例风格 / stlye</span>
+                    </div>
+                </div>
+                <div class="other-caption-bar" band-sensors="sensors-div-153">
+                    <a href="#"  title=""
+                       class="more-btn">查看更多案例&gt;</a>
+                </div>
+            </div>
+            <!--用户好评 S -->
+            <div class="inner-wrap trends-comment-warp clearfix" band-sensors="sensors-div-154">
+
+                <div class="model-warp fl" band-sensors="sensors-div-155">
+                    <div class="caption-bar clearfixe" band-sensors="sensors-div-156">
+                        <div class="caption" band-sensors="sensors-div-157">
+                            用户好评
+                            <span class="sub" band-sensors="sensors-span-158">/ 帮您了解真实客户评价</span>
+                        </div>
+                    </div>
+                    <div class="content-slide comment-slide" band-sensors="sensors-div-159">
+                        <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal"
+                             band-sensors="sensors-div-160">
+                            <div class="swiper-wrapper" band-sensors="sensors-div-161"
+                                 style="transition-duration: 0ms;"><a href="javascript:void(0);"
+                                                                      class="swiper-slide swiper-slide-duplicate swiper-slide-prev"
+                                                                      data-swiper-slide-index="2"
+                                                                      style="width: 380px; transition-duration: 0ms; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                <div class="pic" band-sensors="sensors-div-174">
+                                    <img src="{% static 'image/20180412_A2E0A1048D754F8A3B2F643057D72BDB.jpg' %}" alt=""
+                                         class="lazy" data-animation="fadeIn" band-sensors="sensors-img-175">
+                                </div>
+                                <div class="caption-price clearfix" band-sensors="sensors-div-176">
+                                    你是我心中的绝对C位
+                                </div>
+                                <span class="current-date des" band-sensors="sensors-span-177">高贵优雅  热烈奔放  精致大气</span>
+                                <p class="text">你是我的唯一，你是我心中的绝对C位。选择蜜匠是因为他的性价比，选择Only
+                                    One是喜欢他的寓意。想把最好的一切给我的爱人，所以很感谢蜜匠给了我一场完美的婚礼，希望蜜匠也越来越好。</p>
+                                <dl class="department clearfix">
+                                    <dd class="title">手机会员6282</dd>
+                                    <dd class="subtitle">来自蜜匠APP</dd>
+                                    <dt>
+                                        <div class="icon" band-sensors="sensors-div-178">
+                                            <img src="{% static 'image/face_w.png' %}" band-sensors="sensors-img-179">
+                                        </div>
+                                    </dt>
+                                </dl>
+                            </a>
+                                <a href="javascript:void(0);" class="swiper-slide swiper-slide-active"
+                                   data-swiper-slide-index="0"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 1; transform: translate3d(-380px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-162">
+                                        <img src="{% static 'image/20170825_4B664200AC401B2E97A368141971FBDF.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-163">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-164">
+                                        青山不及你眉长，一生只一个你
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-165">清新浪漫  回归纯真  灵动随性</span>
+                                    <p class="text">
+                                        第一次来店里的时候，策划师很细致的给我们讲解了婚礼布置的特点，征求我们喜欢的风格，然后又给我们提些意见，因为我们年轻人基本不懂，她的专业告诉我，她考虑的很周全，帮我们也是想的很多，婚礼果断定了，接下来的几次流程沟通也帮我们做的很细致，帮我们婚礼当天的行程都安排的很到位，现在布置的真的很喜欢，是我要的效果！很棒！</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">石家庄爱上婚礼道-高</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-166">
+                                                <img src="{% static '132' %}" band-sensors="sensors-img-167">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a>
+                                <a href="javascript:void(0);" class="swiper-slide swiper-slide-next"
+                                   data-swiper-slide-index="1"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 0; transform: translate3d(-760px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-168">
+                                        <img src="{% static 'image/20170825_4B664200AC401B2E97A368141971FBDF.jpg' %}" alt=""
+                                             class="lazy" data-animation="fadeIn" band-sensors="sensors-img-169">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-170">
+                                        空气清甜
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-171">清新浪漫  回归纯真  灵动随性</span>
+                                    <p class="text">
+                                        不得不说我这家婚庆公司选对了！蜜匠婚礼服务和质量真的超棒，给我弄的比我预期的效果要好，虽然价格不高但是布置效果还是杠杠滴！化妆师，摄影师，都挺辛苦的，天没亮就过来工作了，关键和化妆师还挺聊的来，婚礼上司仪主持挺好的，还有自己的节目，现场的气氛非常开心，人很热情，很善良，知道我有身孕，时不时的关心我，结婚嘛，开心是最重要的！</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">安静的小胖纸</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-172">
+                                                <img src="{% static '132(1)' %}" band-sensors="sensors-img-173">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a>
+                                <a href="javascript:void(0);" class="swiper-slide swiper-slide-duplicate-prev"
+                                   data-swiper-slide-index="2"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1140px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-174">
+                                        <img src="{% static 'image/20180412_A2E0A1048D754F8A3B2F643057D72BDB.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-175">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-176">
+                                        你是我心中的绝对C位
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-177">高贵优雅  热烈奔放  精致大气</span>
+                                    <p class="text">你是我的唯一，你是我心中的绝对C位。选择蜜匠是因为他的性价比，选择Only
+                                        One是喜欢他的寓意。想把最好的一切给我的爱人，所以很感谢蜜匠给了我一场完美的婚礼，希望蜜匠也越来越好。</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">手机会员6282</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-178">
+                                                <img src="{% static 'image/face_w.png' %}"
+                                                     band-sensors="sensors-img-179">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a>
+                                <a href="javascript:void(0);"
+                                   class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                                   data-swiper-slide-index="0"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1520px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-162">
+                                        <img src="{% static 'image/20170825_4B664200AC401B2E97A368141971FBDF.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-163">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-164">
+                                        青山不及你眉长，一生只一个你
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-165">清新浪漫  回归纯真  灵动随性</span>
+                                    <p class="text">
+                                        第一次来店里的时候，策划师很细致的给我们讲解了婚礼布置的特点，征求我们喜欢的风格，然后又给我们提些意见，因为我们年轻人基本不懂，她的专业告诉我，她考虑的很周全，帮我们也是想的很多，婚礼果断定了，接下来的几次流程沟通也帮我们做的很细致，帮我们婚礼当天的行程都安排的很到位，现在布置的真的很喜欢，是我要的效果！很棒！</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">石家庄爱上婚礼道-高</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-166">
+                                                <img src="{% static '132' %}" band-sensors="sensors-img-167">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a></div>
+                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
+                                 band-sensors="sensors-div-180"><span
+                                    class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                    role="button" aria-label="Go to slide 1"
+                                    band-sensors="sensors-span-219"></span><span class="swiper-pagination-bullet"
+                                                                                 tabindex="0" role="button"
+                                                                                 aria-label="Go to slide 2"
+                                                                                 band-sensors="sensors-span-220"></span><span
+                                    class="swiper-pagination-bullet" tabindex="0" role="button"
+                                    aria-label="Go to slide 3" band-sensors="sensors-span-221"></span></div>
+                            <div class="swiper-button-prev" band-sensors="sensors-div-181" tabindex="0" role="button"
+                                 aria-label="Previous slide"></div>
+                            <div class="swiper-button-next" band-sensors="sensors-div-182" tabindex="0" role="button"
+                                 aria-label="Next slide"></div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"
+                                  band-sensors="sensors-span-224"></span></div>
+                    </div>
+                </div>
+
+
+                <div class="model-warp fl" band-sensors="sensors-div-183">
+                    <div class="caption-bar clearfixe" band-sensors="sensors-div-184">
+                        <div class="caption" band-sensors="sensors-div-185">
+                            用户好评
+                            <span class="sub" band-sensors="sensors-span-186">/ 帮您了解真实客户评价</span>
+                        </div>
+                    </div>
+                    <div class="content-slide comment-slide" band-sensors="sensors-div-187">
+                        <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal"
+                             band-sensors="sensors-div-188">
+                            <div class="swiper-wrapper" band-sensors="sensors-div-189"
+                                 style="transition-duration: 0ms;"><a href="javascript:void(0);"
+                                                                      class="swiper-slide swiper-slide-duplicate swiper-slide-prev"
+                                                                      data-swiper-slide-index="2"
+                                                                      style="width: 380px; transition-duration: 0ms; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                <div class="pic" band-sensors="sensors-div-202">
+                                    <img src="{% static 'image/20180412_A2E0A1048D754F8A3B2F643057D72BDB.jpg' %}" alt=""
+                                         class="lazy" data-animation="fadeIn" band-sensors="sensors-img-203">
+                                </div>
+                                <div class="caption-price clearfix" band-sensors="sensors-div-204">
+                                    二三事，一个你
+                                </div>
+                                <span class="current-date des" band-sensors="sensors-span-205">高贵优雅  热烈奔放  精致大气</span>
+                                <p class="text">
+                                    真的感到非常荣幸遇到蜜匠婚礼。无论前期还是婚礼当天。婚庆公司给到了不少的建议。特别感谢策划师小姐姐。由于是慢性子。每个环节都靠着婚礼策划师善意提醒。且不管路途远近都抽出时间来和我们敲方案。设身处地帮我们节约成本同时帮忙出效果。策划师人小力量大。特能吃苦。各方面都为你考虑周全。非常赞。婚礼实际效果也很不错。圆了我的婚礼梦。非常感谢。赞赞赞。效果就见图片啦，真实又浪漫～</p>
+                                <dl class="department clearfix">
+                                    <dd class="title">嘀嘀嘀</dd>
+                                    <dd class="subtitle">来自蜜匠APP</dd>
+                                    <dt>
+                                        <div class="icon" band-sensors="sensors-div-206">
+                                            <img src="{% static '132(2)' %}" band-sensors="sensors-img-207">
+                                        </div>
+                                    </dt>
+                                </dl>
+                            </a>
+                                <a href="javascript:void(0);" class="swiper-slide swiper-slide-active"
+                                   data-swiper-slide-index="0"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 1; transform: translate3d(-380px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-190">
+                                        <img src="{% static 'image/20190616_99B00EFDE37A55C0B06AB81BD1568FEB.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-191">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-192">
+                                        深情
+                                    </div>
+                                    <span class="current-date des" band-sensors="sensors-span-193">经典浪漫 复古轻奢 简约时尚</span>
+                                    <p class="text">
+                                        整体都非常好，地方特别容易找。我着重看了二楼的婚纱馆，女孩子一般都婚纱都有很大的想象感，六楼是婚庆策划，跟新人之间得策划之地，小姐姐热情到位的给我全程介绍，让我觉得特别安心，结婚肯定首选蜜匠婚礼！</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">手机会员5387</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-194">
+                                                <img src="{% static 'image/face_w.png' %}"
+                                                     band-sensors="sensors-img-195">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a>
+                                <a href="javascript:void(0);" class="swiper-slide swiper-slide-next"
+                                   data-swiper-slide-index="1"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 0; transform: translate3d(-760px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-196">
+                                        <img src="{% static 'image/20181203_DE857B00913C6A06A20FC2DB99BE8C3B.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-197">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-198">
+                                        玫瑰里的极致浪漫
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-199">浪漫饱满  灵动甜蜜  跳跃曲线美</span>
+                                    <p class="text">
+                                        婚礼现场很精致，玫瑰超大，但是不会觉得很突兀，加了点预算，加了个顶，也很好看，不会显得秃秃的。柴玉小姐姐很负责，人也超好，想办婚礼的可以去蜜匠婚礼找她哦！</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">没有目的的疯子</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-200">
+                                                <img src="{% static '132(3)' %}" band-sensors="sensors-img-201">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a>
+                                <a href="javascript:void(0);" class="swiper-slide swiper-slide-duplicate-prev"
+                                   data-swiper-slide-index="2"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1140px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-202">
+                                        <img src="{% static 'image/20180412_A2E0A1048D754F8A3B2F643057D72BDB.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-203">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-204">
+                                        二三事，一个你
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-205">高贵优雅  热烈奔放  精致大气</span>
+                                    <p class="text">
+                                        真的感到非常荣幸遇到蜜匠婚礼。无论前期还是婚礼当天。婚庆公司给到了不少的建议。特别感谢策划师小姐姐。由于是慢性子。每个环节都靠着婚礼策划师善意提醒。且不管路途远近都抽出时间来和我们敲方案。设身处地帮我们节约成本同时帮忙出效果。策划师人小力量大。特能吃苦。各方面都为你考虑周全。非常赞。婚礼实际效果也很不错。圆了我的婚礼梦。非常感谢。赞赞赞。效果就见图片啦，真实又浪漫～</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">嘀嘀嘀</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-206">
+                                                <img src="{% static '132(2)' %}" band-sensors="sensors-img-207">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a>
+                                <a href="javascript:void(0);"
+                                   class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                                   data-swiper-slide-index="0"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1520px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-190">
+                                        <img src="{% static 'image/20190616_99B00EFDE37A55C0B06AB81BD1568FEB.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-191">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-192">
+                                        深情
+                                    </div>
+                                    <span class="current-date des" band-sensors="sensors-span-193">经典浪漫 复古轻奢 简约时尚</span>
+                                    <p class="text">
+                                        整体都非常好，地方特别容易找。我着重看了二楼的婚纱馆，女孩子一般都婚纱都有很大的想象感，六楼是婚庆策划，跟新人之间得策划之地，小姐姐热情到位的给我全程介绍，让我觉得特别安心，结婚肯定首选蜜匠婚礼！</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">手机会员5387</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-194">
+                                                <img src="{% static 'image/face_w.png' %}"
+                                                     band-sensors="sensors-img-195">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a></div>
+                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
+                                 band-sensors="sensors-div-208"><span
+                                    class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                    role="button" aria-label="Go to slide 1"
+                                    band-sensors="sensors-span-263"></span><span class="swiper-pagination-bullet"
+                                                                                 tabindex="0" role="button"
+                                                                                 aria-label="Go to slide 2"
+                                                                                 band-sensors="sensors-span-264"></span><span
+                                    class="swiper-pagination-bullet" tabindex="0" role="button"
+                                    aria-label="Go to slide 3" band-sensors="sensors-span-265"></span></div>
+                            <div class="swiper-button-prev" band-sensors="sensors-div-209" tabindex="0" role="button"
+                                 aria-label="Previous slide"></div>
+                            <div class="swiper-button-next" band-sensors="sensors-div-210" tabindex="0" role="button"
+                                 aria-label="Next slide"></div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"
+                                  band-sensors="sensors-span-268"></span></div>
+                    </div>
+                </div>
+
+
+                <div class="model-warp fl" band-sensors="sensors-div-211">
+                    <div class="caption-bar clearfixe" band-sensors="sensors-div-212">
+                        <div class="caption" band-sensors="sensors-div-213">
+                            用户好评
+                            <span class="sub" band-sensors="sensors-span-214">/ 帮您了解真实客户评价</span>
+                        </div>
+                    </div>
+                    <div class="content-slide comment-slide" band-sensors="sensors-div-215">
+                        <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal"
+                             band-sensors="sensors-div-216">
+                            <div class="swiper-wrapper" band-sensors="sensors-div-217"
+                                 style="transition-duration: 0ms;"><a href="javascript:void(0);"
+                                                                      class="swiper-slide swiper-slide-duplicate swiper-slide-prev"
+                                                                      data-swiper-slide-index="2"
+                                                                      style="width: 380px; transition-duration: 0ms; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                <div class="pic" band-sensors="sensors-div-230">
+                                    <img src="{% static 'image/20170825_4B664200AC401B2E97A368141971FBDF.jpg' %}" alt=""
+                                         class="lazy" data-animation="fadeIn" band-sensors="sensors-img-231">
+                                </div>
+                                <div class="caption-price clearfix" band-sensors="sensors-div-232">
+                                    我只是遇见了你，你却闯进了我心里
+                                </div>
+                                <span class="current-date des" band-sensors="sensors-span-233">清新浪漫  回归纯真  灵动随性</span>
+                                <p class="text">
+                                    生活需要仪式感，人生一次的结婚大事更需要仪式感，要让这幸福的瞬间，不只是惊艳了时光，更能温柔了岁月。选择蜜匠婚礼，是明智且正确的，哈哈哈，在人生回首的时候，是很靓很美的记忆。蜜匠婚礼，是一家非常专业的婚礼策划公司。当初选择了好久最终选择了蜜匠，当时还有些担心会搞不好，现在看来我的担心是多余的了，非常的满意。公司的策划、摄影师、化妆师等都非常的专业，态度都特别热情，而且都很有耐心，总之一切都非常满意，值得推荐....不负时光
+                                    不负遇见 不负有心人。</p>
+                                <dl class="department clearfix">
+                                    <dd class="title">嘿~来块儿巧克力</dd>
+                                    <dd class="subtitle">来自蜜匠APP</dd>
+                                    <dt>
+                                        <div class="icon" band-sensors="sensors-div-234">
+                                            <img src="{% static '132(4)' %}" band-sensors="sensors-img-235">
+                                        </div>
+                                    </dt>
+                                </dl>
+                            </a>
+                                <a href="javascript:void(0);" class="swiper-slide swiper-slide-active"
+                                   data-swiper-slide-index="0"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 1; transform: translate3d(-380px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-218">
+                                        <img src="{% static 'image/20171117_5E08F074F6CFE2D204DEAD8F1DD00537.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-219">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-220">
+                                        礼娶
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-221">中式典雅  古风韵律  诗书如画</span>
+                                    <p class="text">
+                                        特别棒的团队！因为一直在海外，所以在初期选择婚庆公司时有点担心，事实证明了蜜匠是一支非常优秀，真诚，专业，贴心的团队！从1月份开始咨询，沟通想法，到3月确定下来整套方案，都是通过微信和视频。特别感谢策划在这个过程中付出的时间与心血，正是因为这几个月不间断的沟通和了解，才让这场婚礼完全符合我的想法，更是超出了我的预期，
+                                        也特别感谢优秀的司仪与摄影团队，正是因为你们才让我的婚礼更加完整！</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">grit</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-222">
+                                                <img src="{% static 'g' %}" band-sensors="sensors-img-223">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a>
+                                <a href="javascript:void(0);" class="swiper-slide swiper-slide-next"
+                                   data-swiper-slide-index="1"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 0; transform: translate3d(-760px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-224">
+                                        <img src="{% static 'image/20170921_0E5467244240694AA71234A14B65B02A.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-225">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-226">
+                                        梦如你，宿命是你
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-227">灵动自然  梦幻唯美  清爽纯净</span>
+                                    <p class="text">
+                                        筹备婚礼的时候就想着要找审美水平在线的，不要乱七八糟的染色灯打出来的照骗效果。一定要现场和图片保持一致。看了蜜匠的几个案例，和策划师聊了一次基本就确定是他们了，之后的沟通都很顺利，找一个靠谱又值得信任的的婚庆，真的可以省很多力气！最后婚礼当天天气很好，看到效果，所有来参加婚礼的人都被惊艳到。再过五年，十年，这都是我不会忘记的独家回忆。</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">Sim!伺櫁</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-228">
+                                                <img src="{% static '132(5)' %}" band-sensors="sensors-img-229">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a>
+                                <a href="javascript:void(0);" class="swiper-slide swiper-slide-duplicate-prev"
+                                   data-swiper-slide-index="2"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1140px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-230">
+                                        <img src="{% static 'image/20170825_4B664200AC401B2E97A368141971FBDF.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-231">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-232">
+                                        我只是遇见了你，你却闯进了我心里
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-233">清新浪漫  回归纯真  灵动随性</span>
+                                    <p class="text">
+                                        生活需要仪式感，人生一次的结婚大事更需要仪式感，要让这幸福的瞬间，不只是惊艳了时光，更能温柔了岁月。选择蜜匠婚礼，是明智且正确的，哈哈哈，在人生回首的时候，是很靓很美的记忆。蜜匠婚礼，是一家非常专业的婚礼策划公司。当初选择了好久最终选择了蜜匠，当时还有些担心会搞不好，现在看来我的担心是多余的了，非常的满意。公司的策划、摄影师、化妆师等都非常的专业，态度都特别热情，而且都很有耐心，总之一切都非常满意，值得推荐....不负时光
+                                        不负遇见 不负有心人。</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">嘿~来块儿巧克力</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-234">
+                                                <img src="{% static '132(4)' %}" band-sensors="sensors-img-235">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a>
+                                <a href="javascript:void(0);"
+                                   class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                                   data-swiper-slide-index="0"
+                                   style="width: 380px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1520px, 0px, 0px);">
+                                    <div class="pic" band-sensors="sensors-div-218">
+                                        <img src="{% static 'image/20171117_5E08F074F6CFE2D204DEAD8F1DD00537.jpg' %}"
+                                             alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-219">
+                                    </div>
+                                    <div class="caption-price clearfix" band-sensors="sensors-div-220">
+                                        礼娶
+                                    </div>
+                                    <span class="current-date des"
+                                          band-sensors="sensors-span-221">中式典雅  古风韵律  诗书如画</span>
+                                    <p class="text">
+                                        特别棒的团队！因为一直在海外，所以在初期选择婚庆公司时有点担心，事实证明了蜜匠是一支非常优秀，真诚，专业，贴心的团队！从1月份开始咨询，沟通想法，到3月确定下来整套方案，都是通过微信和视频。特别感谢策划在这个过程中付出的时间与心血，正是因为这几个月不间断的沟通和了解，才让这场婚礼完全符合我的想法，更是超出了我的预期，
+                                        也特别感谢优秀的司仪与摄影团队，正是因为你们才让我的婚礼更加完整！</p>
+                                    <dl class="department clearfix">
+                                        <dd class="title">grit</dd>
+                                        <dd class="subtitle">来自蜜匠APP</dd>
+                                        <dt>
+                                            <div class="icon" band-sensors="sensors-div-222">
+                                                <img src="{% static 'g' %}" band-sensors="sensors-img-223">
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </a></div>
+                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
+                                 band-sensors="sensors-div-236"><span
+                                    class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                    role="button" aria-label="Go to slide 1"
+                                    band-sensors="sensors-span-307"></span><span class="swiper-pagination-bullet"
+                                                                                 tabindex="0" role="button"
+                                                                                 aria-label="Go to slide 2"
+                                                                                 band-sensors="sensors-span-308"></span><span
+                                    class="swiper-pagination-bullet" tabindex="0" role="button"
+                                    aria-label="Go to slide 3" band-sensors="sensors-span-309"></span></div>
+                            <div class="swiper-button-prev" band-sensors="sensors-div-237" tabindex="0" role="button"
+                                 aria-label="Previous slide"></div>
+                            <div class="swiper-button-next" band-sensors="sensors-div-238" tabindex="0" role="button"
+                                 aria-label="Next slide"></div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"
+                                  band-sensors="sensors-span-312"></span></div>
+                    </div>
+                </div>
+            </div>
+            <!--用户好评 E-->
+        </div>
+    </div>
+{% endblock function %}
