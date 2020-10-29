@@ -88,8 +88,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'GroupOneProject',
         'USER':'root',
-        'PASSWORD':'Root@123',
-        'HOST':'192.168.72.129',
+        'PASSWORD':'Hzz1282166818',
+        'HOST':'121.36.55.18',
         'PORT':3306
     }
 }
