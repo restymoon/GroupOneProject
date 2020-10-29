@@ -1,5 +1,6 @@
 from django.db import models
 from db.base_model import BaseModel
+#这是婚车
 
 
 # Create your models here.
