@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aad4ed47-69fb-461a-9524-95d3b57d1603" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupOneProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GroupOneProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/car/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/car/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/car/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/car/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/example/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/example/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/hotel/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/hotel/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/team/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/team/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wedding/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wedding/admin.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,8 +126,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="89" column="22" lean-forward="true" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+            <state relative-caret-position="222">
+              <caret line="91" column="30" lean-forward="true" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -176,6 +168,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -215,8 +210,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="470" />
-    <option name="y" value="70" />
+    <option name="x" value="451" />
+    <option name="y" value="22" />
     <option name="width" value="1275" />
     <option name="height" value="1040" />
   </component>
@@ -323,15 +318,23 @@
       <workItem from="1603893688274" duration="17000" />
       <workItem from="1603939007244" duration="31000" />
       <workItem from="1603939065730" duration="7002000" />
-      <workItem from="1603970672485" duration="5419000" />
+      <workItem from="1603970672485" duration="5607000" />
     </task>
+    <task id="LOCAL-00001" summary="修改数据库配置">
+      <created>1603979223075</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603979223075</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60718000" />
+    <option name="totallyTimeSpent" value="60906000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="376" y="56" width="1020" height="832" extended-state="1" />
+    <frame x="361" y="18" width="1020" height="832" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.34095633" />
@@ -359,6 +362,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改数据库配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改数据库配置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/apps/wedding/apps.py">
@@ -694,8 +701,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="89" column="22" lean-forward="true" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+        <state relative-caret-position="222">
+          <caret line="91" column="30" lean-forward="true" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
         </state>
       </provider>
     </entry>
