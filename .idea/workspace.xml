@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aad4ed47-69fb-461a-9524-95d3b57d1603" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupOneProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GroupOneProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/car/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/car/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/car/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/car/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/example/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/example/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/hotel/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/hotel/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/team/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/team/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wedding/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wedding/admin.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/car/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="100">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -131,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="89" column="22" lean-forward="true" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+            <state relative-caret-position="1272">
+              <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -176,6 +169,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -205,18 +201,18 @@
         <option value="$PROJECT_DIR$/apps/team/models.py" />
         <option value="$PROJECT_DIR$/apps/wedding/models.py" />
         <option value="$PROJECT_DIR$/apps/car/admin.py" />
-        <option value="$PROJECT_DIR$/apps/car/models.py" />
         <option value="$PROJECT_DIR$/apps/example/admin.py" />
         <option value="$PROJECT_DIR$/apps/hotel/admin.py" />
         <option value="$PROJECT_DIR$/apps/team/admin.py" />
         <option value="$PROJECT_DIR$/apps/wedding/admin.py" />
         <option value="$PROJECT_DIR$/GroupOneProject/settings.py" />
+        <option value="$PROJECT_DIR$/apps/car/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="470" />
-    <option name="y" value="70" />
+    <option name="x" value="451" />
+    <option name="y" value="22" />
     <option name="width" value="1275" />
     <option name="height" value="1040" />
   </component>
@@ -237,6 +233,12 @@
               <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="car" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -323,21 +325,37 @@
       <workItem from="1603893688274" duration="17000" />
       <workItem from="1603939007244" duration="31000" />
       <workItem from="1603939065730" duration="7002000" />
-      <workItem from="1603970672485" duration="5419000" />
+      <workItem from="1603970672485" duration="6646000" />
     </task>
+    <task id="LOCAL-00001" summary="修改数据库配置">
+      <created>1603979223075</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603979223075</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改数据库配置">
+      <created>1603979397381</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603979397381</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60718000" />
+    <option name="totallyTimeSpent" value="61945000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="376" y="56" width="1020" height="832" extended-state="1" />
+    <frame x="361" y="18" width="1020" height="832" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.34095633" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.34095633" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.42857143" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.42857143" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32863188" />
@@ -359,6 +377,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改数据库配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改数据库配置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/apps/wedding/apps.py">
@@ -612,16 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/car/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/example/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -694,8 +706,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="89" column="22" lean-forward="true" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+        <state relative-caret-position="1272">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/car/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
