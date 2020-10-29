@@ -13,3 +13,6 @@ def dress(request):
 
 def theme(request):
     return render(request,"Wedding_theme.html")
+
+def hotel(request):
+    return render(request,"hotel.html")

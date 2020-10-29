@@ -20,4 +20,5 @@ urlpatterns = [
     url(r"^test$",views.test,name="test"),#test
     url(r"^dress$",views.dress,name="dress"),
     url(r"^theme$",views.theme,name="theme"),
+    url(r"^hotel$",views.hotel,name="hotel"),
 ]
