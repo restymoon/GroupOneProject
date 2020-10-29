@@ -29,7 +29,7 @@ class CarType(BaseModel):
 
     class Meta:
         db_table = "df_car_type"
-        verbose_name = "商品SPU"
+        verbose_name = "车型"
         verbose_name_plural = verbose_name
 
 
