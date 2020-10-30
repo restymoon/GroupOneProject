@@ -16,5 +16,5 @@ Including another URLconf
 from wedding import views
 from django.conf.urls import url
 urlpatterns = [
-    url(r"^$",views.index,name="index"),#婚车页面
+    url(r"^$",views.car,name="car"),#婚车页面
 ]

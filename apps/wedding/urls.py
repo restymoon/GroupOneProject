@@ -15,8 +15,9 @@ Including another URLconf
 """
 from wedding import views
 from django.conf.urls import url
+
 urlpatterns = [
-    url(r"^$",views.index,name="index"),#首页
-    url(r"^dress/",views.dress,name="dress"),
-    url(r"^theme/",views.theme,name="theme"),
+    url(r"^$", views.index, name="index"),  # 首页
+    url(r"^dress/", views.dress, name="dress"),
+    url(r"^theme/", views.theme, name="theme"),
 ]
