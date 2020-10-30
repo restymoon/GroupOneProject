@@ -146,9 +146,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="PUSH_TAGS">
-      <GitPushTagMode />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -195,8 +192,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="667" />
-    <option name="y" value="57" />
+    <option name="x" value="591" />
+    <option name="y" value="31" />
     <option name="width" value="1275" />
     <option name="height" value="1040" />
   </component>
@@ -346,7 +343,7 @@
       <workItem from="1603939007244" duration="31000" />
       <workItem from="1603939065730" duration="7002000" />
       <workItem from="1603970672485" duration="6954000" />
-      <workItem from="1604028987183" duration="5288000" />
+      <workItem from="1604028987183" duration="5690000" />
     </task>
     <task id="LOCAL-00001" summary="修改数据库配置">
       <created>1603979223075</created>
@@ -383,22 +380,28 @@
       <option name="project" value="LOCAL" />
       <updated>1604040333420</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="配置url">
+      <created>1604040778434</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604040778434</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67541000" />
+    <option name="totallyTimeSpent" value="67943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="356" y="15" width="1020" height="832" extended-state="0" />
-    <editor active="true" />
+    <frame x="402" y="10" width="1020" height="832" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18814969" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18814969" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4989605" weight="0.19857143" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010395" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="2" sideWeight="0.5010395" side_tool="true" visible="true" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.4989605" visible="true" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32863188" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
