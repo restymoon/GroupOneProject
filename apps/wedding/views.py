@@ -16,3 +16,6 @@ def environment(request):
 
 def about(request):
     return render(request,"about.html")
+
+def theme_details(request):
+    return render(request,"theme_details.html")

@@ -22,4 +22,5 @@ urlpatterns = [
     url(r"^theme/", views.theme, name="theme"),
     url(r"^environment/", views.environment, name="environment"),
     url(r"^about/", views.about, name="about"),
+    url(r"^details/", views.theme_details, name="details"),
 ]
