@@ -14,25 +14,25 @@
                     <li class="li-btn" band-sensors="sensors-li-19">
                         <p>您的婚期是什么时候？</p>
                         <div class="question" band-sensors="sensors-div-20">
-                            <span class="spanActive" band-sensors="sensors-span-21">今年</span>
-                            <span band-sensors="sensors-span-22">明年</span>
-                            <span band-sensors="sensors-span-23">待定</span>
+                            <span id="this_year" class="spanActive" band-sensors="sensors-span-21">今年</span>
+                            <span id="next_year" band-sensors="sensors-span-22">明年</span>
+                            <span id="undetermined" band-sensors="sensors-span-23">待定</span>
                         </div>
                     </li>
                     <li class="li-btn" band-sensors="sensors-li-24">
                         <p>您筹办的婚礼预算是？</p>
                         <div class="question" band-sensors="sensors-div-25">
-                            <span class="spanActive" band-sensors="sensors-span-26">5万以下</span>
-                            <span band-sensors="sensors-span-27">5-10万</span>
-                            <span band-sensors="sensors-span-28">10万以上</span>
+                            <span id="wuwan" class="spanActive" band-sensors="sensors-span-26">5万以下</span>
+                            <span id="wuwan-shiwan" band-sensors="sensors-span-27">5-10万</span>
+                            <span id="shiwan" band-sensors="sensors-span-28">10万以上</span>
                         </div>
                     </li>
                     <li class="li-btn" band-sensors="sensors-li-29">
                         <p>您预计婚宴桌数是？</p>
                         <div class="question" band-sensors="sensors-div-30">
-                            <span band-sensors="sensors-span-31">10桌（含）以下</span>
-                            <span band-sensors="sensors-span-32">10-20桌</span>
-                            <span class="spanActive" band-sensors="sensors-span-33">20桌以上</span>
+                            <span id="shidesk" band-sensors="sensors-span-31">10桌（含）以下</span>
+                            <span id="shi-ershidesk" band-sensors="sensors-span-32">10-20桌</span>
+                            <span id="ershidesk" class="spanActive" band-sensors="sensors-span-33">20桌以上</span>
                         </div>
                     </li>
                     <li class="li-btn" band-sensors="sensors-li-34">
@@ -926,3 +926,62 @@
         </div>
     </div>
 {% endblock function %}
+{% block texiao %}
+   <script type="text/javascript">
+    $(function () {
+        // 首页婚期单击特效
+        $("#this_year").click(function () {
+            $(this).addClass('spanActive');
+            $('#next_year').removeClass('spanActive');
+            $('#undetermined').removeClass('spanActive');
+        });
+
+       $("#next_year").bind("click",function(){
+           $(this).addClass('spanActive');
+           $('#this_year').removeClass("spanActive");
+           $('#undetermined').removeClass('spanActive');
+       });
+       $("#undetermined").click(function () {
+            $(this).addClass('spanActive');
+            $('#this_year').removeClass('spanActive');
+            $('#next_year').removeClass('spanActive');
+        });
+       // 首页预算单击特效
+       $("#wuwan").click(function () {
+            $(this).addClass('spanActive');
+            $('#wuwan-shiwan').removeClass('spanActive');
+            $('#shiwan').removeClass('spanActive');
+        });
+
+       $("#wuwan-shiwan").bind("click",function(){
+           $(this).addClass('spanActive');
+           $('#wuwan').removeClass("spanActive");
+           $('#shiwan').removeClass('spanActive');
+       });
+       $("#shiwan").click(function () {
+            $(this).addClass('spanActive');
+            $('#wuwan-shiwan').removeClass('spanActive');
+            $('#wuwan').removeClass('spanActive');
+        });
+        // 首页婚宴桌数单击特效
+       $("#shidesk").click(function () {
+            $(this).addClass('spanActive');
+            $('#shi-ershidesk').removeClass('spanActive');
+            $('#ershidesk').removeClass('spanActive');
+        });
+
+       $("#shi-ershidesk").bind("click",function(){
+           $(this).addClass('spanActive');
+           $('#shidesk').removeClass("spanActive");
+           $('#ershidesk').removeClass('spanActive');
+       });
+       $("#ershidesk").click(function () {
+            $(this).addClass('spanActive');
+            $('#shidesk').removeClass('spanActive');
+            $('#shi-ershidesk').removeClass('spanActive');
+        });
+
+    })
+
+</script>
+{% endblock texiao %}
