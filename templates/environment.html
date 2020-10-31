@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block function %}
+<link rel="stylesheet" href="/static/css/store.css" type="text/css">
+<div class="pc-container" band-sensors="sensors-div-14">
+
+    <!-- 门店环境 -->
+    <div class="inner-wrap clearfix" band-sensors="sensors-div-15">
+        <div class="shop-left" band-sensors="sensors-div-16">
+            <img src="/static/image/store-shop1.png" alt="" band-sensors="sensors-img-17">
+            <div class="part2" band-sensors="sensors-div-18">
+                <img src="/static/image/newstore-shop2.png" alt="" band-sensors="sensors-img-19">
+                <div class="showpop-btn" band-sensors="sensors-div-20"></div>
+            </div>
+            <img src="/static/image/store-shop3.png" alt="" band-sensors="sensors-img-21">
+            <img src="/static/image/store-shop4.png" alt="" band-sensors="sensors-img-22">
+            <img src="/static/image/store-shop5.png" alt="" band-sensors="sensors-img-23">
+            <img src="/static/image/store-shop6.png" alt="" band-sensors="sensors-img-24">
+        </div>
+        <div class="shop-right" band-sensors="sensors-div-25" style="left: 1113px;">
+                <p class="mjhl">蜜匠婚礼</p>
+                <p class="sign">线下体验店，蜜匠服务保障</p>
+                <p class="mjjs">蜜匠介绍</p>
+                <div class="content" band-sensors="sensors-div-26">
+                   蜜匠婚礼致力于全国一站式婚庆产业链，在长沙、武汉、郑州、合肥、南昌、深圳、武汉、青岛、株洲、岳阳、张家界、石家庄、邯郸、芜湖、开封、洛阳、荆州、嘉兴、金华、佛山、清远、徐州、扬州、连云港、赣州、景德镇、宜春、烟台、绵阳、海口、三亚、莆田、福州、桂林、重庆、新疆库尔勒.....等300个城市均设有分店。
+                </div>
+                <div class="zixun-btn" band-sensors="sensors-div-27">咨询您所在城市门店</div>
+            </div>
+    </div>
+</div>
+
+<div class="popup" id="popup1" band-sensors="sensors-div-28">
+    <div class="main" band-sensors="sensors-div-29">
+        <div class="close-btn" band-sensors="sensors-div-30">
+            <img src="/static/image/fork.png" alt="" band-sensors="sensors-img-31">
+        </div>
+       <img src="/static/image/index-bg4.png" alt="" class="pop-bg" band-sensors="sensors-img-32">
+       <div class="content" band-sensors="sensors-div-33">
+            <p>请输入您所在城市</p>
+            <input type="text" placeholder="您所在城市" class="name">
+            <p>请输入您的手机号码</p>
+            <input type="text" placeholder="手机号码" maxlength="11" class="phone">
+            <div class="pop-btn" band-sensors="sensors-div-34">立即预约</div>
+       </div>
+    </div>
+</div>
+{% endblock function %}

@@ -32,16 +32,16 @@
                     <a href="{% url 'car:car' %}" title="婚车租赁">婚车租赁</a>
                 </li>
                 <li>
-                    <a href="#" title="真实案例">真实案例</a>
+                    <a href="{% url 'example:example' %}" title="真实案例">真实案例</a>
                 </li>
                 <li>
-                    <a href="#" title="服务团队">服务团队</a>
+                    <a href="{% url 'team:team' %}" title="服务团队">服务团队</a>
                 </li>
                 <li>
-                    <a href="#" title="门店环境">门店环境</a>
+                    <a href="{% url 'wedding:environment' %}" title="门店环境">门店环境</a>
                 </li>
                 <li>
-                    <a href="#" title="关于蜜匠">关于蜜匠</a>
+                    <a href="{% url 'wedding:about' %}" title="关于蜜匠">关于蜜匠</a>
                 </li>
             </ul>
         </div>
@@ -62,12 +62,12 @@
         <ul>
             <li><a href="{% url 'wedding:theme' %}">主题婚礼</a></li>
             <li><a href="{% url 'hotel:hotel' %}">婚宴酒店</a></li>
-            <li><a href="#">真实客片</a></li>
-            <li><a href="#">门店环境</a></li>
+            <li><a href="{% url 'example:example' %}">真实案例</a></li>
+            <li><a href="{% url 'wedding:environment' %}">门店环境</a></li>
             <li><a href="{% url 'wedding:dress' %}">婚纱礼服</a></li>
             <li><a href="{% url 'car:car' %}">婚车租赁</a></li>
-            <li><a href="#">服务团队</a></li>
-            <li><a href="#">关于蜜匠</a></li>
+            <li><a href="{% url 'team:team' %}">服务团队</a></li>
+            <li><a href="{% url 'wedding:about' %}">关于蜜匠</a></li>
         </ul>
         <div class="online-kefu" onclick="kefu()">
             在线客服
