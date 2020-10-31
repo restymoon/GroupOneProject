@@ -1,0 +1,549 @@
+{% extends 'base.html' %}
+{% load staticfiles%}
+{% block function %}
+<div class="pc-container" band-sensors="sensors-div-14">
+    <div class="banner banner-btn" onclick="kefu()" band-sensors="sensors-div-15">
+        <img src="/static/image/car-banner.jpg" band-sensors="sensors-img-16">
+    </div>
+    <div class="inner-wrap" band-sensors="sensors-div-17">
+      <img src="/static/image/car-nav.png" band-sensors="sensors-img-18">
+      <!-- 选择车型 -->
+      <div class="category-wrap clearfix" band-sensors="sensors-div-19">
+        <div class="brand-wrap" band-sensors="sensors-div-20">
+            <a href="javascript:void(0);" class="category-title title">品牌</a>
+            <div class="brand content" band-sensors="sensors-div-21">
+                <li band-sensors="sensors-li-22">
+                    <img src="/static/image/hc09.jpg" alt="石家庄市路虎品牌婚车出租" band-sensors="sensors-img-23">
+                    <div band-sensors="sensors-div-24">
+                        路虎<span class="check" band-sensors="sensors-span-25"></span>
+                    </div>
+                </li>
+                <li band-sensors="sensors-li-26">
+                    <img src="/static/image/hc01.jpg" alt="石家庄市宝马品牌婚车出租" band-sensors="sensors-img-27">
+                    <div band-sensors="sensors-div-28">
+                        宝马<span class="check" band-sensors="sensors-span-29"></span>
+                    </div>
+                </li>
+                <li band-sensors="sensors-li-30">
+                    <img src="/static/image/hc02.jpg" alt="石家庄市奥迪品牌婚车出租" band-sensors="sensors-img-31">
+                    <div band-sensors="sensors-div-32">奥迪<span class="check" band-sensors="sensors-span-33"></span></div>
+                </li>
+                <li band-sensors="sensors-li-34">
+                    <img src="/static/image/hc03.jpg" alt="石家庄市奔驰品牌婚车出租" band-sensors="sensors-img-35">
+                    <div band-sensors="sensors-div-36">奔驰<span class="check" band-sensors="sensors-span-37"></span></div>
+                </li>
+                <li band-sensors="sensors-li-38">
+                    <img src="/static/image/hc04.jpg" alt="石家庄市劳斯莱斯品牌婚车出租" band-sensors="sensors-img-39">
+                    <div band-sensors="sensors-div-40">劳斯莱斯<span class="check" band-sensors="sensors-span-41"></span></div>
+                </li>
+                <li band-sensors="sensors-li-42">
+                    <img src="/static/image/hc05.jpg" alt="石家庄市法拉利品牌婚车出租" band-sensors="sensors-img-43">
+                    <div band-sensors="sensors-div-44">法拉利<span class="check" band-sensors="sensors-span-45"></span></div>
+                </li>
+                <li band-sensors="sensors-li-46">
+                    <img src="/static/image/hc06.jpg" alt="石家庄市玛莎拉蒂品牌婚车出租" band-sensors="sensors-img-47">
+                    <div band-sensors="sensors-div-48">玛莎拉蒂<span class="check" band-sensors="sensors-span-49"></span></div>
+                </li>
+                <li band-sensors="sensors-li-50">
+                    <img src="/static/image/hc07.jpg" alt="石家庄市保时捷品牌婚车出租" band-sensors="sensors-img-51">
+                    <div band-sensors="sensors-div-52">保时捷<span class="check" band-sensors="sensors-span-53"></span></div>
+                </li>
+                <li band-sensors="sensors-li-54">
+                    <img src="/static/image/hc08.jpg" alt="石家庄市大众品牌婚车出租" band-sensors="sensors-img-55">
+                    <div band-sensors="sensors-div-56">大众<span class="check" band-sensors="sensors-span-57"></span></div>
+                </li>
+                <li band-sensors="sensors-li-58">
+                    <img src="/static/image/hc10.jpg" alt="石家庄市丰田品牌婚车出租" band-sensors="sensors-img-59">
+                    <div band-sensors="sensors-div-60">丰田<span class="check" band-sensors="sensors-span-61"></span></div>
+                </li>
+                <li band-sensors="sensors-li-62">
+                    <img src="/static/image/hc11.jpg" alt="石家庄市本田品牌婚车出租" band-sensors="sensors-img-63">
+                    <div band-sensors="sensors-div-64">本田<span class="check" band-sensors="sensors-span-65"></span></div>
+                </li>
+                <li band-sensors="sensors-li-66">
+                    <img src="/static/image/hc12.jpg" alt="石家庄市马自达品牌婚车出租" band-sensors="sensors-img-67">
+                    <div band-sensors="sensors-div-68">马自达<span class="check" band-sensors="sensors-span-69"></span></div>
+                </li>
+            </div>
+        </div>
+        <div class="modal-wrap" band-sensors="sensors-div-70">
+          <span class="modal-title title" band-sensors="sensors-span-71">车型</span>
+          <div class="modal content" band-sensors="sensors-div-72">
+              <li band-sensors="sensors-li-73"><img src="/static/image/hc13.jpg" height="30" width="73" alt="石家庄市SUV婚车出租" band-sensors="sensors-img-74">
+                <div band-sensors="sensors-div-75">SUV<span class="check" band-sensors="sensors-span-76"></span></div></li>
+              <li band-sensors="sensors-li-77"><img src="/static/image/hc14.jpg" height="30" width="73" alt="石家庄市跑车婚车出租" band-sensors="sensors-img-78">
+                <div band-sensors="sensors-div-79">跑车<span class="check" band-sensors="sensors-span-80"></span></div></li>
+              <li band-sensors="sensors-li-81"><img src="/static/image/hc15.jpg" height="30" width="73" alt="石家庄市加长轿车婚车出租" band-sensors="sensors-img-82">
+                <div band-sensors="sensors-div-83">加长轿车<span class="check" band-sensors="sensors-span-84"></span></div></li>
+              <li band-sensors="sensors-li-85"><img src="/static/image/hc16.jpg" height="30" width="73" alt="石家庄市高端轿车婚车出租" band-sensors="sensors-img-86">
+                <div band-sensors="sensors-div-87">高端轿车<span class="check" band-sensors="sensors-span-88"></span></div></li>
+             <li band-sensors="sensors-li-89"><img src="/static/image/hc17.jpg" height="30" width="73" alt="石家庄市豪华轿车婚车出租" band-sensors="sensors-img-90">
+                <div band-sensors="sensors-div-91">豪华轿车<span class="check" band-sensors="sensors-span-92"></span></div></li>
+          </div>
+        </div>
+      </div>
+      <!-- 录客资 -->
+      <div class="kz-box" band-sensors="sensors-div-93">
+        * 您的手机
+        <input type="text" placeholder="您的信息将被严格保密" maxlength="11" class="kz-phone">
+        <span class="ke-btn" band-sensors="sensors-span-94">获取报价</span>
+      </div>
+      <!-- 婚车选择广告位 -->
+      <div class="adv-title" band-sensors="sensors-div-95">
+        <img src="/static/image/car-adv-title.png" alt="" class="title" band-sensors="sensors-img-96">
+        <div class="kefu-box" band-sensors="sensors-div-97">
+            想与婚礼顾问1对1沟通？<span onclick="kefu()" band-sensors="sensors-span-98">咨询顾问<img src="/static/image/car-zixun-icon.png" alt="" band-sensors="sensors-img-99"></span>
+        </div>
+      </div>
+      <ul class="adv-img clearfix">
+                                <li band-sensors="sensors-li-100">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_C482FA3CCCBCC7D0449026A58DBC6510.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_C482FA3CCCBCC7D0449026A58DBC6510.jpg" alt="" band-sensors="sensors-img-101">
+            </li>
+                        <li band-sensors="sensors-li-102">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_EE34A1F995733FAB961A6A0B0143548B.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_EE34A1F995733FAB961A6A0B0143548B.jpg" alt="" band-sensors="sensors-img-103">
+            </li>
+                        <li band-sensors="sensors-li-104">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_EBC4C97F88CFB57AA913378BE59786C4.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_EBC4C97F88CFB57AA913378BE59786C4.jpg" alt="" band-sensors="sensors-img-105">
+            </li>
+                        <li band-sensors="sensors-li-106">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_9CA9F63DB040953369C5C106C39D3CA4.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_9CA9F63DB040953369C5C106C39D3CA4.jpg" alt="" band-sensors="sensors-img-107">
+            </li>
+                        <li band-sensors="sensors-li-108">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_334A15217FA1E8DD9946CA666C93890F.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_334A15217FA1E8DD9946CA666C93890F.jpg" alt="" band-sensors="sensors-img-109">
+            </li>
+                        <li band-sensors="sensors-li-110">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_CEAAD0F9F4A85E1F2574D7F578FCFB99.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_CEAAD0F9F4A85E1F2574D7F578FCFB99.jpg" alt="" band-sensors="sensors-img-111">
+            </li>
+                        <li band-sensors="sensors-li-112">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_D1F325D388ABAE2E62C1BDB486F0AC1B.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_D1F325D388ABAE2E62C1BDB486F0AC1B.jpg" alt="" band-sensors="sensors-img-113">
+            </li>
+                        <li band-sensors="sensors-li-114">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_96ECF9DD8260DAB539C8644D42EBD7B1.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_96ECF9DD8260DAB539C8644D42EBD7B1.jpg" alt="" band-sensors="sensors-img-115">
+            </li>
+                        <li band-sensors="sensors-li-116">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_5C9FF145D26FFC7B4249BEBA9F577F9F.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_5C9FF145D26FFC7B4249BEBA9F577F9F.jpg" alt="" band-sensors="sensors-img-117">
+            </li>
+                        <li band-sensors="sensors-li-118">
+                <!-- <img src="https://files.mijwed.com/new/photo/202003/20200305_D558706E062D8DBFB0E220A4B4C23106.jpg" alt="">
+                 -->
+                <img src="/static/image/20200305_D558706E062D8DBFB0E220A4B4C23106.jpg" alt="" band-sensors="sensors-img-119">
+            </li>
+                           </ul>
+      <div class="look-more look-more-btn" band-sensors="sensors-div-120">更多品牌及车型查看</div>
+    </div>
+    <!-- 婚车租赁服务流程 / SERVICE PROCESS -->
+    <div class="conversion-car-hot" band-sensors="sensors-div-121">
+        <div class="inner-wrap clearfix" band-sensors="sensors-div-122">
+            <div class="caption-bar clearfix" band-sensors="sensors-div-123">
+                <div class="caption" band-sensors="sensors-div-124">
+                    婚车租赁服务流程
+                    <span class="sub" band-sensors="sensors-span-125">
+                        / SERVICE PROCESS
+                    </span>
+                </div>
+                <span class="btn-consult-53" onclick="kfBox()" band-sensors="sensors-span-126">
+                    想与婚礼顾问1对1沟通？<em class="red">咨询顾问</em>
+                </span>
+            </div>
+            <div class="car-rental-container fl" band-sensors="sensors-div-127">
+                <ul class="tab-con-caption">
+                    <li class="current" band-sensors="sensors-li-128">01 预约确认婚车</li>
+                    <li band-sensors="sensors-li-129">02 婚礼当天</li>
+                    <li band-sensors="sensors-li-130">03 婚礼结束</li>
+                </ul>
+                <div class="tab-con-model" band-sensors="sensors-div-131">
+                    <!-- 01 预约确认婚车  -->
+                    <ul class="list-text show">
+                        <li band-sensors="sensors-li-132">
+                            <div class="text-bar fr" band-sensors="sensors-div-133">
+                                <p class="title">丰富车型，自由挑选</p>
+                                <p class="text">在您提交预约信息后,蜜匠婚礼客服将在24小时内与您进行确认。婚车接单客服确认新人需求车型、婚礼档期，接亲地点并根据相关信息提出报价方案。</p>
+                            </div>
+                            <span class="pic" band-sensors="sensors-span-134">
+                                <img src="/static/image/conversion-car-list-1-01.png" class="icon" band-sensors="sensors-img-135">
+                            </span>
+                        </li>
+                        <li band-sensors="sensors-li-136">
+                            <div class="text-bar fr" band-sensors="sensors-div-137">
+                                <p class="title">支付定金</p>
+                                <p class="text">客户确认后支付总费用的10%-20%作为定金，并签署服务合同。</p>
+                            </div>
+                            <span class="pic" band-sensors="sensors-span-138">
+                                <img src="/static/image/conversion-car-list-1-02.png" class="icon" band-sensors="sensors-img-139">
+                            </span>
+                        </li>
+                        <li band-sensors="sensors-li-140">
+                            <div class="text-bar no-line fr" band-sensors="sensors-div-141">
+                                <p class="title">确认行程</p>
+                                <p class="text">婚礼前7天工作人员与新人确认婚礼当天行程安排（集合时间地点，接亲位置等信息）。婚礼前2天车队队长与新人再次确认婚礼当天行程安排。</p>
+                            </div>
+                            <span class="pic" band-sensors="sensors-span-142">
+                                <img src="/static/image/conversion-car-list-1-03.png" class="icon" band-sensors="sensors-img-143">
+                            </span>
+                        </li>
+                    </ul>
+                    <!-- 02 婚礼当天 -->
+                    <ul class="list-text">
+                        <li band-sensors="sensors-li-144">
+                            <div class="text-bar fr" band-sensors="sensors-div-145">
+                                <p class="title">婚车装饰</p>
+                                <p class="text">车队长带领车队按时到指定地点扎花装饰。</p>
+                            </div>
+                            <span class="pic" band-sensors="sensors-span-146">
+                                <img src="/static/image/conversion-car-list-2-01.png" class="icon" band-sensors="sensors-img-147">
+                            </span>
+                        </li>
+                        <li band-sensors="sensors-li-148">
+                            <div class="text-bar fr" band-sensors="sensors-div-149">
+                                <p class="title">互通信息，沟通交流</p>
+                                <p class="text">明确车队负责人并交换各车联系方式，确保准确跟车。</p>
+                            </div>
+                            <span class="pic" band-sensors="sensors-span-150">
+                                <img src="/static/image/conversion-car-list-2-02.png" class="icon" band-sensors="sensors-img-151">
+                            </span>
+                        </li>
+                        <li band-sensors="sensors-li-152">
+                            <div class="text-bar no-line fr" band-sensors="sensors-div-153">
+                                <p class="title">准时出发，支付尾款</p>
+                                <p class="text">接上新郎伴郎后出发前往接亲地点，并等待新娘及宾客上车；返程将新人及宾客送达酒店后，新人交付尾款（订金在线支付,余款以现金红包的形式接亲当天支付给车主）</p>
+                            </div>
+                            <span class="pic" band-sensors="sensors-span-154">
+                                <img src="/static/image/conversion-car-list-2-03.png" class="icon" band-sensors="sensors-img-155">
+                            </span>
+                        </li>
+                    </ul>
+                    <!-- 03 婚礼结束 -->
+                    <ul class="list-text wedding-finish">
+                        <li band-sensors="sensors-li-156">
+                            <div class="text-bar fr" band-sensors="sensors-div-157">
+                                <p class="title">接亲圆满完成</p>
+                                <p class="text">将新人送达婚宴酒店后，婚车服务完结</p>
+                            </div>
+                            <span class="pic" band-sensors="sensors-span-158">
+                                <img src="/static/image/conversion-car-list-3-01.png" class="icon" band-sensors="sensors-img-159">
+                            </span>
+                        </li>
+                        <li band-sensors="sensors-li-160">
+                            <div class="text-bar no-line fr" band-sensors="sensors-div-161">
+                                <p class="title">售后服务反馈</p>
+                                <p class="text">蜜匠婚礼会在婚礼结束后15天内对您进行电话回访,听取您的宝贵意见和建议。</p>
+                            </div>
+                            <span class="pic" band-sensors="sensors-span-162">
+                                <img src="/static/image/conversion-car-list-3-02.png" class="icon" band-sensors="sensors-img-163">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="AD-figure-model fr" band-sensors="sensors-div-164">
+                <div class="AD-banner" band-sensors="sensors-div-165">
+                    <img src="/static/image/AD-banner.png" band-sensors="sensors-img-166">
+                </div>
+                <div class="AD-text" band-sensors="sensors-div-167">
+                    <p class="text">
+                        <em class="num">1</em>
+                        迟到免单，缺席赔双倍
+                    </p>
+                    <p class="text">
+                        <em class="num">2</em>
+                        不额外加价，预定豪礼送
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inner-wrap" band-sensors="sensors-div-168">
+        <img src="/static/image/car-zixuan.png" alt="" class="zixun" band-sensors="sensors-img-169">
+        <img src="/static/image/car-taocan.png" alt="" class="taocan" band-sensors="sensors-img-170">
+    </div>
+
+    <!-- 用户婚车评价 -->
+    <div class="car-footer" band-sensors="sensors-div-171">
+        <div class="inner-wrap" band-sensors="sensors-div-172">
+            <div class="caption-bar clearfix" band-sensors="sensors-div-173">
+                <div class="caption" band-sensors="sensors-div-174">
+                    婚车用户评价
+                    <span class="sub" band-sensors="sensors-span-175">
+                        / VALUATION
+                    </span>
+                </div>
+                <span class="btn-consult-53" onclick="kfBox()" band-sensors="sensors-span-176">
+                    想与婚礼顾问1对1沟通？<em class="red">咨询顾问</em>
+                </span>
+            </div>
+            <ul class="pj-list clearfix">
+                <li band-sensors="sensors-li-177">
+                    <div band-sensors="sensors-div-178">
+                        <img src="/static/image/touxiang1.png" alt="" class="touxiang" band-sensors="sensors-img-179">
+                        <span band-sensors="sensors-span-180">会员7236</span>
+                    </div>
+                    <p>在蜜匠订了一辆主婚车，其他跟车是朋友们凑的，结果跟车都五花八门的不好看，
+                        早知道就全部在蜜匠订统一车型颜色的婚车队了，反正又不贵。</p>
+                </li>
+                <li band-sensors="sensors-li-181">
+                    <div band-sensors="sensors-div-182">
+                        <img src="/static/image/touxiang2.png" alt="" class="touxiang" band-sensors="sensors-img-183">
+                        <span band-sensors="sensors-span-184">张先生</span>
+                    </div>
+                    <p>在蜜匠婚礼选择的是宝马的头车还有五辆跟车，司机师傅服务相当好，结婚当天也很早就到达指定的地方 车子很不错。</p>
+                </li>
+                <li band-sensors="sensors-li-185">
+                    <div band-sensors="sensors-div-186">
+                        <img src="/static/image/touxiang3.png" alt="" class="touxiang" band-sensors="sensors-img-187">
+                        <span band-sensors="sensors-span-188">会员李小姐</span>
+                    </div>
+                    <p>好朋友结婚的时候我是伴娘，在路上跟司机交谈了几句才知道居然有这个网站，自己结婚的时候果断在蜜匠定的婚车，接单的车主都是有保证，我很是放心</p>
+                </li>
+                <li band-sensors="sensors-li-189">
+                    <div band-sensors="sensors-div-190">
+                        <img src="/static/image/touxiang4.png" alt="" class="touxiang" band-sensors="sensors-img-191">
+                        <span band-sensors="sensors-span-192">会员8639</span>
+                    </div>
+                    <p>找婚车的时候对比了又对比：传统的婚车租赁需要我们交订金，但是车主那边是无押金的，还是蜜匠这种互联网平台好，双方都有保证的，感觉靠谱多了。</p>
+                </li>
+                <li band-sensors="sensors-li-193">
+                    <div band-sensors="sensors-div-194">
+                        <img src="/static/image/touxiang5.png" alt="" class="touxiang" band-sensors="sensors-img-195">
+                        <span band-sensors="sensors-span-196">何小姐</span>
+                    </div>
+                    <p>看了很多家，最后还是决定选蜜匠婚礼，一条龙服务，婚礼也是他们家办的，公司整体给我感觉非常专业，婚车价格也不贵，婚礼当天确实没有让我失望。</p>
+                </li>
+                <li band-sensors="sensors-li-197">
+                    <div band-sensors="sensors-div-198">
+                        <img src="/static/image/touxiang6.png" alt="" class="touxiang" band-sensors="sensors-img-199">
+                        <span band-sensors="sensors-span-200">谢先生</span>
+                    </div>
+                    <p>相当满意！婚车很好看，也很大气，师傅很早就到了，给我们足够的时间扎花，师傅也很客气，提示我们要注意的地方，时间差不多了也会提示我们注意时间！</p>
+                </li>
+                <li band-sensors="sensors-li-201">
+                    <div band-sensors="sensors-div-202">
+                        <img src="/static/image/touxiang7.png" alt="" class="touxiang" band-sensors="sensors-img-203">
+                        <span band-sensors="sensors-span-204">会员蓝小姐</span>
+                    </div>
+                    <p>毕竟是结婚大事不敢马虎，看了蜜匠的平台担保承诺感觉靠谱才放心订车。虽说接亲当天有司机找地方耽误了一点时间，好在影响不大。</p>
+                </li>
+                <li band-sensors="sensors-li-205">
+                    <div band-sensors="sensors-div-206">
+                        <img src="/static/image/touxiang8.png" alt="" class="touxiang" band-sensors="sensors-img-207">
+                        <span band-sensors="sensors-span-208">肖先生</span>
+                    </div>
+                    <p>之前选择婚车考虑了好久，后来通过朋友介绍蜜匠婚车，说这里的服务态度不错， 选了套系的性价比很高，车都非常的新，推荐大家来这里！</p>
+                </li>
+                <li band-sensors="sensors-li-209">
+                    <div band-sensors="sensors-div-210">
+                        <img src="/static/image/touxiang9.png" alt="" class="touxiang" band-sensors="sensors-img-211">
+                        <span band-sensors="sensors-span-212">唐小姐</span>
+                    </div>
+                    <p>婚礼当天，婚车非常准时的到达，也很干净整洁，由于我时间安排早了，扎好了婚车里接新娘的时间还早了半小时，几位师傅非常耐心的和我一起等，全程态度也都很好，车开的很稳～很 好的一次体验。</p>
+                </li>
+                <li band-sensors="sensors-li-213">
+                    <div band-sensors="sensors-div-214">
+                        <img src="/static/image/touxiang10.png" alt="" class="touxiang" band-sensors="sensors-img-215">
+                        <span band-sensors="sensors-span-216">会员陈小姐</span>
+                    </div>
+                    <p>老公原本计划是让朋友们开车来帮忙接亲的，是我无意中逛到的蜜匠婚礼这个平台，感觉在蜜匠租用婚车不必麻烦朋友也不欠人情，于是果断在蜜匠定了18辆婚车。</p>
+                </li>
+               <li class="line" band-sensors="sensors-li-217"></li>
+             </ul>
+             <div class="bottom-btn" band-sensors="sensors-div-218">
+               <div class="order-car-btn" band-sensors="sensors-div-219">
+                   <span class="order-car" band-sensors="sensors-span-220">我要预定婚车</span>
+               </div>
+               <div class="recomend-btn" band-sensors="sensors-div-221">
+                  <span class="recomend" band-sensors="sensors-span-222">帮我推荐婚车</span>
+               </div>
+             </div>
+        </div>
+    </div>
+</div>
+<div class="popup" id="popup1" band-sensors="sensors-div-223">
+    <div class="main" band-sensors="sensors-div-224">
+        <div class="close-btn" band-sensors="sensors-div-225">
+            <img src="/static/image/fork.png" alt="" band-sensors="sensors-img-226">
+        </div>
+       <img src="/static/image/car-bg1.png" alt="" class="pop-bg" band-sensors="sensors-img-227">
+       <div class="content" band-sensors="sensors-div-228">
+            <input type="text" placeholder="您的称呼" class="name">
+            <input type="text" placeholder="输入您的电话" maxlength="11" class="phone">
+            <input type="text" placeholder="输入婚车租赁城市" class="adress">
+            <div class="pop-btn" data-note="更多婚车套餐-一键获取" band-sensors="sensors-div-229">一键获取</div>
+       </div>
+    </div>
+</div>
+<div class="popup" id="popup2" band-sensors="sensors-div-230">
+    <div class="main" band-sensors="sensors-div-231">
+        <div class="close-btn" band-sensors="sensors-div-232">
+            <img src="/static/image/fork.png" alt="" band-sensors="sensors-img-233">
+        </div>
+       <img src="/static/image/car-bg2.png" alt="" class="pop-bg" band-sensors="sensors-img-234">
+       <div class="content" band-sensors="sensors-div-235">
+            <input type="text" placeholder="您的称呼" class="name">
+            <input type="text" placeholder="输入您的电话" maxlength="11" class="phone">
+            <input type="text" placeholder="输入婚车租赁城市" class="adress">
+            <div class="pop-btn" data-note="婚车套餐图片-我要预定" band-sensors="sensors-div-236">我要预定</div>
+       </div>
+    </div>
+</div>
+<div class="popup" id="popup3" band-sensors="sensors-div-237">
+    <div class="main" band-sensors="sensors-div-238">
+        <div class="close-btn" band-sensors="sensors-div-239">
+            <img src="/static/image/fork.png" alt="" band-sensors="sensors-img-240">
+        </div>
+       <img src="/static/image/car-bg2.png" alt="" class="pop-bg" band-sensors="sensors-img-241">
+       <div class="content" band-sensors="sensors-div-242">
+            <input type="text" placeholder="您的称呼" class="name">
+            <input type="text" placeholder="输入您的电话" maxlength="11" class="phone">
+            <input type="text" placeholder="输入婚车租赁城市" class="adress">
+            <div class="pop-btn" data-note="婚车底部-帮我推荐" band-sensors="sensors-div-243">帮我推荐</div>
+       </div>
+    </div>
+</div>
+<div class="popup" id="popup4" band-sensors="sensors-div-244">
+    <div class="main" band-sensors="sensors-div-245">
+        <div class="close-btn" band-sensors="sensors-div-246">
+            <img src="/static/image/fork.png" alt="" band-sensors="sensors-img-247">
+        </div>
+       <img src="/static/image/car-bg2.png" alt="" class="pop-bg" band-sensors="sensors-img-248">
+       <div class="content" band-sensors="sensors-div-249">
+            <input type="text" placeholder="您的称呼" class="name">
+            <input type="text" placeholder="输入您的电话" maxlength="11" class="phone">
+            <input type="text" placeholder="输入婚车租赁城市" class="adress">
+            <div class="pop-btn" data-note="婚车底部-我要预定" band-sensors="sensors-div-250">我要预定</div>
+       </div>
+    </div>
+</div>
+{% endblock function %}
+<script>
+    function kefu(){
+        window.open(window.$url_53kefu, "newwindow", "height=541, width=504, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no")
+
+    }
+    $(function(){
+        cssVersion();
+        function cssVersion () {
+            var linkArray = [...$('link')];
+            linkArray.forEach((ele)=>{
+                if($(ele).attr('type') === 'text/css') {
+                    var cssUrl = $(ele).attr('href');
+                    var version = +new Date();
+                    $(ele).attr('href',cssUrl+'?v'+version);
+                }
+            })
+        }
+    });
+</script>
+
+
+<script>
+$('.brand li,.modal li').click(function(){
+    if($(this).find('.check').hasClass('checkActive')){
+        $(this).find('.check').removeClass('checkActive');
+    }else{
+        $(this).find('.check').addClass('checkActive');
+    }
+})
+// 婚车租赁服务流程 TAB
+$(".car-rental-container .tab-con-caption li").click(function(){
+    var i = $(this).index();
+    $(this).addClass('current').siblings().removeClass('current');
+    $('.tab-con-model .list-text').eq(i).show().siblings().hide();
+});
+//路客资
+var userMobile = /^1\d{10}$/;
+$('.close-btn').click(function(){
+    $('.popup').hide();
+})
+$('.adv-img').click(function(){
+    $('#popup2').show();
+})
+$('.order-car-btn').click(function(){
+    $('#popup4').show();
+})
+$('.look-more-btn').click(function(){
+    $('#popup1').show();
+})
+$('.recomend-btn').click(function(){
+    $('#popup3').show();
+})
+ $('.pop-btn').click(function(){
+    var name = $(this).siblings('.name').val();
+    var tel = $(this).siblings('.phone').val();
+    var adress = $(this).siblings('.adress').val();
+    var note = $(this).attr('data-note');
+    if(name == ''){
+        msg('请输入您的称呼');
+        return false;
+    }else if(tel == '') {
+        msg('请输入您的手机号码')
+        return false
+    }else if(!userMobile.test(tel)) {
+        msg('手机号码格式不正确')
+        return false
+    }else if(adress == ''){
+        msg('输入婚车租赁城市');
+        return false;
+    }else{
+        var data = {
+            mobile:tel,
+            from_type: 'pc',
+            name:name,
+            adress:adress,
+            plate_code: 2,
+            note:note+'pc-sem大搜-姓名:'+name+'-手机号:'+tel+'-婚车租赁城市:'+adress
+        }
+        shopAppointment(data,'',function(res){
+            msg(res.message)
+        })
+    }
+ })
+$('.ke-btn').click(function(){
+    var phone = $('.kz-phone').val();
+    var car = $('.checkActive');
+    var arr =[];
+    $.each(car,function(i,item){
+        var checkval = $(item).parent('div').text()
+        arr.push(checkval)
+    })
+    if(arr.length>0){
+        var arr1 = arr.join(",")
+    }else{
+        var arr1 ='未选择'
+    }
+    if(phone == '') {
+        msg('请输入您的手机号码');
+        return false
+    }else if(!userMobile.test(phone)) {
+        msg('手机号码格式不正确');
+        return false
+    }else {
+        var data = {
+            mobile:phone,
+            from_type: 'pc',
+            channel_type:'2' || 19,
+            plate_code: '' || 2,
+            note:'pc-sem大搜-婚车表单-获取报价-手机号:'+phone+'-选中车型：'+arr1
+        }
+        shopAppointment(data,'',function(res){
+            msg(res.message)
+        })
+    }
+})
+</script>

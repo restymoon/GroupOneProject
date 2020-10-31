@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aad4ed47-69fb-461a-9524-95d3b57d1603" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GroupOneProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupOneProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="aad4ed47-69fb-461a-9524-95d3b57d1603" name="Default Changelist" comment="老胡添加了婚车页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/car/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/car/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+            <state relative-caret-position="432">
+              <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -31,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/car.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="431" column="6" selection-start-line="431" selection-start-column="6" selection-end-line="431" selection-end-column="6" />
+            <state relative-caret-position="370">
+              <caret line="537" column="25" lean-forward="true" selection-start-line="537" selection-start-column="25" selection-end-line="537" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -138,12 +134,13 @@
       <find>https://www.mijwed.com/semsearch-themedetail-25153.html?channel_type=19</find>
       <find>target=&quot;_blank&quot;</find>
       <find>&lt;a</find>
+      <find>./蜜匠婚礼_婚车_files</find>
     </findStrings>
     <replaceStrings>
-      <replace>/static/image</replace>
       <replace>/static/image/</replace>
       <replace>#</replace>
       <replace />
+      <replace>/static/image</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -370,27 +367,33 @@
       <option name="project" value="LOCAL" />
       <updated>1604040778434</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="老胡添加了婚车页面">
+      <created>1604127571833</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604127571833</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73308000" />
+    <option name="totallyTimeSpent" value="74160000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="828" y="8" width="708" height="816" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2846154" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16085792" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49840087" weight="0.12573099" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50159913" side_tool="true" weight="0.19848156" />
-      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49840087" weight="0.15643275" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="3" sideWeight="0.49840087" visible="true" weight="0.15580736" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32863188" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info active="true" anchor="bottom" id="Find" order="7" visible="true" weight="0.5205092" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.5205092" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.097953215" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -411,7 +414,8 @@
     <MESSAGE value="修改数据库配置" />
     <MESSAGE value="赵丽帮老胡测试" />
     <MESSAGE value="配置url" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置url" />
+    <MESSAGE value="老胡添加了婚车页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="老胡添加了婚车页面" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/css/header.css">
@@ -725,8 +729,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+        <state relative-caret-position="432">
+          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -773,8 +777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/car.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="431" column="6" selection-start-line="431" selection-start-column="6" selection-end-line="431" selection-end-column="6" />
+        <state relative-caret-position="370">
+          <caret line="537" column="25" lean-forward="true" selection-start-line="537" selection-start-column="25" selection-end-line="537" selection-end-column="25" />
         </state>
       </provider>
     </entry>
