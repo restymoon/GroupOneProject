@@ -927,7 +927,8 @@
     </div>
 {% endblock function %}
 {% block texiao %}
-   <script type="text/javascript">
+// 咨询顾问下的点击特效
+<script type="text/javascript">
     $(function () {
         // 首页婚期单击特效
         $("#this_year").click(function () {
@@ -983,5 +984,52 @@
 
     })
 
+
+</script>
+// 所有的轮播图特效
+<script src="../static/js/swiper0916.js"></script>
+<script>
+           // 案例陈列室轮播图特效
+        var mySwiper = new Swiper('.case-slide-warp .swiper-container', {
+            pagination: {
+                el:'.swiper-pagination',
+                clickable :true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect : 'fade',
+            lazyLoading : true
+        });
+        // 用户评价
+        var commentSlide = new Swiper('.trends-comment-warp .comment-slide .swiper-container', {
+            pagination: {
+                el:'.swiper-pagination',
+                clickable :true,
+            },
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect : 'fade',
+            lazyLoading : true
+        });
+        $('.vedio-btn').click(function(){
+            $(this).hide();
+            $('.vedio-cover').hide();
+            $("#HomeVideo").get(0).play();
+            videoPlay = true;
+        });
+        $("#HomeVideo").get(0).onended = function() {
+            $('.vedio-btn').show();
+            $('.vedio-cover').show()
+         };
 </script>
 {% endblock texiao %}
