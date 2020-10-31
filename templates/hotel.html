@@ -2,172 +2,250 @@
 {% load staticfiles %}
 
 {% block function %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/sem20190704.css' %}">
-<style>
-.top-header-bar,.global-footer{
-    display: block !important;
-}
-</style>
-<!-- 2019.05.10 SEM 9秒订婚宴酒店PC端（去除区域选择的功能模块）-->
-<div class="pc-activity-container" band-sensors="sensors-div-14">
-    <!-- cover -->
-    <div class="cover" band-sensors="sensors-div-15">
-        <img src="/static/image/cover-01.jpg" class="pic" band-sensors="sensors-img-16">
-        <img src="/static/image/cover-02.jpg" class="pic" band-sensors="sensors-img-17">
-        <img src="/static/image/cover-03.jpg" class="pic" band-sensors="sensors-img-18">
-        <img src="/static/image/cover-04.jpg" class="pic" band-sensors="sensors-img-19">
-        <img src="/static/image/cover-05.jpg" class="pic" band-sensors="sensors-img-20">
-        <img src="/static/image/cover-06.jpg" class="pic" band-sensors="sensors-img-21">
-        <img src="/static/image/cover-06.jpg" class="pic" band-sensors="sensors-img-22">
-        <img src="/static/image/cover-06.jpg" class="pic" band-sensors="sensors-img-23">
-    </div>
-    <!-- banner -->
-    <div class="banner" band-sensors="sensors-div-24">
-        <img src="/static/image/banner.png" class="pic" band-sensors="sensors-img-25">
-    </div>
-    <!-- 主体内容 -->
-    <div class="main-model" band-sensors="sensors-div-26">
-        <span class="caption" band-sensors="sensors-span-27">— 宴席酒店预定 —</span>
-        <!-- 宴席类型 -->
-        <div class="type-list clearfix" band-sensors="sensors-div-28">
-            <img src="/static/image/01-title.png" class="title" band-sensors="sensors-img-29">
-            <ul class="list">
-                <li class="current" data-type="婚宴" band-sensors="sensors-li-30">
-                    <img src="/static/image/hy.png" class="pic sc-btn" band-sensors="sensors-img-31">
-                    <p class="text"><em class="icon">icon</em>婚宴</p>
-                </li>
-                <li data-type="宝宝宴" band-sensors="sensors-li-32">
-                    <img src="/static/image/bby.png" class="pic sc-btn" band-sensors="sensors-img-33">
-                    <p class="text"><em class="icon">icon</em>宝宝宴</p>
-                </li>
-                <li data-type="寿宴" band-sensors="sensors-li-34">
-                    <img src="/static/image/sy.png" class="pic sc-btn" band-sensors="sensors-img-35">
-                    <p class="text"><em class="icon">icon</em>寿宴</p>
-                </li>
-                <li data-type="回门宴" band-sensors="sensors-li-36">
-                    <img src="/static/image/hmy.png" class="pic sc-btn" band-sensors="sensors-img-37">
-                    <p class="text"><em class="icon">icon</em>回门宴</p>
-                </li>
-                <li data-type="年会" band-sensors="sensors-li-38">
-                    <img src="/static/image/nh.png" class="pic sc-btn" band-sensors="sensors-img-39">
-                    <p class="text"><em class="icon">icon</em>年会</p>
-                </li>
-                <li data-type="其他" band-sensors="sensors-li-40">
-                    <img src="/static/image/qt.png" class="pic sc-btn" band-sensors="sensors-img-41">
-                    <p class="text"><em class="icon">icon</em>其他</p>
-                </li>
-            </ul>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sem20190704.css' %}">
+    <style>
+        .top-header-bar, .global-footer {
+            display: block !important;
+        }
+    </style>
+    <!-- 2019.05.10 SEM 9秒订婚宴酒店PC端（去除区域选择的功能模块）-->
+    <div class="pc-activity-container" band-sensors="sensors-div-14">
+        <!-- cover -->
+        <div class="cover" band-sensors="sensors-div-15">
+            <img src="/static/image/cover-01.jpg" class="pic" band-sensors="sensors-img-16">
+            <img src="/static/image/cover-02.jpg" class="pic" band-sensors="sensors-img-17">
+            <img src="/static/image/cover-03.jpg" class="pic" band-sensors="sensors-img-18">
+            <img src="/static/image/cover-04.jpg" class="pic" band-sensors="sensors-img-19">
+            <img src="/static/image/cover-05.jpg" class="pic" band-sensors="sensors-img-20">
+            <img src="/static/image/cover-06.jpg" class="pic" band-sensors="sensors-img-21">
+            <img src="/static/image/cover-06.jpg" class="pic" band-sensors="sensors-img-22">
+            <img src="/static/image/cover-06.jpg" class="pic" band-sensors="sensors-img-23">
         </div>
-        <!-- 预定桌数 -->
-        <div class="subscribe-list clearfix" band-sensors="sensors-div-42">
-            <img src="/static/image/02-title.png" class="title" band-sensors="sensors-img-43">
-            <ul class="list">
-                <li class="current sc-btn" data-type="待定" band-sensors="sensors-li-44">待定</li>
-                <li class="sc-btn" data-type="10桌以下" band-sensors="sensors-li-45">10桌以下</li>
-                <li class="sc-btn" data-type="10-20桌" band-sensors="sensors-li-46">10-20桌</li>
-                <li class="sc-btn" data-type="20-30桌" band-sensors="sensors-li-47">20-30桌</li>
-                <li class="sc-btn" data-type="30-40桌" band-sensors="sensors-li-48">30-40桌</li>
-                <li class="sc-btn" data-type="40桌以上" band-sensors="sensors-li-49">40桌以上</li>
-            </ul>
+        <!-- banner -->
+        <div class="banner" band-sensors="sensors-div-24">
+            <img src="/static/image/banner.png" class="pic" band-sensors="sensors-img-25">
         </div>
-        <!-- 每桌预算 -->
-        <div class="subscribe-list num-list clearfix" band-sensors="sensors-div-50">
-            <img src="/static/image/03-title.png" class="title" band-sensors="sensors-img-51">
-            <ul class="list">
-                <li class="current sc-btn" data-type="不限" band-sensors="sensors-li-52">不限</li>
-                <li class="sc-btn" data-type="1000元以下" band-sensors="sensors-li-53">1000元以下</li>
-                <li class="sc-btn" data-type="1000-1500元" band-sensors="sensors-li-54">1000-1500元</li>
-                <li class="sc-btn" data-type="1500-2000元" band-sensors="sensors-li-55">1500-2000元</li>
-                <li class="sc-btn" data-type="2000-2500元" band-sensors="sensors-li-56">2000-2500元</li>
-                <li class="sc-btn" data-type="2500元以上" band-sensors="sensors-li-57">2500元以上</li>
-            </ul>
-        </div>
-        <!-- 您的档期 -->
-        <div class="deta-list clearfix" band-sensors="sensors-div-58">
-            <img src="/static/image/04-title.png" class="title" band-sensors="sensors-img-59">
-            <ul class="list">
-                <li class="current sc-btn" data-type="待定" band-sensors="sensors-li-60">待定</li>
-                <li class="sc-btn" data-type="半年" band-sensors="sensors-li-61">半年</li>
-                <li class="sc-btn" data-type="一年" band-sensors="sensors-li-62">一年</li>
-                <li class="sc-btn" data-type="两年" band-sensors="sensors-li-63">两年</li>
-            </ul>
-        </div>
-        <!-- 选择区域 -->
-        <div class="choosearea-list clearfix" band-sensors="sensors-div-64">
-            <img src="/static/image/choosearea.png" class="title" band-sensors="sensors-img-65">
-            <ul class="list">
-                <li band-sensors="sensors-li-66">城市<a id="c_city" href="javascript:void(0)"><span class="c_name sc-btn" band-sensors="sensors-span-67">请选择城市</span>
-                    <ul class="zhiying">
-                        <li class="sc-btn" id="cs" band-sensors="sensors-li-68">长沙</li>
-                        <li class="sc-btn" id="wh" band-sensors="sensors-li-69">武汉</li>
-                        <li class="sc-btn" id="nc" band-sensors="sensors-li-70">南昌</li>
-                        <li class="sc-btn" id="sz" band-sensors="sensors-li-71">深圳</li>
-                        <li class="sc-btn" id="hf" band-sensors="sensors-li-72">合肥</li>
-                        <li class="sc-btn" id="zz" band-sensors="sensors-li-73">郑州</li>
-                        <li class="sc-btn" id="zz2" band-sensors="sensors-li-74">株洲</li>
-                    </ul>
-                </a></li>
-                <li band-sensors="sensors-li-75">区域<a id="c_local" href="javascript:void(0)"><span class="c_local sc-btn" band-sensors="sensors-span-76">请选择区域</span>
-                    <ul class="locals">
-                        <li band-sensors="sensors-li-77"></li>
-                    </ul>
-                </a></li>
-            </ul>
-        </div>
-        <!-- 布置咨询 -->
-        <div class="attribute-list clearfix" band-sensors="sensors-div-78">
-            <img src="/static/image/05-title.png" class="title" band-sensors="sensors-img-79">
-            <ul class="list">
-                <li class="current sc-btn" data-type="是" band-sensors="sensors-li-80">是</li>
-                <li class="sc-btn" data-type="否" band-sensors="sensors-li-81">否</li>
-            </ul>
-        </div>
-        <!-- swiper -->
-        <div class="swiper-list" band-sensors="sensors-div-82">
-            <div class="swiper-container swiper-container-horizontal" band-sensors="sensors-div-83">
-                <div class="swiper-wrapper" band-sensors="sensors-div-84" style="transform: translate3d(-4372px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" band-sensors="sensors-div-89" data-swiper-slide-index="2" style="width: 1093px;">
-                        <img src="/static/image/list-pic-03.jpg" band-sensors="sensors-img-90">
-                    </div>
-                    <div class="swiper-slide swiper-slide-duplicate-active" band-sensors="sensors-div-85" data-swiper-slide-index="0" style="width: 1093px;">
-                        <img src="/static/image/list-pic-01.jpg" band-sensors="sensors-img-86">
-                    </div>
-                    <div class="swiper-slide" band-sensors="sensors-div-87" data-swiper-slide-index="1" style="width: 1093px;">
-                        <img src="/static/image/list-pic-02.jpg" band-sensors="sensors-img-88">
-                    </div>
-                    <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" band-sensors="sensors-div-89" data-swiper-slide-index="2" style="width: 1093px;">
-                        <img src="/static/image/list-pic-03.jpg" band-sensors="sensors-img-90">
-                    </div>
-                <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" band-sensors="sensors-div-85" data-swiper-slide-index="0" style="width: 1093px;">
-                        <img src="/static/image/list-pic-01.jpg" band-sensors="sensors-img-86">
-                    </div></div>
-                <div class="swiper-pagination sc-btn swiper-pagination-bullets" band-sensors="sensors-div-91"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
-                <div class="swiper-button-prev sc-btn" band-sensors="sensors-div-92"></div>
-                <div class="swiper-button-next sc-btn" band-sensors="sensors-div-93"></div>
+        <!-- 主体内容 -->
+        <div class="main-model" band-sensors="sensors-div-26">
+            <span class="caption" band-sensors="sensors-span-27">— 宴席酒店预定 —</span>
+            <!-- 宴席类型 -->
+            <div class="type-list clearfix" band-sensors="sensors-div-28">
+                <img src="/static/image/01-title.png" class="title" band-sensors="sensors-img-29">
+                <ul class="list">
+                    <li id="hunyan" class="current" data-type="婚宴" band-sensors="sensors-li-30">
+                        <img src="/static/image/hy.png" class="pic sc-btn" band-sensors="sensors-img-31">
+                        <p class="text"><em class="icon">icon</em>婚宴</p>
+                    </li>
+                    <li id="baobaoyan" data-type="宝宝宴" band-sensors="sensors-li-32">
+                        <img src="/static/image/bby.png" class="pic sc-btn" band-sensors="sensors-img-33">
+                        <p class="text"><em class="icon">icon</em>宝宝宴</p>
+                    </li>
+                    <li id="shouyan" data-type="寿宴" band-sensors="sensors-li-34">
+                        <img src="/static/image/sy.png" class="pic sc-btn" band-sensors="sensors-img-35">
+                        <p class="text"><em class="icon">icon</em>寿宴</p>
+                    </li>
+                    <li id="huimenyan" data-type="回门宴" band-sensors="sensors-li-36">
+                        <img src="/static/image/hmy.png" class="pic sc-btn" band-sensors="sensors-img-37">
+                        <p class="text"><em class="icon">icon</em>回门宴</p>
+                    </li>
+                    <li id="nianhui" data-type="年会" band-sensors="sensors-li-38">
+                        <img src="/static/image/nh.png" class="pic sc-btn" band-sensors="sensors-img-39">
+                        <p class="text"><em class="icon">icon</em>年会</p>
+                    </li>
+                    <li id="qita" data-type="其他" band-sensors="sensors-li-40">
+                        <img src="/static/image/qt.png" class="pic sc-btn" band-sensors="sensors-img-41">
+                        <p class="text"><em class="icon">icon</em>其他</p>
+                    </li>
+                </ul>
             </div>
+            <!-- 预定桌数 -->
+            <div class="subscribe-list clearfix" band-sensors="sensors-div-42">
+                <img src="/static/image/02-title.png" class="title" band-sensors="sensors-img-43">
+                <ul class="list">
+                    <li class="current sc-btn" data-type="待定" band-sensors="sensors-li-44">待定</li>
+                    <li class="sc-btn" data-type="10桌以下" band-sensors="sensors-li-45">10桌以下</li>
+                    <li class="sc-btn" data-type="10-20桌" band-sensors="sensors-li-46">10-20桌</li>
+                    <li class="sc-btn" data-type="20-30桌" band-sensors="sensors-li-47">20-30桌</li>
+                    <li class="sc-btn" data-type="30-40桌" band-sensors="sensors-li-48">30-40桌</li>
+                    <li class="sc-btn" data-type="40桌以上" band-sensors="sensors-li-49">40桌以上</li>
+                </ul>
+            </div>
+            <!-- 每桌预算 -->
+            <div class="subscribe-list num-list clearfix" band-sensors="sensors-div-50">
+                <img src="/static/image/03-title.png" class="title" band-sensors="sensors-img-51">
+                <ul class="list">
+                    <li class="current sc-btn" data-type="不限" band-sensors="sensors-li-52">不限</li>
+                    <li class="sc-btn" data-type="1000元以下" band-sensors="sensors-li-53">1000元以下</li>
+                    <li class="sc-btn" data-type="1000-1500元" band-sensors="sensors-li-54">1000-1500元</li>
+                    <li class="sc-btn" data-type="1500-2000元" band-sensors="sensors-li-55">1500-2000元</li>
+                    <li class="sc-btn" data-type="2000-2500元" band-sensors="sensors-li-56">2000-2500元</li>
+                    <li class="sc-btn" data-type="2500元以上" band-sensors="sensors-li-57">2500元以上</li>
+                </ul>
+            </div>
+            <!-- 您的档期 -->
+            <div class="deta-list clearfix" band-sensors="sensors-div-58">
+                <img src="/static/image/04-title.png" class="title" band-sensors="sensors-img-59">
+                <ul class="list">
+                    <li class="current sc-btn" data-type="待定" band-sensors="sensors-li-60">待定</li>
+                    <li class="sc-btn" data-type="半年" band-sensors="sensors-li-61">半年</li>
+                    <li class="sc-btn" data-type="一年" band-sensors="sensors-li-62">一年</li>
+                    <li class="sc-btn" data-type="两年" band-sensors="sensors-li-63">两年</li>
+                </ul>
+            </div>
+            <!-- 选择区域 -->
+            <div class="choosearea-list clearfix" band-sensors="sensors-div-64">
+                <img src="/static/image/choosearea.png" class="title" band-sensors="sensors-img-65">
+                <ul class="list">
+                    <li band-sensors="sensors-li-66">城市<a id="c_city" href="javascript:void(0)"><span
+                            class="c_name sc-btn" band-sensors="sensors-span-67">请选择城市</span>
+                        <ul class="zhiying">
+                            <li class="sc-btn" id="cs" band-sensors="sensors-li-68">长沙</li>
+                            <li class="sc-btn" id="wh" band-sensors="sensors-li-69">武汉</li>
+                            <li class="sc-btn" id="nc" band-sensors="sensors-li-70">南昌</li>
+                            <li class="sc-btn" id="sz" band-sensors="sensors-li-71">深圳</li>
+                            <li class="sc-btn" id="hf" band-sensors="sensors-li-72">合肥</li>
+                            <li class="sc-btn" id="zz" band-sensors="sensors-li-73">郑州</li>
+                            <li class="sc-btn" id="zz2" band-sensors="sensors-li-74">株洲</li>
+                        </ul>
+                    </a></li>
+                    <li band-sensors="sensors-li-75">区域<a id="c_local" href="javascript:void(0)"><span
+                            class="c_local sc-btn" band-sensors="sensors-span-76">请选择区域</span>
+                        <ul class="locals">
+                            <li band-sensors="sensors-li-77"></li>
+                        </ul>
+                    </a></li>
+                </ul>
+            </div>
+            <!-- 布置咨询 -->
+            <div class="attribute-list clearfix" band-sensors="sensors-div-78">
+                <img src="/static/image/05-title.png" class="title" band-sensors="sensors-img-79">
+                <ul class="list">
+                    <li id="shi" class="current sc-btn" data-type="是" band-sensors="sensors-li-80">是</li>
+                    <li id="fou" class="sc-btn" data-type="否" band-sensors="sensors-li-81">否</li>
+                </ul>
+            </div>
+            <!-- swiper -->
+            <div class="swiper-list" band-sensors="sensors-div-82">
+                <div class="swiper-container swiper-container-horizontal" band-sensors="sensors-div-83">
+                    <div class="swiper-wrapper" band-sensors="sensors-div-84"
+                         style="transform: translate3d(-4372px, 0px, 0px); transition-duration: 0ms;">
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev"
+                             band-sensors="sensors-div-89" data-swiper-slide-index="2" style="width: 1093px;">
+                            <img src="/static/image/list-pic-03.jpg" band-sensors="sensors-img-90">
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate-active" band-sensors="sensors-div-85"
+                             data-swiper-slide-index="0" style="width: 1093px;">
+                            <img src="/static/image/list-pic-01.jpg" band-sensors="sensors-img-86">
+                        </div>
+                        <div class="swiper-slide" band-sensors="sensors-div-87" data-swiper-slide-index="1"
+                             style="width: 1093px;">
+                            <img src="/static/image/list-pic-02.jpg" band-sensors="sensors-img-88">
+                        </div>
+                        <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next"
+                             band-sensors="sensors-div-89" data-swiper-slide-index="2" style="width: 1093px;">
+                            <img src="/static/image/list-pic-03.jpg" band-sensors="sensors-img-90">
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-active"
+                             band-sensors="sensors-div-85" data-swiper-slide-index="0" style="width: 1093px;">
+                            <img src="/static/image/list-pic-01.jpg" band-sensors="sensors-img-86">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination sc-btn swiper-pagination-bullets" band-sensors="sensors-div-91"><span
+                            class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
+                            class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+                    <div class="swiper-button-prev sc-btn" band-sensors="sensors-div-92"></div>
+                    <div class="swiper-button-next sc-btn" band-sensors="sensors-div-93"></div>
+                </div>
+            </div>
+            <!-- 立即查询 -->
+            <div class="demand-btn sc-btn" data-agl-cvt="3" band-sensors="sensors-div-94">立即查询</div>
         </div>
-        <!-- 立即查询 -->
-        <div class="demand-btn sc-btn" data-agl-cvt="3" band-sensors="sensors-div-94">立即查询</div>
     </div>
-</div>
 
-<!-- 弹窗 & 免费获取9秒订婚宴酒店 -->
-<div class="popup" id="popup1" band-sensors="sensors-div-95">
-    <div class="cont" band-sensors="sensors-div-96">
-        <span class="close" band-sensors="sensors-span-97">关闭</span>
-        <div class="popup-title" band-sensors="sensors-div-98">
-            <div class="title" band-sensors="sensors-div-99">共找到<em class="random">95</em>个符合条件的酒店</div>
-            <p class="des">输入手机号，立即获取酒店最新优惠+免费咨询福利</p>
+    <!-- 弹窗 & 免费获取9秒订婚宴酒店 -->
+    <div class="popup" id="popup1" band-sensors="sensors-div-95">
+        <div class="cont" band-sensors="sensors-div-96">
+            <span class="close" band-sensors="sensors-span-97">关闭</span>
+            <div class="popup-title" band-sensors="sensors-div-98">
+                <div class="title" band-sensors="sensors-div-99">共找到<em class="random">95</em>个符合条件的酒店</div>
+                <p class="des">输入手机号，立即获取酒店最新优惠+免费咨询福利</p>
+            </div>
+            <ul class="from-list">
+                <li band-sensors="sensors-li-100">
+                    <input type="tel" class="in-text user-mobile" maxlength="11" value="" placeholder="请填入您的手机号">
+                </li>
+            </ul>
+            <span class="btn sc-btn" band-sensors="sensors-span-101">立即提交</span>
         </div>
-        <ul class="from-list">
-            <li band-sensors="sensors-li-100">
-                <input type="tel" class="in-text user-mobile" maxlength="11" value="" placeholder="请填入您的手机号">
-            </li>
-        </ul>
-        <span class="btn sc-btn" band-sensors="sensors-span-101">立即提交</span>
     </div>
-</div>
 {% endblock function %}
 {% block righttip %}
 {% endblock %}
 {% block bottomfile %}
 {% endblock %}
+{% block texiao %}
+    <script type="text/javascript" src="../static/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 婚宴类型
+            $('#hunyan').click(function () {
+                $(this).addClass('current');
+                $('#baobaoyan').removeClass('current');
+                $('#shouyan').removeClass('current');
+                $('#huimenyan').removeClass('current');
+                $('#nianhui').removeClass('current');
+                $("#qita").removeClass('current');
+            });
+            $('#baobaoyan').click(function () {
+                $(this).addClass('current');
+                $('#shouyan').removeClass('current');
+                $('#huimenyan').removeClass('current');
+                $('#nianhui').removeClass('current');
+                $('#hunyan').removeClass('current');
+                $("#qita").removeClass('current');
+            });
+            $('#shouyan').click(function () {
+                $(this).addClass('current');
+                $('#huimenyan').removeClass('current');
+                $('#nianhui').removeClass('current');
+                $('#hunyan').removeClass('current');
+                $("#qita").removeClass('current');
+                $('#baobaoyan').removeClass('current');
+            });
+            $('#huimenyan').click(function () {
+                $(this).addClass('current');
+                $('#nianhui').removeClass('current');
+                $('#hunyan').removeClass('current');
+                $("#qita").removeClass('current');
+                $('#baobaoyan').removeClass('current');
+                $('#shouyan').removeClass('current');
+            });
+            $('#nianhui').click(function () {
+                $(this).addClass('current');
+                $('#hunyan').removeClass('current');
+                $("#qita").removeClass('current');
+                $('#baobaoyan').removeClass('current');
+                $('#shouyan').removeClass('current');
+                $('#huimenyan').removeClass('current');
+            });
+            $('#qita').click(function () {
+                $(this).addClass('current');
+                $('#baobaoyan').removeClass('current');
+                $('#shouyan').removeClass('current');
+                $('#huimenyan').removeClass('current');
+                $('#nianhui').removeClass('current');
+                $('#hunyan').removeClass('current');
+            });
+            //布置咨询
+            $('#shi').click(function () {
+                $(this).addClass('current');
+                $('#fou').removeClass('current');
+            });
+            $('#fou').click(function () {
+                $(this).addClass('current');
+                $('#shi').removeClass('current');
+            });
+        })
+    </script>
+
+{% endblock texiao %}
