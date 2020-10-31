@@ -10,3 +10,9 @@ def dress(request):
 
 def theme(request):
     return render(request,"Wedding_theme.html")
+
+def environment(request):
+    return render(request,"environment.html")
+
+def about(request):
+    return render(request,"about.html")

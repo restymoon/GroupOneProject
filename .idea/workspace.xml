@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aad4ed47-69fb-461a-9524-95d3b57d1603" name="Default Changelist" comment="老胡添加了婚车页面">
-      <change beforePath="$PROJECT_DIR$/.idea/GroupOneProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupOneProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="aad4ed47-69fb-461a-9524-95d3b57d1603" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/environment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/example.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/team.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/jquery-1.12.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery-1.12.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/example/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/example/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wedding/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wedding/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wedding/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wedding/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,37 +22,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/car.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="1034" column="11" selection-start-line="1034" selection-start-column="11" selection-end-line="1034" selection-end-column="11" />
+            <state relative-caret-position="48">
+              <caret line="3" column="78" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/example.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="2" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/example/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
               <folding>
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#6;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#7;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#7;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#7;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#7;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#68833#69001#0#HTML" />
-                <element signature="e#69051#69215#0#HTML" />
-                <element signature="e#69262#69427#0#HTML" />
-                <element signature="e#69486#69651#0#HTML" />
-                <element signature="e#69704#69858#0#HTML" />
-                <element signature="e#69899#70063#0#HTML" />
-                <element signature="e#70127#70296#0#HTML" />
-                <element signature="e#70350#70509#0#HTML" />
-                <element signature="e#70553#70720#0#HTML" />
+                <element signature="e#624#649#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="19" column="73" lean-forward="true" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="73" />
+              <folding>
+                <element signature="n#block#3;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/environment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="2" selection-end-column="20" />
+              <folding>
+                <element signature="e#1154#1175#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/wedding/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/wedding/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+              <folding>
+                <element signature="e#624#649#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/team.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1056">
+              <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+              <folding>
+                <element signature="e#1157#1180#0#HTML" expanded="true" />
+                <element signature="e#3484#3507#0#HTML" expanded="true" />
+                <element signature="e#6237#6260#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/team/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -82,6 +156,10 @@
       <find>target=&quot;_blank&quot;</find>
       <find>&lt;a</find>
       <find>./蜜匠婚礼_婚车_files</find>
+      <find>./蜜匠婚礼_真实案例_files</find>
+      <find>./蜜匠婚礼_团队_files</find>
+      <find>./蜜匠婚礼_环境_files</find>
+      <find>./蜜匠婚礼_关于_files</find>
     </findStrings>
     <replaceStrings>
       <replace>/static/image/</replace>
@@ -107,6 +185,7 @@
         <option value="$PROJECT_DIR$/static/css/swiper-3.4.2.min.css" />
         <option value="$PROJECT_DIR$/static/css/index.css" />
         <option value="$PROJECT_DIR$/templates/Wedding_theme.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/db/base_model.py" />
         <option value="$PROJECT_DIR$/GroupOneProject/__init__.py" />
         <option value="$PROJECT_DIR$/templates/Wedding _dress.html" />
@@ -122,21 +201,23 @@
         <option value="$PROJECT_DIR$/apps/car/models.py" />
         <option value="$PROJECT_DIR$/apps/hotel/views.py" />
         <option value="$PROJECT_DIR$/apps/hotel/urls.py" />
-        <option value="$PROJECT_DIR$/apps/wedding/views.py" />
-        <option value="$PROJECT_DIR$/apps/wedding/urls.py" />
         <option value="$PROJECT_DIR$/apps/team/views.py" />
         <option value="$PROJECT_DIR$/GroupOneProject/urls.py" />
         <option value="$PROJECT_DIR$/apps/team/urls.py" />
         <option value="$PROJECT_DIR$/apps/example/urls.py" />
-        <option value="$PROJECT_DIR$/apps/example/views.py" />
         <option value="$PROJECT_DIR$/apps/car/urls.py" />
         <option value="$PROJECT_DIR$/GroupOneProject/settings.py" />
         <option value="$PROJECT_DIR$/apps/car/views.py" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/car.html" />
+        <option value="$PROJECT_DIR$/apps/example/views.py" />
+        <option value="$PROJECT_DIR$/templates/example.html" />
+        <option value="$PROJECT_DIR$/templates/team.html" />
+        <option value="$PROJECT_DIR$/templates/environment.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/static/js/jquery-1.12.4.min.js" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/about.html" />
+        <option value="$PROJECT_DIR$/apps/wedding/views.py" />
+        <option value="$PROJECT_DIR$/apps/wedding/urls.py" />
       </list>
     </option>
   </component>
@@ -169,18 +250,18 @@
             <path>
               <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="wedding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
               <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
@@ -198,22 +279,22 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dailyfresh" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\GroupOneProject\apps" />
+      <recent name="C:\Users\Administrator\Desktop\GroupOneProject\apps\wedding" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Users\Lenovo\Desktop\pengpenghunqing\GroupOneProject\templates" />
       <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\apps\team" />
       <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\apps\car" />
       <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\apps\example" />
       <recent name="C:\Users\Administrator\Desktop\GroupOneProject" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\GroupOneProject\apps" />
-      <recent name="C:\Users\Administrator\Desktop\GroupOneProject\apps\wedding" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -278,7 +359,7 @@
       <workItem from="1603970672485" duration="6954000" />
       <workItem from="1604028987183" duration="5690000" />
       <workItem from="1604109788553" duration="1207000" />
-      <workItem from="1604133174726" duration="6940000" />
+      <workItem from="1604128183209" duration="3940000" />
     </task>
     <task id="LOCAL-00001" summary="修改数据库配置">
       <created>1603979223075</created>
@@ -329,28 +410,42 @@
       <option name="project" value="LOCAL" />
       <updated>1604127571833</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="老胡添加了婚车页面2">
+      <created>1604128348869</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604128348869</updated>
+    </task>
+    <task id="LOCAL-00009" summary="老胡改进了由于婚车页面导致的bug">
+      <created>1604142722543</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604142722543</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81100000" />
+    <option name="totallyTimeSpent" value="78100000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1035" y="10" width="885" height="1020" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.36969697" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18565683" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49840087" visible="true" weight="0.12979683" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49840087" weight="0.12573099" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50159913" side_tool="true" weight="0.19848156" />
-      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49840087" weight="0.15492958" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49840087" weight="0.15580736" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32863188" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.5205092" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.097953215" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.07790368" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -371,7 +466,9 @@
     <MESSAGE value="赵丽帮老胡测试" />
     <MESSAGE value="配置url" />
     <MESSAGE value="老胡添加了婚车页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="老胡添加了婚车页面" />
+    <MESSAGE value="老胡添加了婚车页面2" />
+    <MESSAGE value="老胡改进了由于婚车页面导致的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="老胡改进了由于婚车页面导致的bug" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/css/primaryWrapper.css">
@@ -540,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Wedding _dress.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GroupOneProject/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -571,42 +661,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/team.html" />
-    <entry file="file://$PROJECT_DIR$/apps/wedding/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-          <folding>
-            <element signature="e#624#649#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/wedding/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/team/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/team/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#624#649#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/example/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
@@ -623,24 +678,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/example/views.py">
+    <entry file="file://$USER_HOME$/Envs/GroupOne_project/Lib/site-packages/django/db/models/fields/files.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="312">
+          <caret line="390" column="8" selection-start-line="390" selection-start-column="8" selection-end-line="390" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Envs/GroupOne_project/Lib/site-packages/django/db/models/fields/files.py" />
     <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
+        <state relative-caret-position="432">
           <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/car/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/car/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GroupOneProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="1" selection-start-line="24" selection-start-column="54" selection-end-line="25" selection-end-column="1" />
+          <folding>
+            <element signature="e#624#665#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/car/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="192">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -650,7 +728,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/wedding/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="16">
           <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -658,111 +736,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Wedding _dress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1696">
+          <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="928" column="18" selection-start-line="928" selection-start-column="18" selection-end-line="928" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/example/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/example/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding>
+            <element signature="e#624#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/car.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="78" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/team.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056">
+          <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+          <folding>
+            <element signature="e#1157#1180#0#HTML" expanded="true" />
+            <element signature="e#3484#3507#0#HTML" expanded="true" />
+            <element signature="e#6237#6260#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/team/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        <state relative-caret-position="304">
+          <caret line="19" column="73" lean-forward="true" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="73" />
           <folding>
             <element signature="n#block#3;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GroupOneProject/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/environment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="25" column="1" selection-start-line="24" selection-start-column="54" selection-end-line="25" selection-end-column="1" />
+        <state>
+          <caret selection-end-line="2" selection-end-column="20" />
           <folding>
-            <element signature="e#624#665#0" expanded="true" />
+            <element signature="e#1154#1175#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/car/urls.py">
+    <entry file="file://$PROJECT_DIR$/apps/wedding/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="256">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/car/views.py">
+    <entry file="file://$PROJECT_DIR$/apps/wedding/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/car.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="439" column="21" selection-start-line="439" selection-start-column="21" selection-end-line="439" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/peixun/pycharmLearn/js/lbt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/swiper-3.4.2.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7025">
-          <caret line="151" column="26" lean-forward="true" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+        <state relative-caret-position="368">
+          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
           <folding>
-            <element signature="e#3972#4230#2" expanded="true" />
+            <element signature="e#624#649#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery-1.12.4.min.js">
+    <entry file="file://$PROJECT_DIR$/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6525">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="1034" column="11" selection-start-line="1034" selection-start-column="11" selection-end-line="1034" selection-end-column="11" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#6;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#6;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#7;n#div#1;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#7;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#7;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#7;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#68833#69001#0#HTML" />
-            <element signature="e#69051#69215#0#HTML" />
-            <element signature="e#69262#69427#0#HTML" />
-            <element signature="e#69486#69651#0#HTML" />
-            <element signature="e#69704#69858#0#HTML" />
-            <element signature="e#69899#70063#0#HTML" />
-            <element signature="e#70127#70296#0#HTML" />
-            <element signature="e#70350#70509#0#HTML" />
-            <element signature="e#70553#70720#0#HTML" />
-          </folding>
+        <state relative-caret-position="48">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>

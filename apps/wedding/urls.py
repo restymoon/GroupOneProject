@@ -20,4 +20,6 @@ urlpatterns = [
     url(r"^$", views.index, name="index"),  # 首页
     url(r"^dress/", views.dress, name="dress"),
     url(r"^theme/", views.theme, name="theme"),
+    url(r"^environment/", views.environment, name="environment"),
+    url(r"^about/", views.about, name="about"),
 ]
