@@ -21,6 +21,7 @@ class WeddingSKU(BaseModel):
     user = models.ForeignKey("team.Staff", verbose_name="设计师")
     name = models.CharField(max_length=20, verbose_name="婚礼名称")
     desc = models.CharField(max_length=256, verbose_name="婚礼简介")
+    video = models.CharField(max_length=256, verbose_name="视频链接")
     cover_image = models.ImageField(upload_to="wedding", verbose_name="婚礼封面图片")
 
     def __str__(self):

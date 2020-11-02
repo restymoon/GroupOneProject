@@ -85,6 +85,7 @@ class Migration(migrations.Migration):
                 ('is_delete', models.BooleanField(verbose_name='删除标记', default=False)),
                 ('name', models.CharField(verbose_name='婚礼名称', max_length=20)),
                 ('desc', models.CharField(verbose_name='婚礼简介', max_length=256)),
+                ('video', models.CharField(verbose_name='视频链接', max_length=256)),
                 ('cover_image', models.ImageField(verbose_name='婚礼封面图片', upload_to='wedding')),
             ],
             options={
