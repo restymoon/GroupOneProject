@@ -111,3 +111,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+
+# 配置所使用的文件存储系统
+DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FDFSStorage'
+
+# 设置fdfs使用的client.conf文件路径
+FDFS_CLIENT_CONF = './utils/fdfs/client.conf'
+
+# 设置fdfs存储服务器上的nginx的IP和端口
+FDFS_URL = 'http://192.168.72.129:7766/'

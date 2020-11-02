@@ -23,4 +23,5 @@ urlpatterns = [
     url(r"^environment/", views.environment, name="environment"),
     url(r"^about/", views.about, name="about"),
     url(r"^details/", views.theme_details, name="details"),
+    url(r"^test/", views.test, name="test"),
 ]

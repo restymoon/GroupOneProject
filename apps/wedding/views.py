@@ -19,3 +19,6 @@ def about(request):
 
 def theme_details(request):
     return render(request,"theme_details.html")
+
+def test(request):
+    return render(request,"test.html")
