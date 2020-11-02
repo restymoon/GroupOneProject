@@ -18,7 +18,7 @@ class WeddingType(BaseModel):
 class WeddingSKU(BaseModel):
     """   婚礼SKU模型类   """
     type = models.ForeignKey("WeddingType", verbose_name="婚礼种类")
-    user = models.ForeignKey("team.Staff", verbose_name="设计师")
+    designer = models.ForeignKey("team.Staff", verbose_name="设计师")
     name = models.CharField(max_length=20, verbose_name="婚礼名称")
     desc = models.CharField(max_length=256, verbose_name="婚礼简介")
     video = models.CharField(max_length=256, verbose_name="视频链接")

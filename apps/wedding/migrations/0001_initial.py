@@ -87,6 +87,7 @@ class Migration(migrations.Migration):
                 ('desc', models.CharField(verbose_name='婚礼简介', max_length=256)),
                 ('video', models.CharField(verbose_name='视频链接', max_length=256)),
                 ('cover_image', models.ImageField(verbose_name='婚礼封面图片', upload_to='wedding')),
+                ('designer', models.ForeignKey(verbose_name='设计师', to='team.Staff')),
             ],
             options={
                 'verbose_name': '婚礼',
@@ -113,11 +114,6 @@ class Migration(migrations.Migration):
             model_name='weddingsku',
             name='type',
             field=models.ForeignKey(verbose_name='婚礼种类', to='wedding.WeddingType'),
-        ),
-        migrations.AddField(
-            model_name='weddingsku',
-            name='user',
-            field=models.ForeignKey(verbose_name='设计师', to='team.Staff'),
         ),
         migrations.AddField(
             model_name='weddingimage',

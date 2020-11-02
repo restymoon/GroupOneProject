@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^hotel/',include('hotel.urls',namespace="hotel")),
     url(r'^example/',include('example.urls',namespace="example")),
     url(r'^car/',include('car.urls',namespace="car")),
+    url(r'^user/',include('user.urls',namespace="user")),
 ]

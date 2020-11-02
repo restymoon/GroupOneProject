@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aad4ed47-69fb-461a-9524-95d3b57d1603" name="Default Changelist" comment="">
+    <list default="true" id="aad4ed47-69fb-461a-9524-95d3b57d1603" name="Default Changelist" comment="赵丽修改为fdfs存储图片">
+      <change afterPath="$PROJECT_DIR$/apps/example/migrations/0002_auto_20201102_1953.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/user/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupOneProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GroupOneProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupOneProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/GroupOneProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/car/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/car/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/car/migrations/0002_auto_20201102_0903.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/example/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/example/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/example/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/example/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wedding/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wedding/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wedding/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wedding/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,67 +28,101 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/wedding/models.py">
+        <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="3425">
+              <caret line="137" column="27" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/test.html">
+        <entry file="file://$PROJECT_DIR$/GroupOneProject/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="7" selection-start-line="10" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/team/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/team/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="550">
+              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/wedding/urls.py">
+        <entry file="file://$PROJECT_DIR$/apps/user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="326">
+              <caret line="117" column="49" lean-forward="true" selection-start-line="117" selection-start-column="49" selection-end-line="117" selection-end-column="49" />
               <folding>
-                <element signature="e#624#649#0" expanded="true" />
+                <element signature="e#2561#3925#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/wedding/views.py">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state relative-caret-position="300">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="930" column="17" selection-start-line="930" selection-start-column="17" selection-end-line="930" selection-end-column="17" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/user/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/celery_tasks/tasks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/wedding/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,8 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/css/header.css" />
-        <option value="$PROJECT_DIR$/static/css/headerBar.css" />
         <option value="$PROJECT_DIR$/static/css/base.css" />
         <option value="$PROJECT_DIR$/static/css/animate.min.css" />
         <option value="$PROJECT_DIR$/static/css/footer.css" />
@@ -137,11 +181,9 @@
         <option value="$PROJECT_DIR$/static/css/swiper-3.4.2.min.css" />
         <option value="$PROJECT_DIR$/static/css/index.css" />
         <option value="$PROJECT_DIR$/templates/Wedding_theme.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/db/base_model.py" />
         <option value="$PROJECT_DIR$/GroupOneProject/__init__.py" />
         <option value="$PROJECT_DIR$/templates/Wedding _dress.html" />
-        <option value="$PROJECT_DIR$/apps/example/models.py" />
         <option value="$PROJECT_DIR$/apps/hotel/models.py" />
         <option value="$PROJECT_DIR$/apps/car/admin.py" />
         <option value="$PROJECT_DIR$/apps/example/admin.py" />
@@ -152,7 +194,6 @@
         <option value="$PROJECT_DIR$/apps/hotel/views.py" />
         <option value="$PROJECT_DIR$/apps/hotel/urls.py" />
         <option value="$PROJECT_DIR$/apps/team/views.py" />
-        <option value="$PROJECT_DIR$/GroupOneProject/urls.py" />
         <option value="$PROJECT_DIR$/apps/team/urls.py" />
         <option value="$PROJECT_DIR$/apps/example/urls.py" />
         <option value="$PROJECT_DIR$/apps/car/urls.py" />
@@ -164,24 +205,33 @@
         <option value="$PROJECT_DIR$/templates/team.html" />
         <option value="$PROJECT_DIR$/templates/environment.html" />
         <option value="$PROJECT_DIR$/templates/about.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/theme_details.html" />
         <option value="$PROJECT_DIR$/templates/hotel.html" />
         <option value="$PROJECT_DIR$/apps/team/models.py" />
-        <option value="$PROJECT_DIR$/GroupOneProject/settings.py" />
         <option value="$PROJECT_DIR$/utils/fdfs/storage.py" />
-        <option value="$PROJECT_DIR$/apps/wedding/models.py" />
         <option value="$PROJECT_DIR$/apps/wedding/urls.py" />
         <option value="$PROJECT_DIR$/apps/wedding/views.py" />
         <option value="$PROJECT_DIR$/templates/test.html" />
+        <option value="$PROJECT_DIR$/apps/example/models.py" />
+        <option value="$PROJECT_DIR$/apps/wedding/models.py" />
+        <option value="$PROJECT_DIR$/apps/user/models.py" />
+        <option value="$PROJECT_DIR$/GroupOneProject/urls.py" />
+        <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/celery_tasks/tasks.py" />
+        <option value="$PROJECT_DIR$/GroupOneProject/settings.py" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/apps/user/urls.py" />
+        <option value="$PROJECT_DIR$/apps/user/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="613" />
-    <option name="y" value="57" />
-    <option name="width" value="1168" />
-    <option name="height" value="1020" />
+    <option name="x" value="167" />
+    <option name="y" value="60" />
+    <option name="width" value="1473" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -191,7 +241,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,30 +253,53 @@
               <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
+              <item name="celery_tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
+              <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils/fdfs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\templates" />
+      <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\apps\user" />
+      <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject" />
       <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\utils\fdfs" />
       <recent name="G:\Users\Lenovo\Desktop\pengpenghunqing\GroupOneProject\templates" />
-      <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\apps\team" />
-      <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\apps\car" />
-      <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\apps\example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\wedding\GroupOneProject\apps" />
       <recent name="C:\Users\Administrator\Desktop\GroupOneProject\apps" />
       <recent name="C:\Users\Administrator\Desktop\GroupOneProject\apps\wedding" />
     </key>
@@ -295,7 +367,8 @@
       <workItem from="1604028987183" duration="5690000" />
       <workItem from="1604109788553" duration="1207000" />
       <workItem from="1604128183209" duration="6040000" />
-      <workItem from="1604278445284" duration="5817000" />
+      <workItem from="1604278445284" duration="11040000" />
+      <workItem from="1604322352956" duration="1246000" />
     </task>
     <task id="LOCAL-00001" summary="修改数据库配置">
       <created>1603979223075</created>
@@ -402,23 +475,31 @@
       <option name="project" value="LOCAL" />
       <updated>1604316524726</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="赵丽修改为fdfs存储图片">
+      <created>1604316581482</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1604316581482</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87037000" />
+    <option name="totallyTimeSpent" value="93506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15013404" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12935656" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49798927" visible="true" weight="0.28611898" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="2" sideWeight="0.5020107" side_tool="true" visible="true" weight="0.28611898" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5020107" side_tool="true" weight="0.28611898" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49840087" weight="0.3569405" />
-      <window_info anchor="bottom" id="Python Console" order="4" weight="0.3286119" />
+      <window_info anchor="bottom" id="Python Console" order="4" weight="0.32748538" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.5205092" />
@@ -427,7 +508,7 @@
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="manage.py@GroupOneProject" order="13" sideWeight="0.49865952" weight="0.3286119" />
+      <window_info anchor="bottom" id="manage.py@GroupOneProject" order="13" sideWeight="0.49865952" weight="0.32748538" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="SciView" order="2" />
@@ -469,36 +550,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="赵丽修改为fdfs存储图片" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/car/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/wedding/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/team/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../dailyfresh/apps/goods/models.py" />
-    <entry file="file://$PROJECT_DIR$/apps/hotel/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/base_model.py" />
     <entry file="file://$PROJECT_DIR$/apps/car/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/example/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -533,16 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/hotel/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Wedding_theme.html" />
     <entry file="file://$PROJECT_DIR$/GroupOneProject/__init__.py" />
     <entry file="file://$PROJECT_DIR$/apps/hotel/urls.py">
@@ -551,16 +598,6 @@
           <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
           <folding>
             <element signature="e#624#647#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/team/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#624#649#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -584,17 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GroupOneProject/urls.py" />
-    <entry file="file://$PROJECT_DIR$/apps/car/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,7 +652,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/environment.html" />
-    <entry file="file://$PROJECT_DIR$/templates/base.html" />
     <entry file="file://$PROJECT_DIR$/templates/about.html" />
     <entry file="file://$PROJECT_DIR$/templates/header.html" />
     <entry file="file://$PROJECT_DIR$/templates/hotel.html" />
@@ -648,28 +673,11 @@
     <entry file="file://$PROJECT_DIR$/static/image/list1-6.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="929" column="13" selection-start-line="929" selection-start-column="13" selection-end-line="929" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Wedding _dress.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/theme_details.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/wedding/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/fdfs/client.conf">
       <provider selected="true" editor-type-id="text-editor" />
@@ -681,13 +689,6 @@
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="122" column="40" lean-forward="true" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -708,29 +709,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/wedding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/wedding/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#624#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/team/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/team/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
-          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/wedding/views.py">
+    <entry file="file://$PROJECT_DIR$/apps/hotel/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        <state relative-caret-position="150">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/wedding/urls.py">
+    <entry file="file://$PROJECT_DIR$/apps/example/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="575">
+          <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
           <folding>
-            <element signature="e#624#649#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/car/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GroupOneProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3425">
+          <caret line="137" column="27" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GroupOneProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/celery_tasks/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/wedding/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="930" column="17" selection-start-line="930" selection-start-column="17" selection-end-line="930" selection-end-column="17" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="117" column="49" lean-forward="true" selection-start-line="117" selection-start-column="49" selection-end-line="117" selection-end-column="49" />
+          <folding>
+            <element signature="e#2561#3925#0" />
           </folding>
         </state>
       </provider>

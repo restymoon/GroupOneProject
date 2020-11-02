@@ -54,8 +54,8 @@ class Migration(migrations.Migration):
                 ('image', models.ImageField(verbose_name='车型图片', upload_to='carbrand')),
             ],
             options={
-                'verbose_name': '商品SPU',
-                'verbose_name_plural': '商品SPU',
+                'verbose_name': '车型',
+                'verbose_name_plural': '车型',
                 'db_table': 'df_car_type',
             },
         ),

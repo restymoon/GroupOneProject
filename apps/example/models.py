@@ -21,7 +21,7 @@ class Example(BaseModel):
     """ 案例模型类 """
     type = models.ForeignKey("ExampleType", verbose_name="案例种类")
     wedding = models.ForeignKey("wedding.WeddingSKU", verbose_name="婚礼")
-    # user = models.ForeignKey("team.User",verbose_name="评论人")
+    user = models.ForeignKey("user.User",verbose_name="评论人")
     name = models.CharField(max_length=20, verbose_name="案例名称")
     cover_image = models.ImageField(upload_to="example", verbose_name="案例封面图片")
     prov = models.CharField(max_length=20, verbose_name="省")

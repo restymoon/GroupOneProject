@@ -44,6 +44,13 @@
                     <a href="{% url 'wedding:about' %}" title="关于蜜匠">关于蜜匠</a>
                 </li>
             </ul>
+            {% if request.user.is_authenticated %}
+                    <div class="login_btn fl">
+                        欢迎您：<em>{{ request.user.username }}</em>
+                        <span>|</span>
+                        <a href="{% url 'user:logout' %}">退出</a>
+                    </div>
+            {% endif %}
         </div>
     </div>
 </div>

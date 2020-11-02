@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'example',
     'hotel',
     'team',
+    'user',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -112,6 +113,34 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
+# django认证系统使用的模型类
+AUTH_USER_MODEL = "user.User"
+
+# 发送邮件配置
+EMAIL_BACKEMD = "django.core.mail.backends.smtp.EmailBackend"
+# smtp服务器地址
+EMAIL_HOST = "smtp.163.com"
+# smtp服务器端口号
+EMAIL_PORT = 25
+# 发送邮件的邮箱
+EMAIL_HOST_USER = "15176161367@163.com"
+# 在邮箱中设置的客户授权码
+EMAIL_HOST_PASSWORD = "FSROYUIZCFWCJKLP"
+# 收件人看到的发件人
+EMAIL_FROM = "蜜匠婚礼<15176161367@163.com>"
+
+# 登录的状态信息保存到redis中
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://192.168.72.129:6379/9",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
 
 # 配置所使用的文件存储系统
 DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FDFSStorage'
