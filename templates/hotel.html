@@ -185,67 +185,254 @@
 {% endblock %}
 {% block texiao %}
     <script type="text/javascript" src="../static/js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            // 婚宴类型
-            $('#hunyan').click(function () {
-                $(this).addClass('current');
-                $('#baobaoyan').removeClass('current');
-                $('#shouyan').removeClass('current');
-                $('#huimenyan').removeClass('current');
-                $('#nianhui').removeClass('current');
-                $("#qita").removeClass('current');
-            });
-            $('#baobaoyan').click(function () {
-                $(this).addClass('current');
-                $('#shouyan').removeClass('current');
-                $('#huimenyan').removeClass('current');
-                $('#nianhui').removeClass('current');
-                $('#hunyan').removeClass('current');
-                $("#qita").removeClass('current');
-            });
-            $('#shouyan').click(function () {
-                $(this).addClass('current');
-                $('#huimenyan').removeClass('current');
-                $('#nianhui').removeClass('current');
-                $('#hunyan').removeClass('current');
-                $("#qita").removeClass('current');
-                $('#baobaoyan').removeClass('current');
-            });
-            $('#huimenyan').click(function () {
-                $(this).addClass('current');
-                $('#nianhui').removeClass('current');
-                $('#hunyan').removeClass('current');
-                $("#qita").removeClass('current');
-                $('#baobaoyan').removeClass('current');
-                $('#shouyan').removeClass('current');
-            });
-            $('#nianhui').click(function () {
-                $(this).addClass('current');
-                $('#hunyan').removeClass('current');
-                $("#qita").removeClass('current');
-                $('#baobaoyan').removeClass('current');
-                $('#shouyan').removeClass('current');
-                $('#huimenyan').removeClass('current');
-            });
-            $('#qita').click(function () {
-                $(this).addClass('current');
-                $('#baobaoyan').removeClass('current');
-                $('#shouyan').removeClass('current');
-                $('#huimenyan').removeClass('current');
-                $('#nianhui').removeClass('current');
-                $('#hunyan').removeClass('current');
-            });
-            //布置咨询
-            $('#shi').click(function () {
-                $(this).addClass('current');
-                $('#fou').removeClass('current');
-            });
-            $('#fou').click(function () {
-                $(this).addClass('current');
-                $('#shi').removeClass('current');
-            });
+    <script src="../static/js/common20200410.min.js"></script>
+    <script src="../static/js/sensorsTrack.min.js"></script>
+    <script src="../static/js/jquery.lazyload.min.js"></script>
+    <script src="../static/js/swiper-3.4.2.js"></script>
+    <script src="../static/js/public.js"></script>
+    <script src="../static/js/public.js(1)"></script>
+    <!-- <script src="/themes/template_3_1/static_pc/js/sensorsTrack.js?v20200339"></script> -->
+
+
+
+
+    <script>
+        window.mijwed = window.location.hostname == "m.mijwed.com";
+        var note = '';
+        var selectedtype = "";
+        var platecode = '' || 2;
+        // 随机数
+        var randomNum = Math.floor(Math.random() * (100 - 80)) + 80;
+        console.log(randomNum)
+        var randomNumber = $('.random').text(randomNum)
+
+        setCookie("sem20190512", randomNum, 365);
+        console.log(getCookie("sem20190512"));
+
+
+        // 点击弹出
+        $(".type-list li,.subscribe-list li,.num-list li,.deta-list li,.attribute-list li").click(function () {
+            selectedtype = $(this).attr('data-type');
+            console.log(selectedtype)
+            $(this).addClass("current").siblings(".current").removeClass("current");
+        });
+
+        // swiper
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 1500,//可选选项，自动滑动
+            loop: true,
+            pagination: '.swiper-pagination',
+            prevButton: '.swiper-button-prev',
+            nextButton: '.swiper-button-next',
         })
+
+        // 点击关闭
+        $(".close").click(function () {
+            $(".popup").hide();
+        });
+
+        // 立即免费获取9秒订婚宴酒店
+        $(".demand-btn").click(function () {
+            $(".popup").show();
+
+        });
+        var umobile = /^1\d{10}$/;
+        // 一键提交 & shop预约
+        $("#popup1 .btn").click(function () {
+            var isNianhui = window.location.search;
+            console.log(isNianhui, '====================')
+            //选择城市和区域
+            var c_city = $('.c_name').text();
+            var c_local = $('.c_local').text();
+            var userMobile = $('.user-mobile').val();
+            if (userMobile == '') {
+                msg("电话不能为空");
+                return false;
+            } else if (!umobile.test(userMobile)) {
+                msg("请输入正确的手机号");
+                return false;
+            } else {
+
+                if ($(".attribute-list li.current").attr('data-type') == '是') {
+                    // 商家预约 shop-yuyue
+                    var data = {
+                        url: window.location.href,
+                        mobile: userMobile,
+                        hotel_id: 1,
+                        plate_code: platecode,
+                        note: (isNianhui == "?isNianhui") ? '点击年会更多宴席定制;Sem免费获取9秒订婚宴酒店--> 宴席类型：' + $(".type-list li.current").attr('data-type') + ' ；> 预定桌数' + $(".subscribe-list li.current").attr('data-type') + ' ；> 每桌预算：' + $(".num-list li.current").attr('data-type') + ' ；> 您的档期：' + $(".deta-list li.current").attr('data-type') + ' ；> 选择区域：' + c_city + '-' + c_local + '>布置咨询：' + $(".attribute-list li.current").attr('data-type') : 'Sem免费获取9秒订婚宴酒店--> 宴席类型：' + $(".type-list li.current").attr('data-type') + ' ；> 预定桌数' + $(".subscribe-list li.current").attr('data-type') + ' ；> 每桌预算：' + $(".num-list li.current").attr('data-type') + ' ；> 您的档期：' + $(".deta-list li.current").attr('data-type') + ' ；> 选择区域：' + c_city + '-' + c_local + '>布置咨询：' + $(".attribute-list li.current").attr('data-type')
+                    }
+                    console.log(data.note);
+
+                    $.post("/activity/shop-yuyue.html", data, function (res) {
+                        msg(res.message)
+                        // 2019.05.29 新增百度推广代码监控
+                        window._agl && window._agl.push(['track', ['success', {t: 3}]]);
+                    }, 'json');
+
+                    // 酒店预约 hotel-yuyue
+                    $.post("/index.php?hotel-yuyue.html", {
+                        data: {
+                            mobile: userMobile,
+                            note: (isNianhui == "?isNianhui") ? '点击年会更多宴席定制;Sem免费获取9秒订婚宴酒店--> 宴席类型：' + $(".type-list li.current").attr('data-type') + ' ；> 预定桌数' + $(".subscribe-list li.current").attr('data-type') + ' ；> 每桌预算：' + $(".num-list li.current").attr('data-type') + ' ；> 您的档期：' + $(".deta-list li.current").attr('data-type') + ' ；> 选择区域：' + c_city + '-' + c_local + '>布置咨询：' + $(".attribute-list li.current").attr('data-type') : 'Sem免费获取9秒订婚宴酒店--> 宴席类型：' + $(".type-list li.current").attr('data-type') + ' ；> 预定桌数' + $(".subscribe-list li.current").attr('data-type') + ' ；> 每桌预算：' + $(".num-list li.current").attr('data-type') + ' ；> 您的档期：' + $(".deta-list li.current").attr('data-type') + ' ；> 选择区域：' + c_city + '-' + c_local + '>布置咨询：' + $(".attribute-list li.current").attr('data-type'),
+                            city_id: '52',
+                            plate_code: platecode,
+                            channel_type: '19' || 19,
+                            hotel_id: 1
+                        },
+                        url: window.location.href,
+                    }, function (res) {
+                        // 2019.05.29 新增百度推广代码监控
+                        window._agl && window._agl.push(['track', ['success', {t: 3}]]);
+                    }, 'json');
+                } else {
+                    // 酒店预约 hotel-yuyue
+                    $.post("/index.php?hotel-yuyue.html", {
+                        data: {
+                            mobile: userMobile,
+                            note: (isNianhui == "?isNianhui") ? '点击年会更多宴席定制;Sem免费获取9秒订婚宴酒店--> 宴席类型：' + $(".type-list li.current").attr('data-type') + ' ；> 预定桌数' + $(".subscribe-list li.current").attr('data-type') + ' ；> 每桌预算：' + $(".num-list li.current").attr('data-type') + ' ；> 您的档期：' + $(".deta-list li.current").attr('data-type') + ' ；> 选择区域：' + c_city + '-' + c_local + '>布置咨询：' + $(".attribute-list li.current").attr('data-type') : 'Sem免费获取9秒订婚宴酒店--> 宴席类型：' + $(".type-list li.current").attr('data-type') + ' ；> 预定桌数' + $(".subscribe-list li.current").attr('data-type') + ' ；> 每桌预算：' + $(".num-list li.current").attr('data-type') + ' ；> 您的档期：' + $(".deta-list li.current").attr('data-type') + ' ；> 选择区域：' + c_city + '-' + c_local + '>布置咨询：' + $(".attribute-list li.current").attr('data-type'),
+                            city_id: '52',
+                            plate_code: platecode,
+                            channel_type: '19' || 19,
+                            hotel_id: 1
+                        },
+                        url: window.location.href,
+                    }, function (res) {
+                        msg(res.message)
+                        // 2019.05.29 新增百度推广代码监控
+                        window._agl && window._agl.push(['track', ['success', {t: 3}]]);
+                    }, 'json');
+                }
+
+
+            }
+
+        });
+
+
+        //选择区域
+        $('#c_city').click(function () {
+            $('.zhiying').toggle();
+        });
+
+        var uList = $('.zhiying').children('li');
+        console.log(uList)
+        for (var i = 0; i < uList.length; i++) {
+            $(uList[i]).mouseover(function () {
+                for (var j = 0; j < uList.length; j++) {
+                    $(uList[j]).removeClass('lihover');
+                }
+                $(this).addClass('lihover');
+            });
+            $(uList[i]).click(function () {
+                $('.c_name').html($(this).text());
+                $('.zhiying').hide();
+                return false;
+            });
+        }
+
+        // 选择区域
+        $('#c_local').click(function () {
+            $('.locals').toggle();
+        });
+
+        function choose() {
+            var uList2 = $('.locals').children('li');
+            console.log(uList2)
+            for (var i = 0; i < uList2.length; i++) {
+                $(uList2[i]).mouseover(function () {
+                    for (var j = 0; j < uList2.length; j++) {
+                        $(uList2[j]).removeClass('lihover');
+                    }
+                    $(this).addClass('lihover');
+                });
+                $(uList2[i]).click(function () {
+                    $('.c_local').html($(this).text());
+                    $('.locals').hide();
+                    return false;
+                });
+            }
+        }
+
+
+        var cs_local = ['天心区', '雨花区', '芙蓉区', '开福区', '岳麓区', '星沙', '望城区', '宁乡县', '浏阳市'];
+        var wh_local = ['江汉区', '洪山区', '江岸区', '汉阳区', '武昌区', '硚口区', '东西湖区', '青山区', '江夏区', '近郊', '黄陂区', '汉南区', '蔡甸区', '新洲区', '光谷'];
+        var nc_local = ['湾里区', '东湖区', '西湖区', '青云谱区', '青山湖区', '红谷滩新区', '南昌县', '安义县', '进贤县', '高新区', '新建县'];
+        var sz_local = ['罗湖区', '福田区', '宝安区', '南山区', '龙岗区', '盐田区', '龙华区', '近郊'];
+        var hf_local = ['包河区', '瑶海区', '庐阳区', '蜀山区', '长丰县', '肥东县', '肥西县', '巢湖市', '滨湖新区', '经开区', '政务区', '高新区', '新站区', '北城区'];
+        var zz_local = ['郑东新区', '惠济区', '中原区', '金水区', '二七区', '管城区', '郑州近郊', '经开区', '高新区', '港区', '新密', '新郑', '中牟', '荥阳', '中牟', '上街'];
+        var zz2_local = ['石峰区', '荷塘区', '天元区', '芦淞区', '株洲县', '攸县', '茶陵县', '醴陵市', '炎陵县'];
+
+        $('#cs').click(function () {
+            $('.locals').html('');
+            $('.c_local').text('请选择区域');
+            for (var i = 0; i < cs_local.length; i++) {
+                var lis = $('<li></li>');
+                lis.text(cs_local[i]);
+                $('.locals').append(lis);
+            }
+            choose();
+        });
+        $('#wh').click(function () {
+            $('.locals').html('');
+            $('.c_local').text('请选择区域');
+            for (var i = 0; i < wh_local.length; i++) {
+                var lis = $('<li></li>');
+                lis.text(wh_local[i]);
+                $('.locals').append(lis);
+            }
+            choose();
+        });
+        $('#nc').click(function () {
+            $('.locals').html('');
+            $('.c_local').text('请选择区域');
+            for (var i = 0; i < nc_local.length; i++) {
+                var lis = $('<li></li>');
+                lis.text(nc_local[i]);
+                $('.locals').append(lis);
+            }
+            choose();
+        });
+        $('#sz').click(function () {
+            $('.locals').html('');
+            $('.c_local').text('请选择区域');
+            for (var i = 0; i < sz_local.length; i++) {
+                var lis = $('<li></li>');
+                lis.text(sz_local[i]);
+                $('.locals').append(lis);
+            }
+            choose();
+        });
+        $('#hf').click(function () {
+            $('.locals').html('');
+            $('.c_local').text('请选择区域');
+            for (var i = 0; i < hf_local.length; i++) {
+                var lis = $('<li></li>');
+                lis.text(hf_local[i]);
+                $('.locals').append(lis);
+            }
+            choose();
+        });
+        $('#zz').click(function () {
+            $('.locals').html('');
+            $('.c_local').text('请选择区域');
+            for (var i = 0; i < zz_local.length; i++) {
+                var lis = $('<li></li>');
+                lis.text(zz_local[i]);
+                $('.locals').append(lis);
+            }
+            choose();
+        });
+        $('#zz2').click(function () {
+            $('.locals').html('');
+            $('.c_local').text('请选择区域');
+            for (var i = 0; i < zz2_local.length; i++) {
+                var lis = $('<li></li>');
+                lis.text(zz2_local[i]);
+                $('.locals').append(lis);
+            }
+            choose();
+        });
     </script>
 
 {% endblock texiao %}
