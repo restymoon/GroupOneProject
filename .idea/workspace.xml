@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aad4ed47-69fb-461a-9524-95d3b57d1603" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/swiper-3.4.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/swiper-3.4.2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/hotel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hotel.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +18,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/fdfs/client.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="149">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -30,26 +36,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/hotel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="278" column="13" lean-forward="true" selection-start-line="278" selection-start-column="13" selection-end-line="278" selection-end-column="13" />
+            <state relative-caret-position="250">
+              <caret line="439" lean-forward="true" selection-start-line="439" selection-end-line="439" />
               <folding>
-                <element signature="e#28533#28791#0#HTML" />
-                <element signature="e#28823#29081#0#HTML" />
-                <element signature="e#29113#29371#0#HTML" />
-                <element signature="e#29403#29661#0#HTML" />
-                <element signature="e#29693#29951#0#HTML" />
-                <element signature="e#29983#30241#0#HTML" />
-                <element signature="e#30274#30534#0#HTML" />
+                <element signature="n#block#0;n#!!top" />
+                <element signature="e#161#272#0#HTML" />
+                <element signature="n#block#3;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/swiper-3.4.2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9917">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -222,15 +215,15 @@
         <option value="$PROJECT_DIR$/apps/user/views.py" />
         <option value="$PROJECT_DIR$/celery_tasks/tasks.py" />
         <option value="$PROJECT_DIR$/GroupOneProject/settings.py" />
-        <option value="$PROJECT_DIR$/utils/fdfs/client.conf" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/static/js/swiper-3.4.2.js" />
+        <option value="$PROJECT_DIR$/utils/fdfs/client.conf" />
         <option value="$PROJECT_DIR$/templates/hotel.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="201" />
+    <option name="x" value="200" />
     <option name="y" value="20" />
     <option name="width" value="1420" />
     <option name="height" value="1040" />
@@ -253,6 +246,11 @@
             <path>
               <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroupOneProject1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroupOneProject" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -270,6 +268,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -357,7 +356,7 @@
       <workItem from="1604322352956" duration="4031000" />
       <workItem from="1604365013946" duration="1182000" />
       <workItem from="1604374738385" duration="4867000" />
-      <workItem from="1604408009929" duration="1351000" />
+      <workItem from="1604408009929" duration="2192000" />
     </task>
     <task id="LOCAL-00001" summary="修改数据库配置">
       <created>1603979223075</created>
@@ -492,11 +491,18 @@
       <option name="project" value="LOCAL" />
       <updated>1604382171803</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="hotel页面特效copy完成">
+      <created>1604409530278</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1604409530278</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103691000" />
+    <option name="totallyTimeSpent" value="104532000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -508,15 +514,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="460" y="15" width="1136" height="832" extended-state="0" />
-    <editor active="true" />
+    <frame x="161" y="16" width="1136" height="832" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23005566" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23005566" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49597856" visible="true" weight="0.2857143" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50402147" side_tool="true" weight="0.28611898" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49536178" visible="true" weight="0.2857143" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5046382" side_tool="true" weight="0.2857143" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49840087" weight="0.3569405" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32748538" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
@@ -568,7 +573,8 @@
     <MESSAGE value="赵丽修改为fdfs存储图片" />
     <MESSAGE value="赵丽完成登录注册激活功能" />
     <MESSAGE value="修复bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug" />
+    <MESSAGE value="hotel页面特效copy完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="hotel页面特效copy完成" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/Wedding_theme.html" />
@@ -750,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/user/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -841,24 +840,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/fdfs/client.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1250">
           <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -869,6 +854,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/swiper-3.4.2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9917">
@@ -876,18 +868,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/fdfs/client.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/hotel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="278" column="13" lean-forward="true" selection-start-line="278" selection-start-column="13" selection-end-line="278" selection-end-column="13" />
+        <state relative-caret-position="250">
+          <caret line="439" lean-forward="true" selection-start-line="439" selection-end-line="439" />
           <folding>
-            <element signature="e#28533#28791#0#HTML" />
-            <element signature="e#28823#29081#0#HTML" />
-            <element signature="e#29113#29371#0#HTML" />
-            <element signature="e#29403#29661#0#HTML" />
-            <element signature="e#29693#29951#0#HTML" />
-            <element signature="e#29983#30241#0#HTML" />
-            <element signature="e#30274#30534#0#HTML" />
+            <element signature="n#block#0;n#!!top" />
+            <element signature="e#161#272#0#HTML" />
+            <element signature="n#block#3;n#!!top" />
           </folding>
         </state>
       </provider>
