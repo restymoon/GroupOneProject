@@ -9,7 +9,7 @@ from GroupOneProject import settings
 from django.core.mail import send_mail
 # from goods.models import GoodsType, IndexGoodsBanner, IndexPromotionBanner, IndexTypeGoodsBanner
 
-app = Celery("celery_tasks.tasks", broker="redis://192.168.72.129/8")
+app = Celery("celery_tasks.tasks", broker="redis://192.168.0.67/8")
 
 
 @app.task  # 进行装饰

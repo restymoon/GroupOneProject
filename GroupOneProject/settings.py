@@ -88,8 +88,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'GroupOneProject',
         'USER': 'root',
-        'PASSWORD': 'Hzz1282166818',
-        'HOST': '121.36.55.18',
+        'PASSWORD': 'Root@123',
+        'HOST': '192.168.0.67',
         'PORT': 3306
     }
 }
@@ -133,7 +133,7 @@ EMAIL_FROM = "蜜匠婚礼<15176161367@163.com>"
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://192.168.72.129:6379/9",
+        "LOCATION": "redis://192.168.0.67:6379/9",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -149,4 +149,4 @@ DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FDFSStorage'
 FDFS_CLIENT_CONF = './utils/fdfs/client.conf'
 
 # 设置fdfs存储服务器上的nginx的IP和端口
-FDFS_URL = 'http://192.168.72.129:7766/'
+FDFS_URL = 'http://192.168.0.67:7766/'
