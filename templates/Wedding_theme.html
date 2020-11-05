@@ -2,371 +2,42 @@
 {% load staticfiles %}
 {% block function %}
     <link rel="stylesheet" href="{% static 'css/themewed.css' %}" type="text/css">
-<div class="pc-container" band-sensors="sensors-div-14">
-    <!-- 主题婚礼 -->
-    <div id="product_list" class="inner-wrap" band-sensors="sensors-div-15">
-        <div class="pro-name" band-sensors="sensors-div-16">
-            <div class="newest" data-screen="1" band-sensors="sensors-div-17"><a href="#">最新产品</a><span band-sensors="sensors-span-18">|</span></div>
-            <div class="hot" data-screen="2" band-sensors="sensors-div-19"><a href="#">热门产品</a><span band-sensors="sensors-span-20">|</span></div>
-            <div class="dingzhi" band-sensors="sensors-div-21"><a href="#" >我要定制</a></div>
-        </div>
-        <ul id="pro_list" class="clearfix inner-wrap waterfull" data-growing-container="">
-
-                        <li class="items-box-shadow fl height list" data-growing-title="简单爱" band-sensors="sensors-li-22">
-                <a href="#"  title="简单爱" class="pc-product-popup">
+    <div class="pc-container" band-sensors="sensors-div-14">
+        <!-- 主题婚礼 -->
+        <div id="product_list" class="inner-wrap" band-sensors="sensors-div-15">
+            <div class="pro-name" band-sensors="sensors-div-16">
+                {% for type in wedding_type %}
+                    <div class="newest" data-screen="{{ forloop.counter }}" band-sensors="sensors-div-17"><a href="{% url 'wedding:theme' type.id %}">{{ type.name }}</a>
+                        {% if forloop.counter == 1 %}
+                            <span band-sensors="sensors-span-18">|</span>
+                         {% else %}
+                            <span band-sensors="sensors-span-18"></span>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+            <ul id="pro_list" class="clearfix inner-wrap waterfull" data-growing-container="">
+                {% for wedding_sku in wedding_skus %}
+                    <li class="items-box-shadow fl height list" data-growing-title="{{ wedding_sku.name }}" band-sensors="sensors-li-22">
+                    <a href="{% url 'wedding:details' wedding_sku.id %}" title="{{ wedding_sku.name }}" class="pc-product-popup">
                     <span class="figure" band-sensors="sensors-span-23">
-                        <img src="/static/image/20200909_789896F1DE25D1FA02DCA5196B9A7AA2.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-24">
+                        <img src="{{ wedding_sku.cover_image.url }}" alt="" class="lazy"
+                             data-animation="fadeIn" band-sensors="sensors-img-24">
                     </span>
-                    <div class="info" band-sensors="sensors-div-25">
-                        <div class="productName" band-sensors="sensors-div-26">简单爱</div>
-                        <div class="productType" band-sensors="sensors-div-27">温馨柔和  秋色复古  清新美式</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="莫兰迪爱情哲学" band-sensors="sensors-li-28">
-                <a href="#"  title="莫兰迪爱情哲学" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-29">
-                        <img src="/static/image/20200929_AF7E7B1AA2D2D30314622D5EE92D5ECD.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-30">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-31">
-                        <div class="productName" band-sensors="sensors-div-32">莫兰迪爱情哲学</div>
-                        <div class="productType" band-sensors="sensors-div-33">莫兰迪色系 极简主义 轻奢雅致</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="漫步哈瓦那" band-sensors="sensors-li-34">
-                <a href="#"  title="漫步哈瓦那" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-35">
-                        <img src="/static/image/20200715_902DFFBEB95CEF66EE201C074B0453CA.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-36">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-37">
-                        <div class="productName" band-sensors="sensors-div-38">漫步哈瓦那</div>
-                        <div class="productType" band-sensors="sensors-div-39">夏日Mojito  古巴风情  热烈浓郁</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="莫奈" band-sensors="sensors-li-40">
-                <a href="#"  title="莫奈" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-41">
-                        <img src="/static/image/20200611_E15F352DFECFEF143409F0F0027BB595.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-42">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-43">
-                        <div class="productName" band-sensors="sensors-div-44">莫奈</div>
-                        <div class="productType" band-sensors="sensors-div-45">复古油画 莫奈花园 印象主义</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="满庭芳" band-sensors="sensors-li-46">
-                <a href="#"  title="满庭芳" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-47">
-                        <img src="/static/image/20200519_46A7F1D7050C30719480C64AFE90E679.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-48">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-49">
-                        <div class="productName" band-sensors="sensors-div-50">满庭芳</div>
-                        <div class="productType" band-sensors="sensors-div-51">法式中国风 色彩富丽 古典主义</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="Yes，I do" band-sensors="sensors-li-52">
-                <a href="#"  title="Yes，I do" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-53">
-                        <img src="/static/image/20200429_DAC88463ACF0FAC9CC00F8EF3C08508A.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-54">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-55">
-                        <div class="productName" band-sensors="sensors-div-56">Yes，I do</div>
-                        <div class="productType" band-sensors="sensors-div-57">泰式极简 留白艺术 构成主义</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="倾慕" band-sensors="sensors-li-58">
-                <a href="#"  title="倾慕" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-59">
-                        <img src="/static/image/20200109_7CD7FA55D8FA553AA5FFC0D28BA8BDEA.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-60">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-61">
-                        <div class="productName" band-sensors="sensors-div-62">倾慕</div>
-                        <div class="productType" band-sensors="sensors-div-63">复古优雅  解构主义  浓郁柔情</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="臻爱" band-sensors="sensors-li-64">
-                <a href="#"  title="臻爱" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-65">
-                        <img src="/static/image/20190507_2FBA7403D294A7A72D5DE8A6A6961425.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-66">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-67">
-                        <div class="productName" band-sensors="sensors-div-68">臻爱</div>
-                        <div class="productType" band-sensors="sensors-div-69">温柔雅致 简洁现代 恢弘大气</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="You ＆ Me" band-sensors="sensors-li-70">
-                <a href="#"  title="You ＆ Me" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-71">
-                        <img src="/static/image/20191210_2C6F3E245E7F0300687B955A53230AEF.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-72">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-73">
-                        <div class="productName" band-sensors="sensors-div-74">You ＆ Me</div>
-                        <div class="productType" band-sensors="sensors-div-75">法式风情  秋日蜜语  橙调暖意</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="时光馥" band-sensors="sensors-li-76">
-                <a href="#"  title="时光馥" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-77">
-                        <img src="/static/image/20181201_2F98166755AB2737752CA5C23A5B9EE6.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-78">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-79">
-                        <div class="productName" band-sensors="sensors-div-80">时光馥</div>
-                        <div class="productType" band-sensors="sensors-div-81">唯美大气  神圣浪漫  温婉优雅</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="之子于归" band-sensors="sensors-li-82">
-                <a href="#"  title="之子于归" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-83">
-                        <img src="/static/image/20191101_0168CAB182E2EC81C948EC8126C722C0.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-84">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-85">
-                        <div class="productName" band-sensors="sensors-div-86">之子于归</div>
-                        <div class="productType" band-sensors="sensors-div-87">中式婚礼 东方情调 古韵雅致</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="情书" band-sensors="sensors-li-88">
-                <a href="#"  title="情书" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-89">
-                        <img src="/static/image/20191130_C2603922FD7E440BEE4B0963A55AD565.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-90">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-91">
-                        <div class="productName" band-sensors="sensors-div-92">情书</div>
-                        <div class="productType" band-sensors="sensors-div-93">清新灵动  自然森系  纯粹干净</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="完美时刻" band-sensors="sensors-li-94">
-                <a href="#"  title="完美时刻" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-95">
-                        <img src="/static/image/20190516_BFA6B631F341AFAF9BA2B7079696AEED.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-96">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-97">
-                        <div class="productName" band-sensors="sensors-div-98">完美时刻</div>
-                        <div class="productType" band-sensors="sensors-div-99">大气高贵 热烈精致 中西皆宜</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="绮梦" band-sensors="sensors-li-100">
-                <a href="#"  title="绮梦" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-101">
-                        <img src="/static/image/20181201_01134389BD0963F2E9A97121A9352021.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-102">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-103">
-                        <div class="productName" band-sensors="sensors-div-104">绮梦</div>
-                        <div class="productType" band-sensors="sensors-div-105">中式情怀  清新简约  古朴素雅</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="鹊悦" band-sensors="sensors-li-106">
-                <a href="#"  title="鹊悦" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-107">
-                        <img src="/static/image/20171117_5E08F074F6CFE2D204DEAD8F1DD00537.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-108">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-109">
-                        <div class="productName" band-sensors="sensors-div-110">鹊悦</div>
-                        <div class="productType" band-sensors="sensors-div-111">中式典雅  古风韵律  诗书如画</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="光锦" band-sensors="sensors-li-112">
-                <a href="#"  title="光锦" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-113">
-                        <img src="/static/image/20190616_99B00EFDE37A55C0B06AB81BD1568FEB.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-114">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-115">
-                        <div class="productName" band-sensors="sensors-div-116">光锦</div>
-                        <div class="productType" band-sensors="sensors-div-117">经典浪漫 复古轻奢 简约时尚</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="Only One" band-sensors="sensors-li-118">
-                <a href="#"  title="Only One" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-119">
-                        <img src="/static/image/20180412_A2E0A1048D754F8A3B2F643057D72BDB.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-120">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-121">
-                        <div class="productName" band-sensors="sensors-div-122">Only One</div>
-                        <div class="productType" band-sensors="sensors-div-123">高贵优雅  热烈奔放  精致大气</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="靠近你" band-sensors="sensors-li-124">
-                <a href="#"  title="靠近你" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-125">
-                        <img src="/static/image/20190726_BA8B5C14737FC9C0D4D1F542ADD69030.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-126">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-127">
-                        <div class="productName" band-sensors="sensors-div-128">靠近你</div>
-                        <div class="productType" band-sensors="sensors-div-129">复古优雅  唯美精致  时尚典雅</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="星空" band-sensors="sensors-li-130">
-                <a href="#"  title="星空" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-131">
-                        <img src="/static/image/20181201_8FE532F7B94A2B2FF7D0D2D4B927EC8B.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-132">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-133">
-                        <div class="productName" band-sensors="sensors-div-134">星空</div>
-                        <div class="productType" band-sensors="sensors-div-135">梦幻绚丽  星光璀璨  迤逦唯美</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="清漾林语" band-sensors="sensors-li-136">
-                <a href="#"  title="清漾林语" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-137">
-                        <img src="/static/image/20170825_4B664200AC401B2E97A368141971FBDF.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-138">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-139">
-                        <div class="productName" band-sensors="sensors-div-140">清漾林语</div>
-                        <div class="productType" band-sensors="sensors-div-141">清新浪漫  回归纯真  灵动随性</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="如风" band-sensors="sensors-li-142">
-                <a href="#"  title="如风" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-143">
-                        <img src="/static/image/20190627_14013FECA0B1A7BAC1AE2009D0E58BD7.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-144">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-145">
-                        <div class="productName" band-sensors="sensors-div-146">如风</div>
-                        <div class="productType" band-sensors="sensors-div-147">简约浪漫 清新活泼 梦幻纯真</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="伴侣" band-sensors="sensors-li-148">
-                <a href="#"  title="伴侣" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-149">
-                        <img src="/static/image/20190523_3141690CFCA3DC223443DC5503490F86.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-150">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-151">
-                        <div class="productName" band-sensors="sensors-div-152">伴侣</div>
-                        <div class="productType" band-sensors="sensors-div-153">珊瑚橙   情侣发光装置   透光膜路引</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="给你的诗" band-sensors="sensors-li-154">
-                <a href="#"  title="给你的诗" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-155">
-                        <img src="/static/image/20190218_EC7DD00D426F71EEFAB5C7BEA967773A.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-156">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-157">
-                        <div class="productName" band-sensors="sensors-div-158">给你的诗</div>
-                        <div class="productType" band-sensors="sensors-div-159">文艺浪漫 简洁复古  精致时尚</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="情迷土耳其" band-sensors="sensors-li-160">
-                <a href="#"  title="情迷土耳其" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-161">
-                        <img src="/static/image/20190530_0EC3D5CC279CB88852B7A1AD5157F233.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-162">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-163">
-                        <div class="productName" band-sensors="sensors-div-164">情迷土耳其</div>
-                        <div class="productType" band-sensors="sensors-div-165">热烈浓郁  古朴大气  异域风情</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="爱丽丝的花园" band-sensors="sensors-li-166">
-                <a href="#"  title="爱丽丝的花园" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-167">
-                        <img src="/static/image/20190911_026D536079597505F95996A74C7E6D75.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-168">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-169">
-                        <div class="productName" band-sensors="sensors-div-170">爱丽丝的花园</div>
-                        <div class="productType" band-sensors="sensors-div-171">森系自然  灵动跳跃  童话世界</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="在水一方" band-sensors="sensors-li-172">
-                <a href="#"  title="在水一方" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-173">
-                        <img src="/static/image/20190422_C5A14874060F8C85F9C22E36568E2B02.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-174">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-175">
-                        <div class="productName" band-sensors="sensors-div-176">在水一方</div>
-                        <div class="productType" band-sensors="sensors-div-177">自然清新 、浪漫优雅、可中式可西式</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="炽爱" band-sensors="sensors-li-178">
-                <a href="#"  title="炽爱" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-179">
-                        <img src="/static/image/20180329_E112B63E951C95669D79EA6974BBDC58.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-180">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-181">
-                        <div class="productName" band-sensors="sensors-div-182">炽爱</div>
-                        <div class="productType" band-sensors="sensors-div-183">热烈浓郁  现代简约  精致典雅</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="小情歌" band-sensors="sensors-li-184">
-                <a href="#"  title="小情歌" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-185">
-                        <img src="/static/image/20190627_81012B578CBFFBD82CA0D8E81084A690.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-186">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-187">
-                        <div class="productName" band-sensors="sensors-div-188">小情歌</div>
-                        <div class="productType" band-sensors="sensors-div-189">交叉铁艺   皇冠造型   蝴蝶羽翼</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="克拉恋人" band-sensors="sensors-li-190">
-                <a href="#"  title="克拉恋人" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-191">
-                        <img src="/static/image/20170929_E54FA1C6DE3B32FADDE7F85CD13D7462.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-192">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-193">
-                        <div class="productName" band-sensors="sensors-div-194">克拉恋人</div>
-                        <div class="productType" band-sensors="sensors-div-195">精致浪漫   欧式文艺   钻意永恒</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="小确幸" band-sensors="sensors-li-196">
-                <a href="#"  title="小确幸" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-197">
-                        <img src="/static/image/20181201_71B3C4F86424AD6D9EEE226DC262670A.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-198">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-199">
-                        <div class="productName" band-sensors="sensors-div-200">小确幸</div>
-                        <div class="productType" band-sensors="sensors-div-201">清新雅致  灵动素雅  小浪漫</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="晨曦" band-sensors="sensors-li-202">
-                <a href="#"  title="晨曦" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-203">
-                        <img src="/static/image/20190531_38FDA5AA33FC5C4C82ED7EEF5ABF0533.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-204">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-205">
-                        <div class="productName" band-sensors="sensors-div-206">晨曦</div>
-                        <div class="productType" band-sensors="sensors-div-207">自然清爽  清新简约  精巧素雅</div>
-                    </div>
-                </a>
-            </li>
-                        <li class="items-box-shadow fl height list" data-growing-title="礼物" band-sensors="sensors-li-208">
-                <a href="#"  title="礼物" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-209">
-                        <img src="/static/image/20181201_9CAAEEAEFBD60E83F25F084589AF0E64.jpg" alt="" class="lazy" data-animation="fadeIn" band-sensors="sensors-img-210">
-                    </span>
-                    <div class="info" band-sensors="sensors-div-211">
-                        <div class="productName" band-sensors="sensors-div-212">礼物</div>
-                        <div class="productType" band-sensors="sensors-div-213">清新柔婉  浪漫甜蜜  深情婉转</div>
-                    </div>
-                </a>
-            </li>
+                        <div class="info" band-sensors="sensors-div-25">
+                            <div class="productName" band-sensors="sensors-div-26">{{ wedding_sku.name }}</div>
+                            <div class="productType" band-sensors="sensors-div-27">{{ wedding_sku.desc }}</div>
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
 
-        </ul>
+            </ul>
+        </div>
     </div>
-</div>
-</div>
+    </div>
 {% endblock function %}
+
+{% block bottomfile %}
+
+{% endblock %}

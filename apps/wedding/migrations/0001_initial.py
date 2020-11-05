@@ -87,6 +87,8 @@ class Migration(migrations.Migration):
                 ('desc', models.CharField(verbose_name='婚礼简介', max_length=256)),
                 ('video', models.CharField(verbose_name='视频链接', max_length=256)),
                 ('cover_image', models.ImageField(verbose_name='婚礼封面图片', upload_to='wedding')),
+                ('reason', models.CharField(verbose_name='推荐理由', max_length=256)),
+                ('inspiration', models.CharField(verbose_name='创作灵感', max_length=256)),
                 ('designer', models.ForeignKey(verbose_name='设计师', to='team.Staff')),
             ],
             options={

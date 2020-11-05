@@ -17,11 +17,12 @@ from wedding import views
 from django.conf.urls import url
 
 urlpatterns = [
-    url(r"^$", views.index, name="index"),  # 首页
-    url(r"^dress/", views.dress, name="dress"),
-    url(r"^theme/", views.theme, name="theme"),
-    url(r"^environment/", views.environment, name="environment"),
-    url(r"^about/", views.about, name="about"),
-    url(r"^details/", views.theme_details, name="details"),
-    url(r"^test/", views.test, name="test"),
+    url(r"^$", views.IndexView.as_view(), name="index"),  # 首页
+    url(r"^theme/(?P<type_id>\d+)/", views.ThemeView.as_view(), name="theme"), #最新产品
+    # url(r"^hottheme/", views.NewThemeView.as_view(), name="hottheme"), #热门产品
+    url(r"^dress/", views.DetailsView.as_view(), name="dress"),
+    url(r"^environment/", views.EnvironmentView.as_view(), name="environment"),
+    url(r"^about/", views.AboutView.as_view(), name="about"),
+    url(r"^details/(?P<sku_id>\d+)/", views.DetailsView.as_view(), name="details"),
+    # url(r"^test/", views.test, name="test"),
 ]

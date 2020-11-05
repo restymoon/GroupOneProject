@@ -20,7 +20,7 @@
                     <a href="{% url 'wedding:index' %}" title="首页">首页</a>
                 </li>
                 <li>
-                    <a href="{% url 'wedding:theme' %}" title="主题婚礼">主题婚礼</a>
+                    <a href="{% url 'wedding:theme' 1 %}" title="主题婚礼">主题婚礼</a>
                 </li>
                 <li class="hover  ">
                     <a href="{% url 'wedding:dress' %}" title="婚纱礼服">婚纱礼服</a>
@@ -44,13 +44,13 @@
                     <a href="{% url 'wedding:about' %}" title="关于蜜匠">关于蜜匠</a>
                 </li>
             </ul>
-            {% if request.user.is_authenticated %}
-                    <div class="login_btn fl">
-                        欢迎您：<em>{{ request.user.username }}</em>
-                        <span>|</span>
-                        <a href="{% url 'user:logout' %}">退出</a>
-                    </div>
-            {% endif %}
+{#            {% if request.user.is_authenticated %}#}
+{#                <div class="login_btn fl">#}
+{#                    欢迎您：<em>{{ request.user.username }}</em>#}
+{#                    <span>|</span>#}
+{#                    <a href="{% url 'user:logout' %}">退出</a>#}
+{#                </div>#}
+{#            {% endif %}#}
         </div>
     </div>
 </div>
@@ -67,7 +67,7 @@
 <div class="fotter-contact">
     <div class="inner-wrap">
         <ul>
-            <li><a href="{% url 'wedding:theme' %}">主题婚礼</a></li>
+            <li><a href="{% url 'wedding:theme' 1 %}">主题婚礼</a></li>
             <li><a href="{% url 'hotel:hotel' %}">婚宴酒店</a></li>
             <li><a href="{% url 'example:example' %}">真实案例</a></li>
             <li><a href="{% url 'wedding:environment' %}">门店环境</a></li>

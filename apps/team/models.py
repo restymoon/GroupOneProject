@@ -23,7 +23,7 @@ class Profession(BaseModel):
     type = models.ForeignKey("TeamType", verbose_name="团队种类")
     name = models.CharField(max_length=20, verbose_name="职业名称")
     desc = models.CharField(max_length=256, verbose_name="职业简介")
-    image = models.ImageField(upload_to="dress", verbose_name="职业图片")
+    image = models.ImageField(upload_to="profession", verbose_name="职业图片")
 
     class Meta:
         db_table = 'df_profession'
@@ -37,6 +37,7 @@ class Staff(BaseModel):
     ''' 员工模型类 '''
     profession = models.ForeignKey("Profession", verbose_name="职业")
     staffname = models.CharField(max_length=20, verbose_name="员工姓名")
+    image = models.ImageField(upload_to="staff", verbose_name="员工照片")
     nickname = models.CharField(max_length=20, verbose_name="职业别称")
     experience = models.CharField(max_length=20, verbose_name="经验")
     number = models.IntegerField(default=1, verbose_name="场次")

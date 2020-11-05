@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('is_delete', models.BooleanField(verbose_name='删除标记', default=False)),
                 ('name', models.CharField(verbose_name='职业名称', max_length=20)),
                 ('desc', models.CharField(verbose_name='职业简介', max_length=256)),
-                ('image', models.ImageField(verbose_name='职业图片', upload_to='dress')),
+                ('image', models.ImageField(verbose_name='职业图片', upload_to='profession')),
             ],
             options={
                 'verbose_name': '职业名称',
@@ -35,6 +35,7 @@ class Migration(migrations.Migration):
                 ('update_time', models.DateTimeField(verbose_name='更新时间', auto_now=True)),
                 ('is_delete', models.BooleanField(verbose_name='删除标记', default=False)),
                 ('staffname', models.CharField(verbose_name='员工姓名', max_length=20)),
+                ('image', models.ImageField(verbose_name='员工照片', upload_to='staff')),
                 ('nickname', models.CharField(verbose_name='职业别称', max_length=20)),
                 ('experience', models.CharField(verbose_name='经验', max_length=20)),
                 ('number', models.IntegerField(verbose_name='场次', default=1)),

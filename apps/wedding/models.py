@@ -23,6 +23,8 @@ class WeddingSKU(BaseModel):
     desc = models.CharField(max_length=256, verbose_name="婚礼简介")
     video = models.CharField(max_length=256, verbose_name="视频链接")
     cover_image = models.ImageField(upload_to="wedding", verbose_name="婚礼封面图片")
+    reason = models.CharField(max_length=256, verbose_name="推荐理由")
+    inspiration = models.CharField(max_length=256, verbose_name="创作灵感")
 
     def __str__(self):
         return self.name
