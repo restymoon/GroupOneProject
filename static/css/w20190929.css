@@ -1,1 +1,318 @@
-body,html{background:#f2f2f2}.pc-container{width:100%;text-align:center;display:inline-block}.pc-container .banner{width:100%;position:relative;cursor:pointer}.pc-container .banner img{width:100%}.pc-container .part1{width:auto;height:962px;background:url('https://files.mijwed.com/activity/wedding/w20190929/bg1.jpg') top center no-repeat no-repeat;background-size:cover;overflow:hidden}.pc-container .part1 .mian{width:1200px;height:490px;margin:316px auto 0}.pc-container .part1 .mian .left{width:600px;float:left}.pc-container .part1 .mian .right{width:580px;float:right}.pc-container .part1 .mian .right div:nth-child(2){margin-top:20px}.pc-container .tab-box{width:auto;height:700px;background:url('https://files.mijwed.com/activity/wedding/w20190929/bg2.jpg') top center no-repeat no-repeat;background-size:cover;overflow:hidden}.pc-container .tab-box .main{width:1200px;padding:30px;margin:246px auto 0;background:#d2a362;border-radius:10px;display:inline-block;box-sizing:border-box}.pc-container .tab-box .main ul{width:100%;height:100%}.pc-container .tab-box .main ul li{width:158px;height:314px;float:left;margin-left:18px;background:#fafafa;border-radius:8px;padding:20px 8px 10px 8px}.pc-container .tab-box .main ul li:nth-child(1){margin-left:0}.pc-container .tab-box .main ul .current{background:#fbdad1}.pc-container .btn1{width:450px;margin:45px auto 78px}.pc-container .part5{width:auto;height:1368px;background:url('https://files.mijwed.com/activity/wedding/w20190929/bg7.jpg') top center no-repeat no-repeat;background-size:cover;overflow:hidden}.pc-container .part5 .lifu-btn{margin:1226px auto 0}.pc-container .part5 .lifu-btn img{width:100%}.pc-container .part7{width:auto;height:1746px;background:url('https://files.mijwed.com/activity/wedding/w20190929/bg9.jpg') top center no-repeat no-repeat;background-size:cover;overflow:hidden}.pc-container .part7 .lifu-btn{margin:1605px auto 0}.pc-container .part7 .lifu-btn img{width:100%}.img-auto{width:100%}.img-auto img{width:100%}.cursor{cursor:pointer}.popup{width:100%;height:100%;position:fixed;top:0;left:0;z-index:9999;display:none;background:rgba(0,0,0,0.5)}.popup .cont{width:650px;height:560px;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);text-align:center;background-size:100%}.popup .cont .close{width:48px;height:48px;cursor:pointer;border-radius:50%;font-size:0;position:absolute;top:-24px;right:-24px;background:url("https://files.mijwed.com/activity/wedding/w20190929/lifu-close.png") no-repeat center;background-size:95%}.popup .cont .main{text-align:center;padding:139px 0 0}.popup .cont .main .title{line-height:40px;font-size:36px;font-weight:bold;color:#fff;padding:0 0 37px}.popup .cont .main .gift-pic{width:135px;height:177px;margin-bottom:94px;display:inline-block}.popup .cont .from-list{width:548px;display:block;margin:0 auto 26px}.popup .cont .from-list li{text-align:center;display:block}.popup .cont .from-list li .in-text{width:100%;height:84px;line-height:84px;background-color:#fff;border:none;border:1px solid #ddd;border-radius:8px;text-align:center;margin-bottom:20px}.popup .cont .from-list li .in-text div{width:168px;height:100%;text-align:center;line-height:84px;float:left;color:#666;font-size:30px}.popup .cont .from-list li .in-text input{width:300px;display:block;height:100%;border:none;text-align:left;float:left;color:#666;font-size:30px}.popup .cont .new-btn{width:363px;height:75px;display:block;margin:0 auto;text-align:center;cursor:pointer}.popup .cont .new-btn img{width:100%}#popup1 .cont{background:url("https://files.mijwed.com/activity/wedding/w20190929/popup01-bg.png") no-repeat center}#popup2 .cont{background:url("https://files.mijwed.com/activity/wedding/w20190929/popup02-bg.png") no-repeat center}#popup2 .cont .main{padding:385px 0 0}#popup3 .cont{background:url("https://files.mijwed.com/activity/wedding/w20190929/popup03-bg.png") no-repeat center}.right-hash{width:80px;height:492px;position:fixed;right:24px;top:300px;background:#d5ab70;border-radius:80px;border:1px solid #7e5010}.right-hash .hash-img{width:100%;height:88px;position:absolute;top:-28px}.right-hash ul{margin-top:88px}.right-hash ul li{width:100%;height:44px;display:block;border-top:1px solid #7e5010}.right-hash ul li a{display:block;width:100%;height:100%;text-align:center;line-height:44px;font-size:17px;color:#7e5010}.right-hash ul li:last-child{border-bottom:1px solid #7e5010}.right-hash ul .active a{background:#7e5010;color:#fff}.right-hash .hash-img2{margin:16px auto 0;text-align:center}
+body, html {
+    background: #f2f2f2
+}
+
+.pc-container {
+    width: 100%;
+    text-align: center;
+    display: inline-block
+}
+
+.pc-container .banner {
+    width: 100%;
+    position: relative;
+    cursor: pointer
+}
+
+.pc-container .banner img {
+    width: 100%
+}
+
+.pc-container .part1 {
+    width: auto;
+    height: 962px;
+    background: url('https://files.mijwed.com/activity/wedding/w20190929/bg1.jpg') top center no-repeat no-repeat;
+    background-size: cover;
+    overflow: hidden
+}
+
+.pc-container .part1 .mian {
+    width: 1200px;
+    height: 490px;
+    margin: 316px auto 0
+}
+
+.pc-container .part1 .mian .left {
+    width: 600px;
+    float: left
+}
+
+.pc-container .part1 .mian .right {
+    width: 580px;
+    float: right
+}
+
+.pc-container .part1 .mian .right div:nth-child(2) {
+    margin-top: 20px
+}
+
+.pc-container .tab-box {
+    width: auto;
+    height: 700px;
+    background: url('https://files.mijwed.com/activity/wedding/w20190929/bg2.jpg') top center no-repeat no-repeat;
+    background-size: cover;
+    overflow: hidden
+}
+
+.pc-container .tab-box .main {
+    width: 1200px;
+    padding: 30px;
+    margin: 246px auto 0;
+    background: #d2a362;
+    border-radius: 10px;
+    display: inline-block;
+    box-sizing: border-box
+}
+
+.pc-container .tab-box .main ul {
+    width: 100%;
+    height: 100%
+}
+
+.pc-container .tab-box .main ul li {
+    width: 158px;
+    height: 314px;
+    float: left;
+    margin-left: 18px;
+    background: #fafafa;
+    border-radius: 8px;
+    padding: 20px 8px 10px 8px
+}
+
+.pc-container .tab-box .main ul li:nth-child(1) {
+    margin-left: 0
+}
+
+.pc-container .tab-box .main ul .current {
+    background: #fbdad1
+}
+
+.pc-container .btn1 {
+    width: 450px;
+    margin: 45px auto 78px
+}
+
+.pc-container .part5 {
+    width: auto;
+    /*height: 1165px;*/
+    /*background: url('../image/bg7.jpg') top center no-repeat no-repeat;*/
+    background-size: cover;
+    overflow: hidden
+}
+
+.pc-container .part5 .lifu-btn {
+    margin: 1226px auto 0
+}
+
+.pc-container .part5 .lifu-btn img {
+    width: 100%
+}
+
+.pc-container .part7 {
+    width: auto;
+    /*height: 1553px;*/
+    /*background: url('../image/bg9.jpg') top center no-repeat no-repeat;*/
+    background-size: cover;
+    overflow: hidden
+}
+
+.pc-container .part7 .lifu-btn {
+    margin: 1605px auto 0
+}
+
+.pc-container .part7 .lifu-btn img {
+    width: 100%
+}
+
+.img-auto {
+    width: 100%
+}
+
+.img-auto img {
+    width: 100%
+}
+
+.cursor {
+    cursor: pointer
+}
+
+.popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.popup .cont {
+    width: 650px;
+    height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-size: 100%
+}
+
+.popup .cont .close {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 0;
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    background: url("https://files.mijwed.com/activity/wedding/w20190929/lifu-close.png") no-repeat center;
+    background-size: 95%
+}
+
+.popup .cont .main {
+    text-align: center;
+    padding: 139px 0 0
+}
+
+.popup .cont .main .title {
+    line-height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 0 37px
+}
+
+.popup .cont .main .gift-pic {
+    width: 135px;
+    height: 177px;
+    margin-bottom: 94px;
+    display: inline-block
+}
+
+.popup .cont .from-list {
+    width: 548px;
+    display: block;
+    margin: 0 auto 26px
+}
+
+.popup .cont .from-list li {
+    text-align: center;
+    display: block
+}
+
+.popup .cont .from-list li .in-text {
+    width: 100%;
+    height: 84px;
+    line-height: 84px;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.popup .cont .from-list li .in-text div {
+    width: 168px;
+    height: 100%;
+    text-align: center;
+    line-height: 84px;
+    float: left;
+    color: #666;
+    font-size: 30px
+}
+
+.popup .cont .from-list li .in-text input {
+    width: 300px;
+    display: block;
+    height: 100%;
+    border: none;
+    text-align: left;
+    float: left;
+    color: #666;
+    font-size: 30px
+}
+
+.popup .cont .new-btn {
+    width: 363px;
+    height: 75px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer
+}
+
+.popup .cont .new-btn img {
+    width: 100%
+}
+
+#popup1 .cont {
+    background: url("https://files.mijwed.com/activity/wedding/w20190929/popup01-bg.png") no-repeat center
+}
+
+#popup2 .cont {
+    background: url("https://files.mijwed.com/activity/wedding/w20190929/popup02-bg.png") no-repeat center
+}
+
+#popup2 .cont .main {
+    padding: 385px 0 0
+}
+
+#popup3 .cont {
+    background: url("https://files.mijwed.com/activity/wedding/w20190929/popup03-bg.png") no-repeat center
+}
+
+.right-hash {
+    width: 80px;
+    height: 492px;
+    position: fixed;
+    right: 24px;
+    top: 300px;
+    background: #d5ab70;
+    border-radius: 80px;
+    border: 1px solid #7e5010
+}
+
+.right-hash .hash-img {
+    width: 100%;
+    height: 88px;
+    position: absolute;
+    top: -28px
+}
+
+.right-hash ul {
+    margin-top: 88px
+}
+
+.right-hash ul li {
+    width: 100%;
+    height: 44px;
+    display: block;
+    border-top: 1px solid #7e5010
+}
+
+.right-hash ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 44px;
+    font-size: 17px;
+    color: #7e5010
+}
+
+.right-hash ul li:last-child {
+    border-bottom: 1px solid #7e5010
+}
+
+.right-hash ul .active a {
+    background: #7e5010;
+    color: #fff
+}
+
+.right-hash .hash-img2 {
+    margin: 16px auto 0;
+    text-align: center
+}

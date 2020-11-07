@@ -18,11 +18,11 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r"^$", views.IndexView.as_view(), name="index"),  # 首页
-    url(r"^theme/(?P<type_id>\d+)/", views.ThemeView.as_view(), name="theme"), #最新产品
-    # url(r"^hottheme/", views.NewThemeView.as_view(), name="hottheme"), #热门产品
-    url(r"^dress/", views.DetailsView.as_view(), name="dress"),
-    url(r"^environment/", views.EnvironmentView.as_view(), name="environment"),
-    url(r"^about/", views.AboutView.as_view(), name="about"),
-    url(r"^details/(?P<sku_id>\d+)/", views.DetailsView.as_view(), name="details"),
-    # url(r"^test/", views.test, name="test"),
+    url(r"^theme/(?P<type_id>\d+)/", views.ThemeView.as_view(), name="theme"), #主题婚礼
+    url(r"^dress/", views.DressView.as_view(), name="dress"),#礼服
+    url(r"^environment/", views.EnvironmentView.as_view(), name="environment"),#门店环境
+    url(r"^about/", views.AboutView.as_view(), name="about"),#关于我们
+    url(r"^details/(?P<sku_id>\d+)/", views.DetailsView.as_view(), name="details"),#婚礼详情
+    url(r"^dresses/", views.Dresses.as_view(), name="dresses"),  # 婚礼详情
+
 ]

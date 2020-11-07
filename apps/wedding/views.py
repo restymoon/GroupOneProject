@@ -2,7 +2,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
 from django.views.generic.base import View
-from wedding.models import WeddingType, WeddingSKU, Decorate
+from wedding.models import WeddingType, WeddingSKU, Decorate, DressType,Dress
 
 
 # Create your views here.
@@ -52,7 +52,13 @@ class DetailsView(View):
 class DressView(View):
     def get(self, request):
         '''显示婚纱礼服页面'''
-        return render(request, "Wedding _dress.html")
+        dresstypes = DressType.objects.all()
+        return render(request, "Wedding _dress.html",{"dresstypes":dresstypes})
+
+class Dresses(View):
+    def get(self,request):
+        '''显示礼服详情页'''
+        return render(request, "dresses.html")
 
 
 class EnvironmentView(View):

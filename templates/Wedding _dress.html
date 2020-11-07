@@ -1,309 +1,313 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block function %}
-<!-- 运营活动--礼服落地页 --hgq 2019.09.29 -->
-<link rel="stylesheet" type="text/css" href="{% static 'js/w20190929.css' %}">
-<div class="pc-container" band-sensors="sensors-div-14">
-    <div class="banner sc-btn" band-sensors="sensors-div-15">
-        <img src="/static/image//new-pcbanner.jpg" alt="" band-sensors="sensors-img-16">
+    <!-- 运营活动--礼服落地页 --hgq 2019.09.29 -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/w20190929.css' %}">
+    <div class="pc-container" band-sensors="sensors-div-14">
+        <div class="banner sc-btn" band-sensors="sensors-div-15">
+            <img src="/static/image//new-pcbanner.jpg" alt="" band-sensors="sensors-img-16">
+        </div>
+        <div class="part1" id="tab0" band-sensors="sensors-div-17">
+            <div class="mian" band-sensors="sensors-div-18">
+                <div class="left sc-btn get-coupop" coupop_id="333" coupop_name="1000元现金抵用券"
+                     band-sensors="sensors-div-19"><img src="/static/image//coupop01.png" alt=""
+                                                        band-sensors="sensors-img-20"></div>
+                <div class="right" band-sensors="sensors-div-21">
+                    <div class="get-coupop sc-btn" coupop_id="369" coupop_name="到店礼券" band-sensors="sensors-div-22"><img
+                            src="/static/image//coupop02.png" alt="" band-sensors="sensors-img-23"></div>
+                    <div class="get-coupop2 sc-btn" coupop_id="" coupop_name="免费上妆试纱" band-sensors="sensors-div-24"><img
+                            src="/static/image//coupop03.png" alt="" band-sensors="sensors-img-25"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-box" band-sensors="sensors-div-26">
+            <div class="main" band-sensors="sensors-div-27">
+                <ul id="lifu_tabs">
+                    {% for dresstype in dresstypes %}
+                        {% if dresstype.name == "婚纱" %}
+                            <li class="current sc-btn" band-sensors="sensors-li-28">
+                                <a href="#tab{{ forloop.counter }}">
+                                    <img src="{{ dresstype.cover_image.url }}" alt="" band-sensors="sensors-img-29">
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="sc-btn" band-sensors="sensors-li-28">
+                                <a href="#tab{{ forloop.counter }}">
+                                    <img src="{{ dresstype.cover_image.url }}" alt="" band-sensors="sensors-img-29">
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% for dresstype in dresstypes %}
+        <div class="img-auto" id="tab{{ forloop.counter }}" band-sensors="sensors-div-40">
+            <img src="{{ dresstype.type_image.url }}" alt="" band-sensors="sensors-img-41">
+        </div>
+        <a href="{% url 'wedding:dresses' %}"><img src="/static/image//btn2.png" class="btn1 try-lifu sc-btn" alt=""
+             band-sensors="sensors-img-42"></a>
+    {% endfor %}
     </div>
-    <div class="part1" id="tab0" band-sensors="sensors-div-17">
-        <div class="mian" band-sensors="sensors-div-18">
-            <div class="left sc-btn get-coupop" coupop_id="333" coupop_name="1000元现金抵用券" band-sensors="sensors-div-19"><img src="/static/image//coupop01.png" alt="" band-sensors="sensors-img-20"></div>
-            <div class="right" band-sensors="sensors-div-21">
-                <div class="get-coupop sc-btn" coupop_id="369" coupop_name="到店礼券" band-sensors="sensors-div-22"><img src="/static/image//coupop02.png" alt="" band-sensors="sensors-img-23"></div>
-                <div class="get-coupop2 sc-btn" coupop_id="" coupop_name="免费上妆试纱" band-sensors="sensors-div-24"><img src="/static/image//coupop03.png" alt="" band-sensors="sensors-img-25"></div>
+
+    <div class="popup" id="popup1" band-sensors="sensors-div-60" style="display: none;">
+        <div class="cont" band-sensors="sensors-div-61">
+            <span class="close" band-sensors="sensors-span-62">关闭</span>
+            <div class="main" band-sensors="sensors-div-63">
+                <ul class="from-list">
+                    <li band-sensors="sensors-li-64">
+                        <div class="input1 in-text" band-sensors="sensors-div-65">
+                            <div band-sensors="sensors-div-66">您的姓名:</div>
+                            <input type="text" class="user-name">
+                        </div>
+                        <div class="input1 in-text" band-sensors="sensors-div-67">
+                            <div band-sensors="sensors-div-68">您的电话:</div>
+                            <input type="tel" class="user-mobile" maxlength="11" value="">
+                        </div>
+                    </li>
+                </ul>
+                <span class="new-btn sc-btn" data-type="预约领取礼品" band-sensors="sensors-span-69"><img
+                        src="/static/image//yuyue-btn.png" alt="" band-sensors="sensors-img-70"></span>
             </div>
         </div>
     </div>
-    <div class="tab-box" band-sensors="sensors-div-26">
-        <div class="main" band-sensors="sensors-div-27">
-            <ul id="lifu_tabs">
-                <li class="current sc-btn" band-sensors="sensors-li-28"><a href="#"><img src="/static/image//tab1.png" alt="" band-sensors="sensors-img-29"></a></li>
-                <li class="sc-btn" band-sensors="sensors-li-30"><a href="#"><img src="/static/image//tab2.png" alt="" band-sensors="sensors-img-31"></a></li>
-                <li class="sc-btn" band-sensors="sensors-li-32"><a href="#"><img src="/static/image//tab3.png" alt="" band-sensors="sensors-img-33"></a></li>
-                <li class="sc-btn" band-sensors="sensors-li-34"><a href="#"><img src="/static/image//tab4.png" alt="" band-sensors="sensors-img-35"></a></li>
-                <li class="sc-btn" band-sensors="sensors-li-36"><a href="#"><img src="/static/image//tab5.png" alt="" band-sensors="sensors-img-37"></a></li>
-                <li class="sc-btn" band-sensors="sensors-li-38"><a href="#"><img src="/static/image//tab6.png" alt="" band-sensors="sensors-img-39"></a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="part2 img-auto" id="tab1" band-sensors="sensors-div-40">
-        <img src="/static/image//newpcbg3.jpg" alt="" band-sensors="sensors-img-41">
-    </div>
-    <img src="/static/image//btn1.png" class="btn1 try-lifu sc-btn" lifu_kind="婚纱-拖尾婚纱" alt="" band-sensors="sensors-img-42">
-    <div class="part3 img-auto" band-sensors="sensors-div-43">
-        <img src="/static/image//bg4.jpg" alt="" band-sensors="sensors-img-44">
-    </div>
-    <img src="/static/image//btn1.png" class="btn1 try-lifu sc-btn" lifu_kind="婚纱-齐地婚纱" alt="" band-sensors="sensors-img-45">
-    <div class="part4 img-auto" id="tab2" band-sensors="sensors-div-46">
-        <img src="/static/image//newpcbg5.jpg" alt="" band-sensors="sensors-img-47">
-        <img src="/static/image//newpcbg6.jpg" alt="" band-sensors="sensors-img-48">
-    </div>
-    <img src="/static/image//btn2.png" class="btn1 try-lifu sc-btn" lifu_kind="中式服装" alt="" band-sensors="sensors-img-49">
-    <div class="part5" id="tab3" band-sensors="sensors-div-50">
-        <img src="/static/image//btn2.png" class="lifu-btn try-lifu sc-btn" lifu_kind="敬酒服" alt="" band-sensors="sensors-img-51">
-    </div>
-    <div class="part6 img-auto" id="tab4" band-sensors="sensors-div-52">
-        <img src="/static/image//bg8.jpg" alt="" band-sensors="sensors-img-53">
-    </div>
-    <img src="/static/image//btn2.png" class="btn1 try-lifu sc-btn" lifu_kind="男士西服" alt="" band-sensors="sensors-img-54">
-    <div class="part7" id="tab5" band-sensors="sensors-div-55">
-        <img src="/static/image//btn2.png" lifu_kind="伴娘服" class="lifu-btn try-lifu sc-btn" alt="" band-sensors="sensors-img-56">
-    </div>
-    <div class="part8 img-auto" id="tab6" band-sensors="sensors-div-57">
-        <img src="/static/image//bg10.jpg" alt="" band-sensors="sensors-img-58">
-    </div>
-    <img src="/static/image//btn2.png" lifu_kind="伴郎服" class="btn1 try-lifu sc-btn" alt="" band-sensors="sensors-img-59">
-</div>
-<div class="popup" id="popup1" band-sensors="sensors-div-60" style="display: none;">
-    <div class="cont" band-sensors="sensors-div-61">
-        <span class="close" band-sensors="sensors-span-62">关闭</span>
-        <div class="main" band-sensors="sensors-div-63">
-            <ul class="from-list">
-                <li band-sensors="sensors-li-64">
-                    <div class="input1 in-text" band-sensors="sensors-div-65">
-                        <div band-sensors="sensors-div-66">您的姓名:</div>
-                        <input type="text" class="user-name">
-                    </div>
-                    <div class="input1 in-text" band-sensors="sensors-div-67">
-                        <div band-sensors="sensors-div-68">您的电话:</div>
-                        <input type="tel" class="user-mobile" maxlength="11" value="">
-                    </div>
-                </li>
-            </ul>
-            <span class="new-btn sc-btn" data-type="预约领取礼品" band-sensors="sensors-span-69"><img src="/static/image//yuyue-btn.png" alt="" band-sensors="sensors-img-70"></span>
-        </div>
-    </div>
-</div>
-<div class="popup" id="popup2" band-sensors="sensors-div-71" style="display: none;">
-    <div class="cont" band-sensors="sensors-div-72">
-        <span class="close" band-sensors="sensors-span-73">关闭</span>
-        <div class="main" band-sensors="sensors-div-74">
+    <div class="popup" id="popup2" band-sensors="sensors-div-71" style="display: none;">
+        <div class="cont" band-sensors="sensors-div-72">
+            <span class="close" band-sensors="sensors-span-73">关闭</span>
+            <div class="main" band-sensors="sensors-div-74">
             <span class="new-btn sc-btn" data-type="预约领取礼品" band-sensors="sensors-span-75">
-                <a  href="https://www.mijwed.com/app-download.html">
+                <a href="https://www.mijwed.com/app-download.html">
                     <img src="/static/image//to-app-btn.png" alt="" band-sensors="sensors-img-76">
                 </a>
             </span>
+            </div>
         </div>
     </div>
-</div>
-<div class="popup" id="popup3" band-sensors="sensors-div-77" style="display: none;">
-    <div class="cont" band-sensors="sensors-div-78">
-        <span class="close" band-sensors="sensors-span-79">关闭</span>
+    <div class="popup" id="popup3" band-sensors="sensors-div-77" style="display: none;">
+        <div class="cont" band-sensors="sensors-div-78">
+            <span class="close" band-sensors="sensors-span-79">关闭</span>
+        </div>
     </div>
-</div>
 {% endblock function %}
 {% block righttip %}
-<!-- 右侧锚点悬浮 -->
-<div class="right-hash" band-sensors="sensors-div-80">
-    <div class="hash-img" band-sensors="sensors-div-81"><img src="/static/image//hash-img.png" alt="" band-sensors="sensors-img-82"></div>
-    <ul id="right_hash">
-        <li id="tab00" class="sc-btn active" band-sensors="sensors-li-83"><a href="#">优惠活动</a></li>
-        <li id="tab11" class="sc-btn" band-sensors="sensors-li-84"><a href="#">婚纱</a></li>
-        <li id="tab22" class="sc-btn" band-sensors="sensors-li-85"><a href="#">中式服装</a></li>
-        <li id="tab33" class="sc-btn" band-sensors="sensors-li-86"><a href="#">敬酒服</a></li>
-        <li id="tab44" class="sc-btn" band-sensors="sensors-li-87"><a href="#">男士西服</a></li>
-        <li id="tab55" class="sc-btn" band-sensors="sensors-li-88"><a href="#">伴娘服</a></li>
-        <li id="tab66" class="sc-btn" band-sensors="sensors-li-89"><a href="#">伴郎服</a></li>
-    </ul>
-    <div class="hash-img2 sc-btn" band-sensors="sensors-div-90">
-        <img src="/static/image//hash-img2.png" alt="" band-sensors="sensors-img-91">
+    <!-- 右侧锚点悬浮 -->
+    <div class="right-hash" band-sensors="sensors-div-80">
+        <div class="hash-img" band-sensors="sensors-div-81"><img src="/static/image//hash-img.png" alt=""
+                                                                 band-sensors="sensors-img-82"></div>
+        <ul id="right_hash">
+            <li id="tab00" class="sc-btn active" band-sensors="sensors-li-83"><a href="#tab0">优惠活动</a></li>
+            <li id="tab11" class="sc-btn" band-sensors="sensors-li-84"><a href="#tab1">婚纱</a></li>
+            <li id="tab22" class="sc-btn" band-sensors="sensors-li-85"><a href="#tab2">中式服装</a></li>
+            <li id="tab33" class="sc-btn" band-sensors="sensors-li-86"><a href="#tab3">敬酒服</a></li>
+            <li id="tab44" class="sc-btn" band-sensors="sensors-li-87"><a href="#tab4">男士西服</a></li>
+            <li id="tab55" class="sc-btn" band-sensors="sensors-li-88"><a href="#tab5">伴娘服</a></li>
+            <li id="tab66" class="sc-btn" band-sensors="sensors-li-89"><a href="#tab6">伴郎服</a></li>
+        </ul>
+        <div class="hash-img2 sc-btn" band-sensors="sensors-div-90">
+            <img src="/static/image//hash-img2.png" alt="" band-sensors="sensors-img-91">
+        </div>
     </div>
-</div>
 {% endblock righttip %}
 {% block bottomfile %}
-<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 <script src="/themes/template_3_1/v4/js/jquery-1.4.2.min.js"></script>
 <script src="/themes/template_3_1/v4/js/public-ie.min.js"></script>
 <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<script src="{% static 'js/jquery.min.js' %}"></script>
-<!--<![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!--<![endif]-->
 
-<script src="{% static 'js/jquery.lazyload.min.js' %}"></script>
-<script src="{% static 'js/swiper-3.4.2.js' %}"></script>
-<script src="{% static 'js/public.js' %}"></script><div id="l_msg" band-sensors="sensors-div-113"></div>
-<script src="{% static 'js/public.js(1)' %}"></script><div id="l_msg" band-sensors="sensors-div-114"></div><div class="showloding" style="display: none;" band-sensors="sensors-div-115"><div class="showloding-box" band-sensors="sensors-div-116">上传数据中...</div></div>
-<script src="{% static 'js/myProgress.min.js' %}"></script>
-<script>
-    // 底部预约
-  window.mijwed = window.location.hostname == "m.mijwed.com";
-  var userMobile = /^1\d{10}$/;
-  $('.footsend-btn').click(function(){
-        var name = $('.foot-name').val();
-        var tel = $('.foot-phone').val();
-        if(name == ''){
-            msg('请输入称呼');
-            return false
-        }else if(tel == '') {
-            msg('请输入手机号码');
-            return false
-        }else if(!userMobile.test(tel)) {
-            msg('手机号码格式不正确');
-            return false
-        }else {
-            var data = {
-                url: window.location.href,
-                mobile:tel,
-                from_type: 'pc',
-                name:name,
-                plate_code: '' || 2,
-                note:'pc-sem大搜-底部浮窗-婚礼预算-称呼：'+name+'-手机号:'+tel
-            }
-            $.post('/mobile/activity/shop-yuyue.html', data, function (e) {
-                if (e.error == 0) {
-                    msg(e.message);
-                    // $('.global-footer input').val('');
-                }else{
-                    msg(e.message);
-                }
-            }, 'json')
-        }
-  })
-  $('.footer-get').click(function(){
-     $(this).hide();
-     $('.redbg').css('left','0px');
-  })
-  $('.fork').click(function(){
-      $('.footer-get').show();
-      $('.redbg').css('left','-100%');
-  })
-
-</script>
-
-
-
-<script src="{% static 'js/common20200410.min.js' %}"></script>
-<script src="{% static 'js/sensorsTrack.min.js' %}"></script>
-<script>
-    function kefu(){
-        window.open(window.$url_53kefu, "newwindow", "height=541, width=504, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no")
-
-    }
-    $(function(){
-        cssVersion();
-        function cssVersion () {
-            var linkArray = [...$('link')];
-            linkArray.forEach((ele)=>{
-                if($(ele).attr('type') === 'text/css') {
-                    var cssUrl = $(ele).attr('href');
-                    var version = +new Date();
-                    $(ele).attr('href',cssUrl+'?v'+version);
-                }
-            })
-        }
-    });
-</script>
-
-
-<script>
-    window.mijwed = window.location.hostname == "mijwed.com";
-    var telzz = /^1\d{10}$/;
-    var coupon_id = '';
-    var coupop_name = '';
-    var lifu_kind= '';
-    var platecode = '' || 2;
-    $('.get-coupop,.get-coupop2').click(function(){
-        coupon_id = $(this).attr('coupop_id');
-        coupop_name = $(this).attr('coupop_name');
-        $('#popup1').show();
-    });
-    $('.banner').click(function(){
-        $('#popup1').show();
-    });
-    $('.try-lifu').click(function(){
-        lifu_kind = $(this).attr('lifu_kind');
-        $('#popup1').show();
-    });
-    //礼服券&到店礼券
-    $('#popup1 .new-btn').click(function(){
-        var user_name = $('.user-name').val();
-        var user_tel = $('.user-mobile').val();
-        if(user_name=='') {
-            msg('姓名不能为空');
-            return false;
-        }else if(user_tel=='') {
-            msg('电话不能为空');
-            return false;
-        }else if(!telzz.test(user_tel)) {
-            msg('手机号码格式不正确');
-            return false;
-        }else {
-            if(lifu_kind == '') {
+    <script src="{% static 'js/jquery.lazyload.min.js' %}"></script>
+    <script src="{% static 'js/swiper-3.4.2.js' %}"></script>
+    <script src="{% static 'js/public.js' %}"></script>
+    <div id="l_msg" band-sensors="sensors-div-113"></div>
+    <script src="{% static 'js/public.js(1)' %}"></script>
+    <div id="l_msg" band-sensors="sensors-div-114"></div>
+    <div class="showloding" style="display: none;" band-sensors="sensors-div-115">
+        <div class="showloding-box" band-sensors="sensors-div-116">上传数据中...</div>
+    </div>
+    <script src="{% static 'js/myProgress.min.js' %}"></script>
+    <script>
+        // 底部预约
+        window.mijwed = window.location.hostname == "m.mijwed.com";
+        var userMobile = /^1\d{10}$/;
+        $('.footsend-btn').click(function () {
+            var name = $('.foot-name').val();
+            var tel = $('.foot-phone').val();
+            if (name == '') {
+                msg('请输入称呼');
+                return false
+            } else if (tel == '') {
+                msg('请输入手机号码');
+                return false
+            } else if (!userMobile.test(tel)) {
+                msg('手机号码格式不正确');
+                return false
+            } else {
                 var data = {
                     url: window.location.href,
-                    mobile: user_tel,
-                    name: user_name,
-                    plate_code: platecode,
-                    channel_type:'19' || 19,
-                    is_lifu: 1,
-                    note: 'pc-sem大搜-新品婚纱嫁到;用户姓名:'+user_name+';用户电话:'+user_tel+';用户选取:'+coupop_name
+                    mobile: tel,
+                    from_type: 'pc',
+                    name: name,
+                    plate_code: '' || 2,
+                    note: 'pc-sem大搜-底部浮窗-婚礼预算-称呼：' + name + '-手机号:' + tel
                 }
-            }else {
-                var data = {
-                    url: window.location.href,
-                    mobile: user_tel,
-                    name: user_name,
-                    plate_code: platecode,
-                    channel_type:'19' || 19,
-                    is_lifu: 1,
-                    note: 'pc-sem大搜-新品婚纱嫁到;用户姓名:'+user_name+';用户电话:'+user_tel+';用户选取:'+lifu_kind
-                }
-            }
-
-            // 商家
-            $.post('/activity/shop-yuyue.html',data,function(res){
-                console.log(res);
-                if(res.error == 0) {
-                    if(coupon_id=='') {
-                        msg(res.message);
-                        $('#popup1').hide();
+                $.post('/mobile/activity/shop-yuyue.html', data, function (e) {
+                    if (e.error == 0) {
+                        msg(e.message);
+                        // $('.global-footer input').val('');
+                    } else {
+                        msg(e.message);
                     }
-                }else {
-                    msg(res.message);
+                }, 'json')
+            }
+        })
+        $('.footer-get').click(function () {
+            $(this).hide();
+            $('.redbg').css('left', '0px');
+        })
+        $('.fork').click(function () {
+            $('.footer-get').show();
+            $('.redbg').css('left', '-100%');
+        })
+
+    </script>
+
+
+
+    <script src="{% static 'js/common20200410.min.js' %}"></script>
+    <script src="{% static 'js/sensorsTrack.min.js' %}"></script>
+    <script>
+        function kefu() {
+            window.open(window.$url_53kefu, "newwindow", "height=541, width=504, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no")
+
+        }
+
+        $(function () {
+            cssVersion();
+
+            function cssVersion() {
+                var linkArray = [...$('link')];
+                linkArray.forEach((ele) => {
+                    if ($(ele).attr('type') === 'text/css') {
+                        var cssUrl = $(ele).attr('href');
+                        var version = +new Date();
+                        $(ele).attr('href', cssUrl + '?v' + version);
+                    }
+                })
+            }
+        });
+    </script>
+
+
+    <script>
+        window.mijwed = window.location.hostname == "mijwed.com";
+        var telzz = /^1\d{10}$/;
+        var coupon_id = '';
+        var coupop_name = '';
+        var lifu_kind = '';
+        var platecode = '' || 2;
+        $('.get-coupop,.get-coupop2').click(function () {
+            coupon_id = $(this).attr('coupop_id');
+            coupop_name = $(this).attr('coupop_name');
+            $('#popup1').show();
+        });
+        $('.banner').click(function () {
+            $('#popup1').show();
+        });
+        $('.try-lifu').click(function () {
+            //    lifu_kind = $(this).attr('lifu_kind');
+            //    $('#popup1').show();
+            window.location.href = "dressdetail.html";
+        });
+        //礼服券&到店礼券
+        $('#popup1 .new-btn').click(function () {
+            var user_name = $('.user-name').val();
+            var user_tel = $('.user-mobile').val();
+            if (user_name == '') {
+                msg('姓名不能为空');
+                return false;
+            } else if (user_tel == '') {
+                msg('电话不能为空');
+                return false;
+            } else if (!telzz.test(user_tel)) {
+                msg('手机号码格式不正确');
+                return false;
+            } else {
+                if (lifu_kind == '') {
+                    var data = {
+                        url: window.location.href,
+                        mobile: user_tel,
+                        name: user_name,
+                        plate_code: platecode,
+                        channel_type: '19' || 19,
+                        is_lifu: 1,
+                        note: 'pc-sem大搜-新品婚纱嫁到;用户姓名:' + user_name + ';用户电话:' + user_tel + ';用户选取:' + coupop_name
+                    }
+                } else {
+                    var data = {
+                        url: window.location.href,
+                        mobile: user_tel,
+                        name: user_name,
+                        plate_code: platecode,
+                        channel_type: '19' || 19,
+                        is_lifu: 1,
+                        note: 'pc-sem大搜-新品婚纱嫁到;用户姓名:' + user_name + ';用户电话:' + user_tel + ';用户选取:' + lifu_kind
+                    }
                 }
-            },'json');
-            if(coupon_id!='') {
-                $.post('/mobile/activity/activity-fetchCoupon.html?mobile='+user_tel+'&coupon_id='+coupon_id,function(res){
+
+                // 商家
+                $.post('/activity/shop-yuyue.html', data, function (res) {
                     console.log(res);
-                    if(res.error == 0) {
-                        $('#popup1').hide();
-                        $('#popup2').show();
-                    }else {
+                    if (res.error == 0) {
+                        if (coupon_id == '') {
+                            msg(res.message);
+                            $('#popup1').hide();
+                        }
+                    } else {
                         msg(res.message);
                     }
-                },'json');
+                }, 'json');
+                if (coupon_id != '') {
+                    $.post('/mobile/activity/activity-fetchCoupon.html?mobile=' + user_tel + '&coupon_id=' + coupon_id, function (res) {
+                        console.log(res);
+                        if (res.error == 0) {
+                            $('#popup1').hide();
+                            $('#popup2').show();
+                        } else {
+                            msg(res.message);
+                        }
+                    }, 'json');
+                }
             }
-        }
-    });
-    $('.close').click(function(){
-        $('.popup').hide();
-    });
+        });
+        $('.close').click(function () {
+            $('.popup').hide();
+        });
 
-    //
-    $('#lifu_tabs li').click(function(){
-        $(this).siblings('li').removeClass('current');
-        $(this).addClass('current');
-    });
-    //右侧悬浮
-    $('.hash-img2').click(function(){
-        $('html,body').animate({scrollTop: '0px'},800);//800滑动的速度
-    });
-    $('#right_hash li').click(function(){
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-    });
-    //滑动页面右侧导航跟随
-    $(window).scroll(function() {
-		var wst = $(window).scrollTop(); //滚动条距离顶端值
-		for (i = 0; i < 7; i++) { //加循环
-			if ($("#tab" + i).offset().top <= (wst + 100)) { //判断滚动条位置
-                // console.log($("#tab" + i).offset().top,wst,'===========')
-				$('#right_hash li').removeClass("active"); //清除c类
-				$("#tab" + i + i).addClass("active"); //给当前导航加c类
-			}
-		}
-	})
-</script>
+        //
+        $('#lifu_tabs li').click(function () {
+            $(this).siblings('li').removeClass('current');
+            $(this).addClass('current');
+        });
+        //右侧悬浮
+        $('.hash-img2').click(function () {
+            $('html,body').animate({scrollTop: '0px'}, 800);//800滑动的速度
+        });
+        $('#right_hash li').click(function () {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        });
+        //滑动页面右侧导航跟随
+        $(window).scroll(function () {
+            var wst = $(window).scrollTop(); //滚动条距离顶端值
+            for (i = 0; i < 7; i++) { //加循环
+                if ($("#tab" + i).offset().top <= (wst + 100)) { //判断滚动条位置
+                    // console.log($("#tab" + i).offset().top,wst,'===========')
+                    $('#right_hash li').removeClass("active"); //清除c类
+                    $("#tab" + i + i).addClass("active"); //给当前导航加c类
+                }
+            }
+        })
+    </script>
 {% endblock bottomfile %}

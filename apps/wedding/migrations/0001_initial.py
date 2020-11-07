@@ -37,6 +37,7 @@ class Migration(migrations.Migration):
                 ('is_delete', models.BooleanField(verbose_name='删除标记', default=False)),
                 ('name', models.CharField(verbose_name='礼服名称', max_length=20)),
                 ('desc', models.CharField(verbose_name='礼服简介', max_length=256)),
+                ('price', models.DecimalField(verbose_name='礼服价格', max_digits=10, decimal_places=2)),
                 ('image', models.ImageField(verbose_name='礼服图片', upload_to='dress')),
             ],
             options={
@@ -54,6 +55,7 @@ class Migration(migrations.Migration):
                 ('is_delete', models.BooleanField(verbose_name='删除标记', default=False)),
                 ('name', models.CharField(verbose_name='种类名称', max_length=20)),
                 ('cover_image', models.ImageField(verbose_name='礼服类型封面图片', upload_to='dress')),
+                ('type_image', models.ImageField(verbose_name='礼服类型图片', upload_to='dress')),
             ],
             options={
                 'verbose_name': '礼服种类',
