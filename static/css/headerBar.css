@@ -1,3 +1,31 @@
+.login_status{
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    width: 92px;
+    height: 120px;
+    margin: 0 10px 0 10px;
+    font-size: 10px;
+}
+.login_up{
+    height: 60px;
+    position: relative;
+    top:-30px;
+}
+#new_topHeader > div > div > ul > li:nth-child(9) > div > div.login_up > div.islogin > a{
+    font-size: 20px;
+    float: left;
+}
+.login_down{
+    /*margin-bottom: 30px;*/
+    height: 60px;
+    position: absolute;
+}
+#new_topHeader > div > div > ul > li:nth-child(9) > div > div.login_down > a{
+    position: relative;
+    font-size: 22px;
+    top:-30px;
+}
+
 #new_topHeader {
     height: 80px;
     z-index: 999

@@ -6,18 +6,19 @@ body {
     background-size: 1600px 800px;
 }
 
-.register_con{
+.register_con {
     height: 600px;
     width: 450px;
     margin-top: 80px;
     margin-left: 60%;
 }
 
-.r_con{
+.r_con {
     border: 1px solid #6f6c6c;
     height: 380px;
-    backdrop-filter: blur(10px) brightness(80%);
+    backdrop-filter: blur(10px) brightness(90%);
 }
+
 .reg_title {
     width: 360px;
     height: 50px;
@@ -40,7 +41,7 @@ body {
     height: 20px;
     line-height: 20px;
     font-size: 16px;
-    color: #5fb42a;
+    color: #333399;
     padding-right: 20px;
     margin-top: 15px
 }
@@ -115,16 +116,19 @@ body {
     color: #e62e2e;
     display: none;
 }
-.login_box{
+
+.login_box {
     margin: 0 auto;
-    width: 1000px;
+    width: 1200px;
     height: 650px;
 }
+
 .login_form {
-    width: 368px;
-    height: 378px;
-    margin-top: 70px;
-    border: 1px solid #a4a4a4;
+    height: 382px;
+    width: 450px;
+    margin-top: -40px;
+    margin-left: 60%;
+    border: 1px solid #6f6c6c;
     backdrop-filter: blur(10px) brightness(90%);
 }
 
@@ -139,7 +143,7 @@ body {
     font-size: 24px;
     height: 60px;
     line-height: 60px;
-    color: #CCCC00;
+    color: #fff74a;
     float: left;
     font-weight: bold;
     margin-left: 44px;
@@ -155,6 +159,7 @@ body {
     float: left;
     margin: 20px 0 0 36px
 }
+
 .form_input {
     width: 308px;
     height: 250px;
@@ -232,10 +237,18 @@ body {
     font-family: 'Microsoft Yahei';
     cursor: pointer;
 }
-.forlove{
-    font-family: 'Microsoft Yahei';
-    font-size: 70px;
-    color: #FF0033;
+/*使用前必须先定义*/
+@font-face {
+    /* 字体名称随意起 */
+    font-family: fusanghua; /*你下载字体所在的位置*/
+    src: url("/static/演示夏行楷.ttf");
+}
+.forlove {
+    font-family: fusanghua;
+    font-style: oblique;
+    font-size: 60px;
+    font-weight: 900;
+    color: #ff2128;
     float: left;
     text-shadow: 0 6px 1px #fdf8ff;
     margin-top: 50px;

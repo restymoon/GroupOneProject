@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
 from django.views.generic.base import View
@@ -116,3 +116,13 @@ class Logout(View):
     def get(self, request):
         logout(request)
         return redirect(reverse("wedding:index"))
+
+class checkLogin(View):
+    # 检查是否登录
+    def get(self,request):
+        user = request.user
+        if not user.is_authenticated():
+            return JsonResponse({"code": 0, "msg": "未登录"})
+        else:
+            user_name = user.username
+            return JsonResponse({"code": 1, "msg": "已登录","user_name":user_name})
