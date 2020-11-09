@@ -34,7 +34,8 @@
 
 .pc-container #product_list .case-name {
     width: 730px;
-    padding-left: 44px
+    padding-left: 44px;
+    margin-left: 485px;
 }
 
 .pc-container #product_list #pro_list {
@@ -172,79 +173,101 @@
     padding: 0 20px
 }
 
-.pc-container #product_list .fenye {
-    width: 470px;
-    height: 30px;
-    margin: 10px auto 30px;
-    overflow: hidden
-}
-
-.pc-container #product_list .fenye ul {
-    width: 210px;
-    height: 30px;
-    overflow: hidden;
-    float: left
-}
-
-.pc-container #product_list .fenye ul li {
-    display: block;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
+.pc-container .pagenation {
+    height: 32px;
     text-align: center;
+    font-size: 0;
+    margin: 30px auto;
+}
+
+.pc-container .pagenation a {
+    display: inline-block;
+    border: 1px solid #d2d2d2;
+    background-color: #f8f6f7;
     font-size: 12px;
-    color: #ababab;
+    padding: 7px 10px;
+    color: #666;
+    margin: 5px
+}
+
+.pc-container .pagenation .active {
     background-color: #fff;
-    margin-right: 12px;
-    border: 1px solid #707070;
-    float: left;
-    cursor: pointer
+    color: #43a200
 }
 
-.pc-container #product_list .fenye ul li:nth-child(5) {
-    margin-right: 0
-}
+/*.pc-container #product_list .fenye {*/
+/*    width: 470px;*/
+/*    height: 30px;*/
+/*    margin: 10px auto 30px;*/
+/*    overflow: hidden*/
+/*}*/
 
-.pc-container #product_list .fenye .shouye:hover, .pc-container #product_list .fenye .moye:hover, .pc-container #product_list .fenye .pre-ye:hover, .pc-container #product_list .fenye .next-ye:hover, .pc-container #product_list .fenye li:hover {
-    background-color: #dc1414;
-    color: #fff;
-    border: 1px solid #dc1414
-}
+/*.pc-container #product_list .fenye ul {*/
+/*    width: 210px;*/
+/*    height: 30px;*/
+/*    overflow: hidden;*/
+/*    float: left*/
+/*}*/
 
-.pc-container #product_list .fenye .shouye, .pc-container #product_list .fenye .moye, .pc-container #product_list .fenye .pre-ye, .pc-container #product_list .fenye .next-ye {
-    display: block;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    text-align: center;
-    font-size: 12px;
-    color: #ababab;
-    background-color: #fff;
-    margin-right: 12px;
-    border: 1px solid #707070;
-    float: left;
-    cursor: pointer
-}
+/*.pc-container #product_list .fenye ul li {*/
+/*    display: block;*/
+/*    width: 28px;*/
+/*    height: 28px;*/
+/*    line-height: 28px;*/
+/*    text-align: center;*/
+/*    font-size: 12px;*/
+/*    color: #ababab;*/
+/*    background-color: #fff;*/
+/*    margin-right: 12px;*/
+/*    border: 1px solid #707070;*/
+/*    float: left;*/
+/*    cursor: pointer*/
+/*}*/
 
-.pc-container #product_list .fenye .shouye, .pc-container #product_list .fenye .moye {
-    width: 48px
-}
+/*.pc-container #product_list .fenye ul li:nth-child(5) {*/
+/*    margin-right: 0*/
+/*}*/
 
-.pc-container #product_list .fenye .moye {
-    margin-right: 0
-}
+/*.pc-container #product_list .fenye .shouye:hover, .pc-container #product_list .fenye .moye:hover, .pc-container #product_list .fenye .pre-ye:hover, .pc-container #product_list .fenye .next-ye:hover, .pc-container #product_list .fenye li:hover {*/
+/*    background-color: #dc1414;*/
+/*    color: #fff;*/
+/*    border: 1px solid #dc1414*/
+/*}*/
 
-.pc-container #product_list .fenye .pre-ye, .pc-container #product_list .fenye .next-ye {
-    width: 58px
-}
+/*.pc-container #product_list .fenye .shouye, .pc-container #product_list .fenye .moye, .pc-container #product_list .fenye .pre-ye, .pc-container #product_list .fenye .next-ye {*/
+/*    display: block;*/
+/*    width: 28px;*/
+/*    height: 28px;*/
+/*    line-height: 28px;*/
+/*    text-align: center;*/
+/*    font-size: 12px;*/
+/*    color: #ababab;*/
+/*    background-color: #fff;*/
+/*    margin-right: 12px;*/
+/*    border: 1px solid #707070;*/
+/*    float: left;*/
+/*    cursor: pointer*/
+/*}*/
 
-.pc-container #product_list .fenye .numActive {
-    background-color: #dc1414;
-    color: #fff;
-    border: 1px solid #dc1414
-}
+/*.pc-container #product_list .fenye .shouye, .pc-container #product_list .fenye .moye {*/
+/*    width: 48px*/
+/*}*/
 
-.pc-container #product_list .fenye .barActive {
-    background-color: #f8f8f8;
-    border: 1px solid #939393
-}
+/*.pc-container #product_list .fenye .moye {*/
+/*    margin-right: 0*/
+/*}*/
+
+/*.pc-container #product_list .fenye .pre-ye, .pc-container #product_list .fenye .next-ye {*/
+/*    width: 58px*/
+/*}*/
+
+/*.pc-container #product_list .fenye .numActive {*/
+/*    background-color: #dc1414;*/
+/*    color: #fff;*/
+/*    border: 1px solid #dc1414*/
+/*}*/
+
+/*.pc-container #product_list .fenye .barActive {*/
+/*    background-color: #f8f8f8;*/
+/*    border: 1px solid #939393*/
+/*}*/

@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import django.core.validators
 import django.utils.timezone
+import django.core.validators
 import django.contrib.auth.models
 
 

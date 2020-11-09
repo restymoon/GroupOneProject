@@ -66,6 +66,7 @@ class DressType(BaseModel):
     '''  礼服种类模型类  '''
     name = models.CharField(max_length=20, verbose_name="种类名称")
     cover_image = models.ImageField(upload_to="dress", verbose_name="礼服类型封面图片")
+    type_image = models.ImageField(upload_to="dress", verbose_name="礼服类型图片")
 
     class Meta:
         db_table = 'df_dress_type'
@@ -81,6 +82,7 @@ class Dress(BaseModel):
     type = models.ForeignKey("DressType", verbose_name="礼服种类")
     name = models.CharField(max_length=20, verbose_name="礼服名称")
     desc = models.CharField(max_length=256, verbose_name="礼服简介")
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="礼服价格")
     image=models.ImageField(upload_to="dress", verbose_name="礼服图片")
 
     def __str__(self):
