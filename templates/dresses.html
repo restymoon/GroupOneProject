@@ -1,94 +1,49 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block function %}
-    <link rel="stylesheet" href="/static/css/dresses.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/dresses.css' %}" type="text/css">
     <div class="pc-container" band-sensors="sensors-div-14">
         <!-- 主题婚礼 -->
         <div id="product_list" class="inner-wrap" band-sensors="sensors-div-15">
             <div class="case-name" band-sensors="sensors-div-16">
-                <div class="newest" data-screen="0" band-sensors="sensors-div-17"><a href="">默认</a>
+                <div class="newest" data-screen="0" band-sensors="sensors-div-17">
+                    <a href="{% url 'wedding:dresses' type.id 1 %}">默认</a>
                     <span band-sensors="sensors-span-18">|</span>
                 </div>
-                <div class="newest" data-screen="0" band-sensors="sensors-div-17"><a href="">价格</a>
+                <div class="newest" data-screen="0" band-sensors="sensors-div-17">
+                    <a href="{% url 'wedding:dresses' type.id 1 %}?sort=price">价格</a>
                 </div>
             </div>
             <ul id="pro_list" class="clearfix inner-wrap" data-growing-container="">
+                {% for dress_page in dresses_page %}
                 <li class="items-box-shadow fl height" band-sensors="sensors-li-29">
-                    <a target="_blank" href="" class="pc-product-popup">
+                    <a target="_blank" href="{% url 'wedding:dressdetail' dress_page.id %}" class="pc-product-popup">
                     <span class="figure" band-sensors="sensors-span-30">
-                        <img class="lazy" src="/static/image/hunsha.jpg" alt="" band-sensors="sensors-img-31">
+                        <img class="lazy" src="{{ dress_page.image.url }}" alt="" band-sensors="sensors-img-31">
                     </span>
                         <div class="info" band-sensors="sensors-div-32">
-                            <div class="productName" band-sensors="sensors-div-33">婚纱</div>
-                            <div class="productType" band-sensors="sensors-div-34">价格</div>
+                            <div class="productName" band-sensors="sensors-div-33">{{ dress_page.name }}</div>
+                            <div class="productType" band-sensors="sensors-div-34">价格：{{ dress_page.price }}</div>
                         </div>
                     </a>
                 </li>
-                <li class="items-box-shadow fl height" band-sensors="sensors-li-29">
-                    <a target="_blank" href="" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-30">
-                        <img class="lazy" src="/static/image/hunsha.jpg" alt="" band-sensors="sensors-img-31">
-                    </span>
-                        <div class="info" band-sensors="sensors-div-32">
-                            <div class="productName" band-sensors="sensors-div-33">婚纱</div>
-                            <div class="productType" band-sensors="sensors-div-34">价格</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="items-box-shadow fl height" band-sensors="sensors-li-29">
-                    <a target="_blank" href="" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-30">
-                        <img class="lazy" src="/static/image/hunsha.jpg" alt="" band-sensors="sensors-img-31">
-                    </span>
-                        <div class="info" band-sensors="sensors-div-32">
-                            <div class="productName" band-sensors="sensors-div-33">婚纱</div>
-                            <div class="productType" band-sensors="sensors-div-34">价格</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="items-box-shadow fl height" band-sensors="sensors-li-29">
-                    <a target="_blank" href="" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-30">
-                        <img class="lazy" src="/static/image/hunsha.jpg" alt="" band-sensors="sensors-img-31">
-                    </span>
-                        <div class="info" band-sensors="sensors-div-32">
-                            <div class="productName" band-sensors="sensors-div-33">婚纱</div>
-                            <div class="productType" band-sensors="sensors-div-34">价格</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="items-box-shadow fl height" band-sensors="sensors-li-29">
-                    <a target="_blank" href="" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-30">
-                        <img class="lazy" src="/static/image/hunsha.jpg" alt="" band-sensors="sensors-img-31">
-                    </span>
-                        <div class="info" band-sensors="sensors-div-32">
-                            <div class="productName" band-sensors="sensors-div-33">婚纱</div>
-                            <div class="productType" band-sensors="sensors-div-34">价格</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="items-box-shadow fl height" band-sensors="sensors-li-29">
-                    <a target="_blank" href="" class="pc-product-popup">
-                    <span class="figure" band-sensors="sensors-span-30">
-                        <img class="lazy" src="/static/image/hunsha.jpg" alt="" band-sensors="sensors-img-31">
-                    </span>
-                        <div class="info" band-sensors="sensors-div-32">
-                            <div class="productName" band-sensors="sensors-div-33">婚纱</div>
-                            <div class="productType" band-sensors="sensors-div-34">价格</div>
-                        </div>
-                    </a>
-                </li>
+                {% endfor %}
             </ul>
 
             <div class="pagenation">
-				<a href="#">&lt;上一页</a>
-				<a href="#" class="active">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">下一页></a>
+                {% if dresses_page.has_previous %}
+				    <a href="{% url 'wedding:dresses' type.id dresses_page.previous_page_number %}?sort={{ sort }}">&lt;上一页</a>
+                {% endif %}
+                {% for page_index in pages %}
+                    {% if page_index == page %}
+				        <a href="{% url 'wedding:dresses' type.id page_index %}?sort={{ sort }}">{{ page_index }}</a>
+                    {% else %}
+                        <a href="{% url 'wedding:dresses' type.id page_index %}?sort={{ sort }}">{{ page_index }}</a>
+                    {% endif %}
+				{% endfor %}
+                {% if dresses_page.has_next %}
+				    <a href="{% url 'wedding:dresses' type.id dresses_page.next_page_number %}?sort={{ sort }}">下一页&gt;</a>
+                {% endif %}
 			</div>
         </div>
     </div>

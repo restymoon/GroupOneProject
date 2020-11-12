@@ -10,7 +10,7 @@
     width: 320px;
     margin: 0 auto;
     height: 125px;
-    text-align: center
+    text-align: center;
 }
 
 .pc-container #product_list .pro-name div, .pc-container #product_list .case-name div {

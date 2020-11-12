@@ -1,6 +1,5 @@
 from django.contrib import admin
-from wedding.models import WeddingSKU,WeddingImage,WeddingType,\
-    DressType,Dress,Decorate
+from wedding.models import WeddingSKU,WeddingImage,WeddingType,DressType,Dress,Decorate
 # Register your models here.
 
 admin.site.register(WeddingType)

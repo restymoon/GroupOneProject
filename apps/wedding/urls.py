@@ -23,6 +23,6 @@ urlpatterns = [
     url(r"^environment/", views.EnvironmentView.as_view(), name="environment"),#门店环境
     url(r"^about/", views.AboutView.as_view(), name="about"),#关于我们
     url(r"^details/(?P<sku_id>\d+)/", views.DetailsView.as_view(), name="details"),#婚礼详情
-    url(r"^dresses/", views.Dresses.as_view(), name="dresses"),  # 婚礼详情
-
+    url(r"^dresses/(?P<type_id>\d+)/(?P<page>\d+)/", views.Dresses.as_view(), name="dresses"),  # 礼服列表页
+    url(r"^dressdetail/(?P<dress_id>\d+)/",views.DressDetsil.as_view(),name="dressdetail"), #礼服详情页
 ]

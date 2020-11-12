@@ -45,7 +45,7 @@
         <div class="img-auto" id="tab{{ forloop.counter }}" band-sensors="sensors-div-40">
             <img src="{{ dresstype.type_image.url }}" alt="" band-sensors="sensors-img-41">
         </div>
-        <a href="{% url 'wedding:dresses' %}"><img src="/static/image//btn2.png" class="btn1 try-lifu sc-btn" alt=""
+        <a href="{% url 'wedding:dresses' dresstype.id 1 %}"><img src="/static/image//btn2.png" class="btn1 try-lifu sc-btn" alt=""
              band-sensors="sensors-img-42"></a>
     {% endfor %}
     </div>
