@@ -41,7 +41,16 @@
                     <a href="{% url 'wedding:environment' %}" title="门店环境">门店环境</a>
                 </li>
                 <li>
-                    <a href="{% url 'wedding:about' %}" title="关于蜜匠">关于蜜匠</a>
+                    <div class="login_status">
+                        <div class="login_up">
+                            <div class="islogin active">
+                                    <a href="{% url 'user:login' %}">登录/</a>
+                                    <a href="{% url 'user:register' %}">注册</a>
+                            </div>
+                            <div class="nologin"><a href="#">用户名</a>&nbsp;&nbsp;<a href="{% url 'user:logout' %}" style="color: #333399">退出</a></div>
+                        </div>
+                        <div class="login_down"><a href="{% url 'wedding:about' %}" title="关于我们">关于我们</a></div>
+                    </div>
                 </li>
             </ul>
 {#            {% if request.user.is_authenticated %}#}
@@ -168,10 +177,33 @@
         }
     });
     $('.to-top').click(function(){
-    $('html,body').animate({scrollTop: '0px'},800);//800滑动的速度
+        $('html,body').animate({scrollTop: '0px'},800);//800滑动的速度
     });
     <!-- 返回顶部结束 -->
     })
 </script>
+<script type="text/javascript">
+    {#检查是否登录#}
+    $(function () {
+        $.ajax({
+            url:"{% url 'user:checklogin' %}",
+            type: "GET",
+            dataType:"json",
+            success: function (res) {
+                if(res.code){
+                    {#登陆成功#}
+                    $(".nologin").show();
+                    $(".nologin a").eq(0).html(res.user_name);
+                    $(".islogin").hide()
+                }
+                else {
+                    {#未登录#}
+                    $(".islogin").show();
+                    $(".nologin").hide();
+                }
+            }
+        })
+    })
+</script>>
 
 {% endblock %}
