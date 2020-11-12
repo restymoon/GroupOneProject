@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block function %}
+    <link rel="stylesheet" href="{% static 'css/dressdetail.css' %}">
+    <div class="dress_detail_con clearfix">
+        <div class="dress_detail_pic fl">
+            <img src="{{ dressdetail.image.url }}">
+        </div>
+
+        <div class="dress_detail_list fr">
+            <h3>{{ dressdetail.name }}</h3>
+            <p>{{ dressdetail.desc }}</p>
+            <div class="prize_bar">
+                <span class="show_pirze">¥<em>{{ dressdetail.price }}</em></span>
+            </div>
+            <div class="operate_btn">
+                <a href="javascript:;" class="buy_btn">立即预定</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock function %}
+
