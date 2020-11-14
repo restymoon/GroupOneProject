@@ -468,3 +468,8 @@
         width: 100%
     }
 }
+.login-tip{
+    color: yellow;
+    position: relative;
+    top: 150px;
+}
